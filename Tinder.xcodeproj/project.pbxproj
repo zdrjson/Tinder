@@ -16,6 +16,7 @@
 		F51E197C1CCE2D3300C281F1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F51E197A1CCE2D3300C281F1 /* LaunchScreen.storyboard */; };
 		F51E19871CCE2D3400C281F1 /* TinderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F51E19861CCE2D3400C281F1 /* TinderTests.m */; };
 		F51E19921CCE2D3400C281F1 /* TinderUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = F51E19911CCE2D3400C281F1 /* TinderUITests.m */; };
+		F51E19A21CCE5CE300C281F1 /* DDTinderNavigaitonController.m in Sources */ = {isa = PBXBuildFile; fileRef = F51E19A11CCE5CE300C281F1 /* DDTinderNavigaitonController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,8 @@
 		F51E198D1CCE2D3400C281F1 /* TinderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TinderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F51E19911CCE2D3400C281F1 /* TinderUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TinderUITests.m; sourceTree = "<group>"; };
 		F51E19931CCE2D3400C281F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F51E19A01CCE5CE300C281F1 /* DDTinderNavigaitonController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDTinderNavigaitonController.h; sourceTree = "<group>"; };
+		F51E19A11CCE5CE300C281F1 /* DDTinderNavigaitonController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDTinderNavigaitonController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +106,7 @@
 		F51E19681CCE2D3300C281F1 /* Tinder */ = {
 			isa = PBXGroup;
 			children = (
+				F51E199F1CCE5C8700C281F1 /* TinderNavigationController */,
 				F51E196C1CCE2D3300C281F1 /* AppDelegate.h */,
 				F51E196D1CCE2D3300C281F1 /* AppDelegate.m */,
 				F51E196F1CCE2D3300C281F1 /* ViewController.h */,
@@ -141,6 +145,15 @@
 				F51E19931CCE2D3400C281F1 /* Info.plist */,
 			);
 			path = TinderUITests;
+			sourceTree = "<group>";
+		};
+		F51E199F1CCE5C8700C281F1 /* TinderNavigationController */ = {
+			isa = PBXGroup;
+			children = (
+				F51E19A01CCE5CE300C281F1 /* DDTinderNavigaitonController.h */,
+				F51E19A11CCE5CE300C281F1 /* DDTinderNavigaitonController.m */,
+			);
+			name = TinderNavigationController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -275,6 +288,7 @@
 			files = (
 				F51E19711CCE2D3300C281F1 /* ViewController.m in Sources */,
 				F51E19771CCE2D3300C281F1 /* Tinder.xcdatamodeld in Sources */,
+				F51E19A21CCE5CE300C281F1 /* DDTinderNavigaitonController.m in Sources */,
 				F51E196E1CCE2D3300C281F1 /* AppDelegate.m in Sources */,
 				F51E196B1CCE2D3300C281F1 /* main.m in Sources */,
 			);
@@ -502,6 +516,7 @@
 				F51E19981CCE2D3400C281F1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F51E19991CCE2D3400C281F1 /* Build configuration list for PBXNativeTarget "TinderTests" */ = {
 			isa = XCConfigurationList;
@@ -510,6 +525,7 @@
 				F51E199B1CCE2D3400C281F1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F51E199C1CCE2D3400C281F1 /* Build configuration list for PBXNativeTarget "TinderUITests" */ = {
 			isa = XCConfigurationList;
@@ -518,6 +534,7 @@
 				F51E199E1CCE2D3400C281F1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
