@@ -7,7 +7,7 @@
 //
 
 #import "DDTinderNavigationBar.h"
-
+#import "DDTinderNavigaitonController.h"
 @interface DDTinderNavigationBar ()
 
 @end
@@ -22,6 +22,24 @@
        
     }];
 }
+- (void)tapGestureHandle:(UITapGestureRecognizer *)tapGesture {
+    NSInteger pageIndex = [self.itemViews indexOfObject:tapGesture.view];
+    [self.navigationController setCurrentPage:pageIndex animated:YES];
+}
+- (void)setItemViews:(NSArray *)itemViews {
+    if (itemViews) {
+        [self.itemViews enumerateObjectsUsingBlock:^(UIView<DDTinderNavigationBarItem> *itemView, NSUInteger idx, BOOL * _Nonnull stop) {
+            [itemView removeFromSuperview];
+        }];
+        
+        [itemViews enumerateObjectsUsingBlock:^(UIView<DDTinderNavigationBarItem> *itemView, NSUInteger idx, BOOL * _Nonnull stop) {
+            itemView.userInteractionEnabled = YES;
+            UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapGestureHandle:)];
+            [itemView addGestureRecognizer:tapGesture];
+            [self addSubview:itemView];
+        }];
+    }
+}
 #pragma mark - Lift Cycle
 - (instancetype)initWithFrame:(CGRect)frame
 {
@@ -35,4 +53,6 @@
 {
     self.itemViews = nil;
 }
+
+
 @end
