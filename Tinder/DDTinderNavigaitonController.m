@@ -29,7 +29,13 @@ typedef NS_ENUM(NSInteger, DDSlideType) {
 @end
 
 @implementation DDTinderNavigaitonController
-
+#pragma mark - DataSource
+- (NSInteger)getCurrentPageIndex {
+    return self.currentPage;
+}
+- (void)setCurrentPage:(NSInteger)currentPage animated:(BOOL)animated {
+     
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.

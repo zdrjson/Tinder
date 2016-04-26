@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F50B1EA21CCFC49F00E192EC /* DDTinderNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = F50B1EA11CCFC49F00E192EC /* DDTinderNavigationBar.m */; };
 		F51E196B1CCE2D3300C281F1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F51E196A1CCE2D3300C281F1 /* main.m */; };
 		F51E196E1CCE2D3300C281F1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F51E196D1CCE2D3300C281F1 /* AppDelegate.m */; };
 		F51E19711CCE2D3300C281F1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F51E19701CCE2D3300C281F1 /* ViewController.m */; };
@@ -37,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F50B1EA01CCFC49F00E192EC /* DDTinderNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDTinderNavigationBar.h; sourceTree = "<group>"; };
+		F50B1EA11CCFC49F00E192EC /* DDTinderNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDTinderNavigationBar.m; sourceTree = "<group>"; };
 		F51E19661CCE2D3300C281F1 /* Tinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F51E196A1CCE2D3300C281F1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F51E196C1CCE2D3300C281F1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -152,6 +155,8 @@
 			children = (
 				F51E19A01CCE5CE300C281F1 /* DDTinderNavigaitonController.h */,
 				F51E19A11CCE5CE300C281F1 /* DDTinderNavigaitonController.m */,
+				F50B1EA01CCFC49F00E192EC /* DDTinderNavigationBar.h */,
+				F50B1EA11CCFC49F00E192EC /* DDTinderNavigationBar.m */,
 			);
 			name = TinderNavigationController;
 			sourceTree = "<group>";
@@ -287,6 +292,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F51E19711CCE2D3300C281F1 /* ViewController.m in Sources */,
+				F50B1EA21CCFC49F00E192EC /* DDTinderNavigationBar.m in Sources */,
 				F51E19771CCE2D3300C281F1 /* Tinder.xcdatamodeld in Sources */,
 				F51E19A21CCE5CE300C281F1 /* DDTinderNavigaitonController.m in Sources */,
 				F51E196E1CCE2D3300C281F1 /* AppDelegate.m in Sources */,
