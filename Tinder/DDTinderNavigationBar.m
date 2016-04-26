@@ -8,14 +8,31 @@
 
 #import "DDTinderNavigationBar.h"
 
+@interface DDTinderNavigationBar ()
+
+@end
+
 @implementation DDTinderNavigationBar
-
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
+#pragma mark - DataSource
+- (void)reloadData {
+    if (!self.items.count) {
+        return;
+    }
+    [self.itemViews enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+       
+    }];
 }
-*/
-
+#pragma mark - Lift Cycle
+- (instancetype)initWithFrame:(CGRect)frame
+{
+    self = [super initWithFrame:frame];
+    if (self) {
+        self.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+    }
+    return self;
+}
+- (void)dealloc
+{
+    self.itemViews = nil;
+}
 @end
