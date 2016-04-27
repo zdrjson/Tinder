@@ -22,6 +22,19 @@
 #endif
 
 DD_EXTERN_C_BEGIN
+#ifndef DD_CLAMP // return the clamped value
+#define DD_CLAMP(_x_, _low_, _high_) (((_x_) > (_high)) ? (_high_) : (((_x_) < (_low_)) ? (_low_) : (_x_)))
+#endif
+
+#ifndef DD_SWAP // swap two value
+#define DD_SWAP(_a, _b) do { __typeof__(_a_) _tmp_ = (_a_); (_a_) = (_b_); (_b_) = _tmp_;} while (0)
+#endif
+/**
+ Whether in main queue/thread.
+ */
+static inline bool dispatch_is_main_queue() {
+    return pthread_main_np() != 0;
+}
 /**
  Submits a block for asynchronous execution on a main queue and returns immediately.
  */
