@@ -11,6 +11,7 @@
 
 #define WIDTH self.bounds.size.width
 #define IMAGESIZE 30
+#define SPEED 2.45
 #define Y_POSITION 28
 
 @interface DDTinderNavigationBar ()
@@ -62,7 +63,18 @@
         CGFloat width = WIDTH - 30;
         CGFloat step = (width / 2 - 15) * idx + 15;
         
+        CGRect itemViewFrame = itemView.frame;
+        itemViewFrame.origin.x = step - (xOffset - normalWidth) / SPEED;
+        itemView.frame = itemViewFrame;
         
+        CGFloat ratio;
+        if (xOffset < normalWidth * idx) {
+            ratio = (xOffset - normalWidth * (idx - 1)) / normalWidth;
+        } else {
+            ratio = 1 - ((xOffset - normalWidth * idx) / normalWidth);
+        }
+        
+        [self updateItemView:itemView withRation:ratio];
     }];
     
 }
