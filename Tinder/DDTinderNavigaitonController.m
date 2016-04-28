@@ -189,16 +189,50 @@ typedef NS_ENUM(NSInteger, DDSlideType) {
     self.didChangePageCompleted = nil;
     
 }
-
+#pragma mark - PanGesture Handle Method
+- (void)pageGestureRecognizerHandle:(UIPanGestureRecognizer *)panGestureRecognizer {
+    CGPoint contentOffSet = self.paggingScrollView.contentOffset;
+    
+    CGSize contentSize = self.paggingScrollView.contentSize;
+    
+    CGFloat baseWidth = CGRectGetWidth(self.paggingScrollView.bounds);
+    
+    switch (panGestureRecognizer.state) {
+        case UIGestureRecognizerStateBegan: {
+            
+            break;
+        }
+        case UIGestureRecognizerStateChanged: {
+            if (contentOffSet.x <= 0) {
+                [panGestureRecognizer setTranslation:CGPointZero inView:panGestureRecognizer.view];
+            } else if (contentOffSet.x >= contentSize.width - baseWidth) {
+                [panGestureRecognizer setTranslation:CGPointZero inView:panGestureRecognizer.view];
+            }
+            break;
+        }
+        case UIGestureRecognizerStateEnded: {
+            
+            break;
+        }
+        case UIGestureRecognizerStateCancelled: {
+            
+            break;
+        }
+        case UIGestureRecognizerStateFailed: {
+            
+            break;
+        }
+        default:
+            break;
+    }
+}
+#pragma mark - Block Call Method
 - (void)callBackChangedPage {
-    
+    if (self.didChangePageCompleted) {
+        UIViewController *currentViewController = self.paggedViewControllers[self.currentPage];
+        self.didChangePageCompleted(self.currentPage, currentViewController.title);
+    }
 }
-
-- (void)pageGestureRecognizerHandle:(id)sender {
-    
-}
-
-
 
 #pragma mark - TableView Helper Method
 - (void)setupScrollToTop {
