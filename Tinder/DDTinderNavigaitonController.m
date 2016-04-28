@@ -63,7 +63,7 @@ typedef NS_ENUM(NSInteger, DDSlideType) {
     self.paggingNavbar.itemViews = self.navbarItemViews;
     [self.paggingNavbar reloadData];
     
-    [self setupScrollTop];
+    [self setupScrollToTop];
     
     [self callBackChangedPage];
 }
@@ -79,23 +79,101 @@ typedef NS_ENUM(NSInteger, DDSlideType) {
     }
     return _centerContainerView;
 }
+- (UIScrollView *)paggingScrollView
+{
+    if (!_paggingScrollView) {
+        self.paggingScrollView = [[UIScrollView alloc] initWithFrame:self.view.bounds];
+        _paggingScrollView.bounces = NO;
+        _paggingScrollView.pagingEnabled = YES;
+        [_paggingScrollView setScrollsToTop:NO];
+        _paggingScrollView.delegate = self;
+        _paggingScrollView.showsVerticalScrollIndicator = NO;
+        _paggingScrollView.showsHorizontalScrollIndicator = NO;
+    }
+    return _paggingScrollView;
+}
+- (DDTinderNavigationBar *)paggingNavbar
+{
+    if (!_paggingNavbar) {
+        self.paggingNavbar = [[DDTinderNavigationBar alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.bounds), 64)];
+        _paggingNavbar.backgroundColor = [UIColor clearColor];
+        _paggingNavbar.navigationController = self;
+        _paggingNavbar.itemViews = self.navbarItemViews;
+        [self.view addSubview:_paggingNavbar];
+    }
+    return _paggingNavbar;
+}
+- (UIViewController *)getPageViewControllerAtIndex:(NSInteger)index {
+    if (index < self.paggedViewControllers.count) {
+        return self.paggedViewControllers[index];
+    } else {
+        return nil;
+    }
+}
+- (void)setCurrentPage:(NSInteger)currentPage {
+    if (_currentPage == currentPage) {
+        return;
+    }
+    _currentPage = currentPage;
+    
+    self.paggingNavbar.currentPage = currentPage + 1;
+    
+    [self setupScrollToTop];
+    [self callBackChangedPage];
+}
+- (void)setNavbarItemViews:(NSArray *)navbarItemViews
+{
+    _navbarItemViews = navbarItemViews;
+    self.paggingNavbar.itemViews = navbarItemViews;
+}
+#pragma mark - Life Cycle
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 }
-
-- (void)setupScrollTop {
-	
-}
-
 - (void)callBackChangedPage {
-	
+    
 }
 
 - (void)pageGestureRecognizerHandle:(id)sender {
-	
+    
 }
 
 
+
+#pragma mark - TableView Helper Method
+- (void)setupScrollToTop {
+    for (int i = 0; i<self.paggedViewControllers.count; i++) {
+        UITableView *tableView = (UITableView *)[self subviewWithClass:[UITableView class] onView:[self getPageViewControllerAtIndex:i].view];
+        if (tableView) {
+            if (self.currentPage == i) {
+                [tableView setScrollsToTop:YES];
+            } else {
+                [tableView setScrollsToTop:NO];
+            }
+        }
+    }
+}
+#pragma mark - View Helper Method
+- (UIView *)subviewWithClass:(Class)currentClasss onView:(UIView *)view {
+    for (UIView *subView in view.subviews) {
+        if ([subView isKindOfClass:currentClasss]) {
+            return subView;
+        }
+    }
+    return nil;
+}
+#pragma mark - UIScrollView Delegate
+- (void)scrollViewWillBeginDecelerating:(UIScrollView *)scrollView {
+    
+}
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    self.paggingNavbar.contentOffSet = scrollView.contentOffset;
+}
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
+    CGFloat pageWidth = CGRectGetWidth(self.paggingScrollView.frame);
+                       //向下取整
+    self.currentPage = floor((scrollView.contentOffset.x - pageWidth / 2) / pageWidth) + 1;
+}
 
 @end
