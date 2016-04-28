@@ -7,6 +7,7 @@
 //
 
 #import "DDTinderNavigaitonController.h"
+#import "DDTinderNavigationBar.h"
 
 typedef NS_ENUM(NSInteger, DDSlideType) {
     DDSlideTypeLeft = 0,
@@ -17,6 +18,8 @@ typedef NS_ENUM(NSInteger, DDSlideType) {
 @interface DDTinderNavigaitonController () <UIScrollViewDelegate>
 @property (nonatomic, strong) UIView *centerContainerView;
 @property (nonatomic, strong) UIScrollView *paggingScrollView;
+
+@property (nonatomic, strong) DDTinderNavigationBar *paggingNavbar;
 
 @property (nonatomic, assign) NSInteger currentPage;
 
@@ -34,26 +37,65 @@ typedef NS_ENUM(NSInteger, DDSlideType) {
     return self.currentPage;
 }
 - (void)setCurrentPage:(NSInteger)currentPage animated:(BOOL)animated {
-     
+    self.paggingNavbar.currentPage = currentPage;
+    self.currentPage = currentPage;
+    
+    CGFloat pageWidth = CGRectGetWidth(self.paggingScrollView.frame);
+    
+    [self.paggingScrollView setContentOffset:CGPointMake(currentPage * pageWidth, 0) animated:animated];
+}
+- (void)reloadData {
+    if (!self.paggedViewControllers.count) {
+        return;
+    }
+    [self.paggingScrollView.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
+    
+    [self.paggedViewControllers enumerateObjectsUsingBlock:^(UIViewController *viewController, NSUInteger idx, BOOL * _Nonnull stop) {
+        CGRect contentViewFrame = viewController.view.bounds;
+        contentViewFrame.origin.x = idx * CGRectGetWidth(self.view.bounds);
+        viewController.view.frame = contentViewFrame;
+        [self.paggingScrollView addSubview:viewController.view];
+        [self addChildViewController:viewController];
+    }];
+    
+    [self.paggingScrollView setContentSize:CGSizeMake(CGRectGetWidth(self.view.bounds) * self.paggedViewControllers.count, 0)];
+    
+    self.paggingNavbar.itemViews = self.navbarItemViews;
+    [self.paggingNavbar reloadData];
+    
+    [self setupScrollTop];
+    
+    [self callBackChangedPage];
+}
+#pragma mark - Propertys
+- (UIView *)centerContainerView
+{
+    if (!_centerContainerView) {
+        _centerContainerView = [[UIView alloc] initWithFrame:self.view.bounds];
+        _centerContainerView.backgroundColor = [UIColor whiteColor];
+        
+        [_centerContainerView addSubview:self.paggingScrollView];
+        [self.paggingScrollView.panGestureRecognizer addTarget:self action:@selector(pageGestureRecognizerHandle:)];
+    }
+    return _centerContainerView;
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)setupScrollTop {
+	
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)callBackChangedPage {
+	
 }
-*/
+
+- (void)pageGestureRecognizerHandle:(id)sender {
+	
+}
+
+
 
 @end
