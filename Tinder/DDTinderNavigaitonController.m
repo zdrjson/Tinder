@@ -127,10 +127,69 @@ typedef NS_ENUM(NSInteger, DDSlideType) {
     self.paggingNavbar.itemViews = navbarItemViews;
 }
 #pragma mark - Life Cycle
+- (void)setupTargetViewController:(UIViewController *)targetViewController withSlideType:(DDSlideType)slideType {
+    if (!targetViewController) {
+        return;
+    }
+    [self addChildViewController:targetViewController];
+    CGRect targetViewFrame = targetViewController.view.frame;
+    switch (slideType) {
+        case DDSlideTypeLeft: {
+            targetViewFrame.origin.x = -CGRectGetWidth(self.view.bounds);
+            break;
+        }
+        case DDSlideTypeRight: {
+            targetViewFrame.origin.x = CGRectGetWidth(self.view.bounds) * 2;
+            break;
+        }
+        default:
+            break;
+    }
+    targetViewController.view.frame = targetViewFrame;
+    [self.view insertSubview:targetViewController.view atIndex:0];
+    [targetViewController didMoveToParentViewController:self];
+}
+- (instancetype)initWithLeftViewController:(UIViewController *)leftViewContrller {
+    return [self initWithLeftViewController:leftViewContrller rightViewController:nil];
+}
+
+- (instancetype)initWithRightViewController:(UIViewController *)rightViewController {
+    return [self initWithLeftViewController:nil rightViewController:rightViewController];
+}
+
+- (instancetype)initWithLeftViewController:(UIViewController *)leftViewContrller rightViewController:(UIViewController *)rightViewContller {
+    self = [super init];
+    if (self) {
+        self.leftViewController = leftViewContrller;
+        
+        self.rightViewController = rightViewContller;
+    }
+    return self;
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [self setupViews];
+    [self reloadData];
 }
+- (void)setupViews {
+    [self.view addSubview:self.centerContainerView];
+    
+    [self setupTargetViewController:self.leftViewController withSlideType:DDSlideTypeLeft];
+    [self setupTargetViewController:self.rightViewController withSlideType:DDSlideTypeRight];
+}
+- (void)dealloc {
+    self.paggingScrollView.delegate = nil;
+    self.paggingScrollView = nil;
+    
+    self.paggingNavbar = nil;
+    
+    self.paggedViewControllers = nil;
+    
+    self.didChangePageCompleted = nil;
+    
+}
+
 - (void)callBackChangedPage {
     
 }
