@@ -18,6 +18,7 @@
 		F51E19871CCE2D3400C281F1 /* TinderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F51E19861CCE2D3400C281F1 /* TinderTests.m */; };
 		F51E19921CCE2D3400C281F1 /* TinderUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = F51E19911CCE2D3400C281F1 /* TinderUITests.m */; };
 		F51E19A21CCE5CE300C281F1 /* DDTinderNavigaitonController.m in Sources */ = {isa = PBXBuildFile; fileRef = F51E19A11CCE5CE300C281F1 /* DDTinderNavigaitonController.m */; };
+		F56C90C71CD2524D0056AB1F /* DDNavigationBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F56C90C61CD2524D0056AB1F /* DDNavigationBarItem.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,8 @@
 		F51E19931CCE2D3400C281F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F51E19A01CCE5CE300C281F1 /* DDTinderNavigaitonController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDTinderNavigaitonController.h; sourceTree = "<group>"; };
 		F51E19A11CCE5CE300C281F1 /* DDTinderNavigaitonController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDTinderNavigaitonController.m; sourceTree = "<group>"; };
+		F56C90C51CD2524D0056AB1F /* DDNavigationBarItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDNavigationBarItem.h; sourceTree = "<group>"; };
+		F56C90C61CD2524D0056AB1F /* DDNavigationBarItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDNavigationBarItem.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +116,8 @@
 				F51E199F1CCE5C8700C281F1 /* TinderNavigationController */,
 				F51E196C1CCE2D3300C281F1 /* AppDelegate.h */,
 				F51E196D1CCE2D3300C281F1 /* AppDelegate.m */,
+				F56C90C51CD2524D0056AB1F /* DDNavigationBarItem.h */,
+				F56C90C61CD2524D0056AB1F /* DDNavigationBarItem.m */,
 				F51E196F1CCE2D3300C281F1 /* ViewController.h */,
 				F51E19701CCE2D3300C281F1 /* ViewController.m */,
 				F51E19721CCE2D3300C281F1 /* Main.storyboard */,
@@ -294,6 +299,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F51E19711CCE2D3300C281F1 /* ViewController.m in Sources */,
+				F56C90C71CD2524D0056AB1F /* DDNavigationBarItem.m in Sources */,
 				F50B1EA21CCFC49F00E192EC /* DDTinderNavigationBar.m in Sources */,
 				F51E19771CCE2D3300C281F1 /* Tinder.xcdatamodeld in Sources */,
 				F51E19A21CCE5CE300C281F1 /* DDTinderNavigaitonController.m in Sources */,
