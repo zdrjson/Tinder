@@ -21,7 +21,7 @@
 @implementation DDTinderNavigationBar
 #pragma mark - DataSource
 - (void)reloadData {
-    if (!self.items.count) {
+    if (!self.itemViews.count) {
         return;
     }
     [self.itemViews enumerateObjectsUsingBlock:^(UIView<DDTinderNavigationBarItem> *itemView, NSUInteger idx, BOOL * _Nonnull stop) {

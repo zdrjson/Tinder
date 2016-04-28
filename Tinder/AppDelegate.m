@@ -7,7 +7,8 @@
 //
 
 #import "AppDelegate.h"
-
+#import "DDTinderNavigaitonController.h"
+#import "DDNavigationBarItem.h"
 @interface AppDelegate ()
 
 @end
@@ -17,6 +18,27 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    DDTinderNavigaitonController *tinderNavigationController = [[DDTinderNavigaitonController alloc] init];
+    
+    UIViewController *viewController1 = [[UIViewController alloc] init];
+    viewController1.view.backgroundColor = [UIColor redColor];
+    UIViewController *viewController2 = [[UIViewController alloc] init];
+    viewController2.view.backgroundColor = [UIColor whiteColor];
+    UIViewController *viewController3 = [[UIViewController alloc] init];
+    viewController3.view.backgroundColor = [UIColor blueColor];
+    
+    tinderNavigationController.paggedViewControllers = @[viewController1,viewController2,viewController3];
+    
+    tinderNavigationController.navbarItemViews = @[[[DDNavigationBarItem alloc] init],
+                                                   [[DDNavigationBarItem alloc] init],
+                                                   [[DDNavigationBarItem alloc] init]];
+    
+    [tinderNavigationController setCurrentPage:1 animated:NO];
+    
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    self.window.rootViewController = tinderNavigationController;
+    [self.window makeKeyWindow];
+    
     return YES;
 }
 

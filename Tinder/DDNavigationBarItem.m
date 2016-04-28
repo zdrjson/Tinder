@@ -22,9 +22,10 @@
         self.layer.cornerRadius = self.frame.size.width / 2;
         self.clipsToBounds = YES;
         
-        self.coloredView = [[UIView alloc] initWithFrame:self.bounds];
-        self.coloredView.backgroundColor = [UIColor orangeColor];
+        _coloredView = [[UIView alloc] initWithFrame:self.bounds];
+        _coloredView.backgroundColor = [UIColor orangeColor];
         [self addSubview:_coloredView];
+           NSLog(@"%@",[NSValue valueWithCGRect:_coloredView.frame]);
     }
     return _coloredView;
 }

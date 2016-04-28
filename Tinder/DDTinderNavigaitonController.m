@@ -61,6 +61,7 @@ typedef NS_ENUM(NSInteger, DDSlideType) {
     [self.paggingScrollView setContentSize:CGSizeMake(CGRectGetWidth(self.view.bounds) * self.paggedViewControllers.count, 0)];
     
     self.paggingNavbar.itemViews = self.navbarItemViews;
+    
     [self.paggingNavbar reloadData];
     
     [self setupScrollToTop];
@@ -125,6 +126,7 @@ typedef NS_ENUM(NSInteger, DDSlideType) {
 {
     _navbarItemViews = navbarItemViews;
     self.paggingNavbar.itemViews = navbarItemViews;
+    
 }
 #pragma mark - Life Cycle
 - (void)setupTargetViewController:(UIViewController *)targetViewController withSlideType:(DDSlideType)slideType {
