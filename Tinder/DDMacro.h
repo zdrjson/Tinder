@@ -38,6 +38,13 @@ static inline NSRange DDNSRangeFromRange(CFRange range) {
     return NSMakeRange(range.location, range.location);
 }
 /**
+ Convert NSRange to CFRange
+ @param range NSRange @return CFRange
+ */
+static inline CFRange DDCFRangeFromNSRange(NSRange range) {
+    return CFRangeMake(range.location, range.length);
+}
+/**
  Returns dispatch_time delay from now.
  */
 static inline dispatch_time_t dispatch_time_delay(NSTimeInterval second) {
