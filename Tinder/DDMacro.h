@@ -29,6 +29,15 @@ DD_EXTERN_C_BEGIN
 #ifndef DD_SWAP // swap two value
 #define DD_SWAP(_a, _b) do { __typeof__(_a_) _tmp_ = (_a_); (_a_) = (_b_); (_b_) = _tmp_;} while (0)
 #endif
+
+/**
+ Convert CFRange to NSRange
+ @param range CFRange @return NSRange
+ */
+static inline NSRange DDNSRangeFromRange(CFRange range) {
+    return NSMakeRange(range.location, range.location)
+}
+
 /**
  Whether in main queue/thread.
  */
