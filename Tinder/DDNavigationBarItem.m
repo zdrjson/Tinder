@@ -25,7 +25,6 @@
         _coloredView = [[UIView alloc] initWithFrame:self.bounds];
         _coloredView.backgroundColor = [UIColor orangeColor];
         [self addSubview:_coloredView];
-           NSLog(@"%@",[NSValue valueWithCGRect:_coloredView.frame]);
     }
     return _coloredView;
 }
