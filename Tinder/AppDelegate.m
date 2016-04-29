@@ -23,18 +23,12 @@
     // Override point for customization after application launch.
     DDTinderNavigaitonController *tinderNavigationController = [DDTinderNavigaitonController new];
     
-    UIViewController *viewController1 = [LeftVc new];
-    viewController1.view.backgroundColor = [UIColor redColor];
-    UIViewController *viewController2 = [MiddleVc new];
-    viewController2.view.backgroundColor = [UIColor whiteColor];
-    UIViewController *viewController3 = [RightVc new];
-    viewController3.view.backgroundColor = [UIColor blueColor];
     
-    tinderNavigationController.paggedViewControllers = @[viewController1,viewController2,viewController3];
+    tinderNavigationController.paggedViewControllers = @[[LeftVc new],[MiddleVc new],[RightVc new]];
     
-    tinderNavigationController.navbarItemViews = @[[[DDNavigationBarItem alloc] init],
-                                                   [[DDNavigationBarItem alloc] init],
-                                                   [[DDNavigationBarItem alloc] init]];
+    tinderNavigationController.navbarItemViews = @[[DDNavigationBarItem new],
+                                                   [DDNavigationBarItem new],
+                                                   [DDNavigationBarItem new]];
     
     [tinderNavigationController setCurrentPage:1 animated:NO];
     
