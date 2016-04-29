@@ -9,6 +9,9 @@
 #import "AppDelegate.h"
 #import "DDTinderNavigaitonController.h"
 #import "DDNavigationBarItem.h"
+#import "LeftVc.h"
+#import "RightVc.h"
+#import "MiddleVc.h"
 @interface AppDelegate ()
 
 @end
@@ -18,13 +21,13 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    DDTinderNavigaitonController *tinderNavigationController = [[DDTinderNavigaitonController alloc] init];
+    DDTinderNavigaitonController *tinderNavigationController = [DDTinderNavigaitonController new];
     
-    UIViewController *viewController1 = [[UIViewController alloc] init];
+    UIViewController *viewController1 = [LeftVc new];
     viewController1.view.backgroundColor = [UIColor redColor];
-    UIViewController *viewController2 = [[UIViewController alloc] init];
+    UIViewController *viewController2 = [MiddleVc new];
     viewController2.view.backgroundColor = [UIColor whiteColor];
-    UIViewController *viewController3 = [[UIViewController alloc] init];
+    UIViewController *viewController3 = [RightVc new];
     viewController3.view.backgroundColor = [UIColor blueColor];
     
     tinderNavigationController.paggedViewControllers = @[viewController1,viewController2,viewController3];

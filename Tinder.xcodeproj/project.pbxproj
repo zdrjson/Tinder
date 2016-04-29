@@ -19,6 +19,9 @@
 		F51E19921CCE2D3400C281F1 /* TinderUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = F51E19911CCE2D3400C281F1 /* TinderUITests.m */; };
 		F51E19A21CCE5CE300C281F1 /* DDTinderNavigaitonController.m in Sources */ = {isa = PBXBuildFile; fileRef = F51E19A11CCE5CE300C281F1 /* DDTinderNavigaitonController.m */; };
 		F56C90C71CD2524D0056AB1F /* DDNavigationBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F56C90C61CD2524D0056AB1F /* DDNavigationBarItem.m */; };
+		F56C90D31CD2EC510056AB1F /* MiddleVc.m in Sources */ = {isa = PBXBuildFile; fileRef = F56C90D21CD2EC510056AB1F /* MiddleVc.m */; };
+		F56C90D61CD2EC650056AB1F /* RightVc.m in Sources */ = {isa = PBXBuildFile; fileRef = F56C90D51CD2EC650056AB1F /* RightVc.m */; };
+		F56C90D91CD2EC710056AB1F /* LeftVc.m in Sources */ = {isa = PBXBuildFile; fileRef = F56C90D81CD2EC710056AB1F /* LeftVc.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +66,12 @@
 		F51E19A11CCE5CE300C281F1 /* DDTinderNavigaitonController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDTinderNavigaitonController.m; sourceTree = "<group>"; };
 		F56C90C51CD2524D0056AB1F /* DDNavigationBarItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDNavigationBarItem.h; sourceTree = "<group>"; };
 		F56C90C61CD2524D0056AB1F /* DDNavigationBarItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDNavigationBarItem.m; sourceTree = "<group>"; };
+		F56C90D11CD2EC510056AB1F /* MiddleVc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MiddleVc.h; path = ../MiddleVc.h; sourceTree = "<group>"; };
+		F56C90D21CD2EC510056AB1F /* MiddleVc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MiddleVc.m; path = ../MiddleVc.m; sourceTree = "<group>"; };
+		F56C90D41CD2EC650056AB1F /* RightVc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RightVc.h; sourceTree = "<group>"; };
+		F56C90D51CD2EC650056AB1F /* RightVc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RightVc.m; sourceTree = "<group>"; };
+		F56C90D71CD2EC710056AB1F /* LeftVc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftVc.h; sourceTree = "<group>"; };
+		F56C90D81CD2EC710056AB1F /* LeftVc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftVc.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +125,12 @@
 				F51E199F1CCE5C8700C281F1 /* TinderNavigationController */,
 				F51E196C1CCE2D3300C281F1 /* AppDelegate.h */,
 				F51E196D1CCE2D3300C281F1 /* AppDelegate.m */,
+				F56C90D11CD2EC510056AB1F /* MiddleVc.h */,
+				F56C90D21CD2EC510056AB1F /* MiddleVc.m */,
+				F56C90D41CD2EC650056AB1F /* RightVc.h */,
+				F56C90D51CD2EC650056AB1F /* RightVc.m */,
+				F56C90D71CD2EC710056AB1F /* LeftVc.h */,
+				F56C90D81CD2EC710056AB1F /* LeftVc.m */,
 				F56C90C51CD2524D0056AB1F /* DDNavigationBarItem.h */,
 				F56C90C61CD2524D0056AB1F /* DDNavigationBarItem.m */,
 				F51E196F1CCE2D3300C281F1 /* ViewController.h */,
@@ -303,8 +318,11 @@
 				F50B1EA21CCFC49F00E192EC /* DDTinderNavigationBar.m in Sources */,
 				F51E19771CCE2D3300C281F1 /* Tinder.xcdatamodeld in Sources */,
 				F51E19A21CCE5CE300C281F1 /* DDTinderNavigaitonController.m in Sources */,
+				F56C90D31CD2EC510056AB1F /* MiddleVc.m in Sources */,
 				F51E196E1CCE2D3300C281F1 /* AppDelegate.m in Sources */,
 				F51E196B1CCE2D3300C281F1 /* main.m in Sources */,
+				F56C90D61CD2EC650056AB1F /* RightVc.m in Sources */,
+				F56C90D91CD2EC710056AB1F /* LeftVc.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
