@@ -35,9 +35,14 @@ DD_EXTERN_C_BEGIN
  @param range CFRange @return NSRange
  */
 static inline NSRange DDNSRangeFromRange(CFRange range) {
-    return NSMakeRange(range.location, range.location)
+    return NSMakeRange(range.location, range.location);
 }
-
+/**
+ Returns dispatch_time delay from now.
+ */
+static inline dispatch_time_t dispatch_time_delay(NSTimeInterval second) {
+    return dispatch_time(DISPACTH_TIME_NOWM (int64_t)(second * NSEC_PER_SEC));
+}
 /**
  Whether in main queue/thread.
  */
