@@ -29,7 +29,8 @@ DD_EXTERN_C_BEGIN
 #ifndef DD_SWAP // swap two value
 #define DD_SWAP(_a, _b) do { __typeof__(_a_) _tmp_ = (_a_); (_a_) = (_b_); (_b_) = _tmp_;} while (0)
 #endif
-
+#define DDAssertMainThread() NSAssert([NSThread isMainThread], @"This method must be called on the main thread")
+#define DDCssertMainThread() NSCssert([NSThread isMainThread], @"This method must be called on the main thread")
 /**
  Convert CFRange to NSRange
  @param range CFRange @return NSRange
