@@ -18,6 +18,7 @@
 		F51E19871CCE2D3400C281F1 /* TinderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F51E19861CCE2D3400C281F1 /* TinderTests.m */; };
 		F51E19921CCE2D3400C281F1 /* TinderUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = F51E19911CCE2D3400C281F1 /* TinderUITests.m */; };
 		F51E19A21CCE5CE300C281F1 /* DDTinderNavigaitonController.m in Sources */ = {isa = PBXBuildFile; fileRef = F51E19A11CCE5CE300C281F1 /* DDTinderNavigaitonController.m */; };
+		F53533CD1CE0072000E79155 /* RadarView.m in Sources */ = {isa = PBXBuildFile; fileRef = F53533CC1CE0072000E79155 /* RadarView.m */; };
 		F56C90C71CD2524D0056AB1F /* DDNavigationBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F56C90C61CD2524D0056AB1F /* DDNavigationBarItem.m */; };
 		F56C90D31CD2EC510056AB1F /* MiddleVc.m in Sources */ = {isa = PBXBuildFile; fileRef = F56C90D21CD2EC510056AB1F /* MiddleVc.m */; };
 		F56C90D61CD2EC650056AB1F /* RightVc.m in Sources */ = {isa = PBXBuildFile; fileRef = F56C90D51CD2EC650056AB1F /* RightVc.m */; };
@@ -64,6 +65,8 @@
 		F51E19931CCE2D3400C281F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F51E19A01CCE5CE300C281F1 /* DDTinderNavigaitonController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDTinderNavigaitonController.h; sourceTree = "<group>"; };
 		F51E19A11CCE5CE300C281F1 /* DDTinderNavigaitonController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDTinderNavigaitonController.m; sourceTree = "<group>"; };
+		F53533CB1CE0072000E79155 /* RadarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RadarView.h; sourceTree = "<group>"; };
+		F53533CC1CE0072000E79155 /* RadarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RadarView.m; sourceTree = "<group>"; };
 		F56C90C51CD2524D0056AB1F /* DDNavigationBarItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDNavigationBarItem.h; sourceTree = "<group>"; };
 		F56C90C61CD2524D0056AB1F /* DDNavigationBarItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDNavigationBarItem.m; sourceTree = "<group>"; };
 		F56C90D11CD2EC510056AB1F /* MiddleVc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MiddleVc.h; path = ../MiddleVc.h; sourceTree = "<group>"; };
@@ -125,8 +128,7 @@
 				F51E199F1CCE5C8700C281F1 /* TinderNavigationController */,
 				F51E196C1CCE2D3300C281F1 /* AppDelegate.h */,
 				F51E196D1CCE2D3300C281F1 /* AppDelegate.m */,
-				F56C90D11CD2EC510056AB1F /* MiddleVc.h */,
-				F56C90D21CD2EC510056AB1F /* MiddleVc.m */,
+				F53533CA1CE006F700E79155 /* New Group */,
 				F56C90D41CD2EC650056AB1F /* RightVc.h */,
 				F56C90D51CD2EC650056AB1F /* RightVc.m */,
 				F56C90D71CD2EC710056AB1F /* LeftVc.h */,
@@ -181,6 +183,17 @@
 				F50B1EA11CCFC49F00E192EC /* DDTinderNavigationBar.m */,
 			);
 			name = TinderNavigationController;
+			sourceTree = "<group>";
+		};
+		F53533CA1CE006F700E79155 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				F56C90D11CD2EC510056AB1F /* MiddleVc.h */,
+				F56C90D21CD2EC510056AB1F /* MiddleVc.m */,
+				F53533CB1CE0072000E79155 /* RadarView.h */,
+				F53533CC1CE0072000E79155 /* RadarView.m */,
+			);
+			name = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -318,6 +331,7 @@
 				F50B1EA21CCFC49F00E192EC /* DDTinderNavigationBar.m in Sources */,
 				F51E19771CCE2D3300C281F1 /* Tinder.xcdatamodeld in Sources */,
 				F51E19A21CCE5CE300C281F1 /* DDTinderNavigaitonController.m in Sources */,
+				F53533CD1CE0072000E79155 /* RadarView.m in Sources */,
 				F56C90D31CD2EC510056AB1F /* MiddleVc.m in Sources */,
 				F51E196E1CCE2D3300C281F1 /* AppDelegate.m in Sources */,
 				F51E196B1CCE2D3300C281F1 /* main.m in Sources */,
