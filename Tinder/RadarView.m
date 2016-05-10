@@ -39,7 +39,7 @@
     [[UIColor yellowColor]setFill];
     [path1 stroke];
     [path1 fill];
-
+    
 }
 
 
