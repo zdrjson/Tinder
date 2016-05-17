@@ -22,14 +22,36 @@ static const CGFloat ChoosePersonButtonVerticalPadding = 20.f;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    self.frontCardView = [self popPersonViewWithFrame:[self frontCardViewFrame]];
 }
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (ChoosePersonView *)popPersonViewWithFrame:(CGRect)frame{
+    if (!self.people.count) {
+        return nil;
+    }
+    MDCSwipeToChooseViewOptions *options = [MDCSwipeToChooseViewOptions new];
+    options.delegate = self;
+    options.threshold = 160.f;
+    options.onPan = ^(MDCPanState *state) {
+        CGRect frame = [self backCardViewFrame];
+        self.backCardView.frame = CGRectMake(frame.origin.x, frame.origin.y - (state.thresholdRatio * 10.f), CGRectGetWidth(frame), CGRectGetHeight(frame));
+    };
+    
+    ChoosePersonView *personView = [[ChoosePersonView alloc] initWithFrame:frame person:self.people[0] options:options];
+    [self.people removeObjectAtIndex:0];
+    return personView;
+    
 }
-
+#pragma mark - View Contruction
+- (CGRect)frontCardViewFrame {
+    CGFloat horizontalPadding = 20.f;
+    CGFloat topPadding = 60.f;
+    CGFloat bottomPadding = 200.f;
+    return CGRectMake(horizontalPadding, topPadding, CGRectGetWidth(self.view.frame) - (horizontalPadding * 2), CGRectGetHeight(self.view.frame) - bottomPadding);
+}
+- (CGRect)backCardViewFrame {
+    CGRect frontFrame = [self frontCardViewFrame];
+    return CGRectMake(frontFrame.origin.x, frontFrame.origin.y + 10.f, CGRectGetWidth(frontFrame), CGRectGetHeight(frontFrame));
+}
 #pragma lazy
 - (NSMutableArray *)people
 {
