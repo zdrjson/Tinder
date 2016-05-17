@@ -61,15 +61,26 @@ static const CGFloat ChoosePersonViewImageLabelWidth = 42.f;
 }
 
 - (void)constructCameraImageLabelView {
-        
+    CGFloat rightPadding = 10.f;
+    UIImage *image = [UIImage imageNamed:@"camera"];
+    _cameraImageLabelView = [self buildImageLabelViewLeftOf:CGRectGetWidth(_informationView.bounds) - rightPadding image:image text:@(_person.numberOfPhotos).stringValue];
+    [_informationView addSubview:_cameraImageLabelView];
 }
 
 - (void)constructInterestsImageLabelView {
-	
+    UIImage *image = [UIImage imageNamed:@"book"];
+    _interestsImageLabelView = [self buildImageLabelViewLeftOf:CGRectGetMinX(_cameraImageLabelView.frame) image:image text:@(_person.numberOfPhotos).stringValue];
+    [_informationView addSubview:_interestsImageLabelView];
 }
 
 - (void)constructFriendsImageLabelView {
-	
+    UIImage *image = [UIImage imageNamed:@"group"];
+    _friendsImageLabelView = [self buildImageLabelViewLeftOf:CGRectGetMinX(_interestsImageLabelView.frame) image:image text:@(_person.numberOfSharedFriends).stringValue];
+    [_informationView addSubview:_friendsImageLabelView];
 }
-
+- (ImageLabelView *)buildImageLabelViewLeftOf:(CGFloat)x image:(UIImage *)image text:(NSString *)text{
+    CGRect frame = CGRectMake(x - ChoosePersonViewImageLabelWidth, 0, ChoosePersonViewImageLabelWidth, CGRectGetHeight(_informationView.bounds));
+    ImageLabelView *view = [[ImageLabelView alloc] initWithFrame:frame image:image text:text];
+    return view;
+}
 @end
