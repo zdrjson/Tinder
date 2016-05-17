@@ -26,6 +26,7 @@
 		F56C90D31CD2EC510056AB1F /* MiddleVc.m in Sources */ = {isa = PBXBuildFile; fileRef = F56C90D21CD2EC510056AB1F /* MiddleVc.m */; };
 		F56C90D61CD2EC650056AB1F /* RightVc.m in Sources */ = {isa = PBXBuildFile; fileRef = F56C90D51CD2EC650056AB1F /* RightVc.m */; };
 		F56C90D91CD2EC710056AB1F /* LeftVc.m in Sources */ = {isa = PBXBuildFile; fileRef = F56C90D81CD2EC710056AB1F /* LeftVc.m */; };
+		F5A4773A1CEAD082000D318F /* ChoosePersonView.m in Sources */ = {isa = PBXBuildFile; fileRef = F5A477391CEAD082000D318F /* ChoosePersonView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +86,8 @@
 		F56C90D51CD2EC650056AB1F /* RightVc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RightVc.m; sourceTree = "<group>"; };
 		F56C90D71CD2EC710056AB1F /* LeftVc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftVc.h; sourceTree = "<group>"; };
 		F56C90D81CD2EC710056AB1F /* LeftVc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftVc.m; sourceTree = "<group>"; };
+		F5A477381CEAD082000D318F /* ChoosePersonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChoosePersonView.h; sourceTree = "<group>"; };
+		F5A477391CEAD082000D318F /* ChoosePersonView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChoosePersonView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,6 +173,7 @@
 				F56398D11CE5906000D185A4 /* New Group1 */,
 				F56398CE1CE58F7600D185A4 /* DDSwipeableVc.h */,
 				F56398CF1CE58F7600D185A4 /* DDSwipeableVc.m */,
+				F5A477371CEAD068000D318F /* View */,
 				F51E19721CCE2D3300C281F1 /* Main.storyboard */,
 				F51E19781CCE2D3300C281F1 /* Assets.xcassets */,
 				F51E197A1CCE2D3300C281F1 /* LaunchScreen.storyboard */,
@@ -236,6 +240,15 @@
 			children = (
 			);
 			name = "New Group1";
+			sourceTree = "<group>";
+		};
+		F5A477371CEAD068000D318F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F5A477381CEAD082000D318F /* ChoosePersonView.h */,
+				F5A477391CEAD082000D318F /* ChoosePersonView.m */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -419,6 +432,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5A4773A1CEAD082000D318F /* ChoosePersonView.m in Sources */,
 				F56398D01CE58F7600D185A4 /* DDSwipeableVc.m in Sources */,
 				F51E19711CCE2D3300C281F1 /* ViewController.m in Sources */,
 				F56C90C71CD2524D0056AB1F /* DDNavigationBarItem.m in Sources */,
