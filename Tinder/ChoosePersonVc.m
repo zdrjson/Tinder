@@ -23,6 +23,11 @@ static const CGFloat ChoosePersonButtonVerticalPadding = 20.f;
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.frontCardView = [self popPersonViewWithFrame:[self frontCardViewFrame]];
+    [self.view addSubview:self.frontCardView];
+    
+    
+    
+    
 }
 - (ChoosePersonView *)popPersonViewWithFrame:(CGRect)frame{
     if (!self.people.count) {
