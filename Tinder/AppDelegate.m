@@ -12,6 +12,7 @@
 #import "LeftVc.h"
 #import "RightVc.h"
 #import "MiddleVc.h"
+#import "ChoosePersonVc.h"
 @interface AppDelegate ()
 
 @end
@@ -33,7 +34,8 @@
     [tinderNavigationController setCurrentPage:1 animated:NO];
     
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    self.window.rootViewController = [MiddleVc new];
+    self.window.backgroundColor = [UIColor whiteColor];
+    self.window.rootViewController = [ChoosePersonVc new];
     [self.window makeKeyWindow];
     
     return YES;

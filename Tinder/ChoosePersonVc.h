@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "ChoosePersonView.h"
 @interface ChoosePersonVc : UIViewController <MDCSwipeToChooseDelegate>
+
+@property (nonatomic, strong) Person *currrentPerson;
 @property (nonatomic, strong) ChoosePersonView *frontCardView;
 @property (nonatomic, strong) ChoosePersonView *backCardView;
 

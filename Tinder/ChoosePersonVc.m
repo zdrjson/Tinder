@@ -26,8 +26,26 @@ static const CGFloat ChoosePersonButtonVerticalPadding = 20.f;
     [self.view addSubview:self.frontCardView];
     
     
+    self.backCardView = [self popPersonViewWithFrame:[self backCardViewFrame]];
+    [self.view insertSubview:self.backCardView belowSubview:self.frontCardView];
+    
+    [self constructNopeButton];
+    [self constructLikedButton];
     
     
+}
+#pragma mark - MDCSwipeToChooseDelegate
+- (void)view:(UIView *)view wasChosenWithDirection:(MDCSwipeDirection)direction {
+    if (direction == MDCSwipeDirectionLeft) {
+        NSLog(@"You noped %@.",self.currrentPerson.name);
+    } else {
+        NSLog(@"You liked %@.",self.currrentPerson.name);
+    }
+}
+- (void)setFrontCardView:(ChoosePersonView *)frontCardView
+{
+    _frontCardView = frontCardView;
+    self.currrentPerson = frontCardView.person;
 }
 - (ChoosePersonView *)popPersonViewWithFrame:(CGRect)frame{
     if (!self.people.count) {
@@ -40,7 +58,7 @@ static const CGFloat ChoosePersonButtonVerticalPadding = 20.f;
         CGRect frame = [self backCardViewFrame];
         self.backCardView.frame = CGRectMake(frame.origin.x, frame.origin.y - (state.thresholdRatio * 10.f), CGRectGetWidth(frame), CGRectGetHeight(frame));
     };
-    
+    NSLog(@"%@",self.people);
     ChoosePersonView *personView = [[ChoosePersonView alloc] initWithFrame:frame person:self.people[0] options:options];
     [self.people removeObjectAtIndex:0];
     return personView;
@@ -56,6 +74,43 @@ static const CGFloat ChoosePersonButtonVerticalPadding = 20.f;
 - (CGRect)backCardViewFrame {
     CGRect frontFrame = [self frontCardViewFrame];
     return CGRectMake(frontFrame.origin.x, frontFrame.origin.y + 10.f, CGRectGetWidth(frontFrame), CGRectGetHeight(frontFrame));
+}
+
+- (void)constructNopeButton
+{
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    UIImage *image = [UIImage imageNamed:@"nope"];
+    button.frame = CGRectMake(ChoosePersonButtonHorizontalPadding, CGRectGetMaxY(self.frontCardView.frame) + ChoosePersonButtonVerticalPadding, image.size.width, image.size.height);
+    [button setImage:image forState:UIControlStateNormal];
+    [button setTintColor:[UIColor colorWithRed:247.f/255.f
+                                         green:91.f/255.f
+                                          blue:37.f/255.f
+                                         alpha:1.f]];
+    [button addTarget:self action:@selector(noneFrontCardView) forControlEvents:UIControlEventTouchUpInside];
+}
+- (void)constructLikedButton
+{
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    UIImage *image = [UIImage imageNamed:@"liked"];
+    button.frame = CGRectMake(CGRectGetMaxX(self.view.frame) - image.size.width - ChoosePersonButtonHorizontalPadding, CGRectGetMaxY(self.frontCardView.frame) + ChoosePersonButtonVerticalPadding, image.size.width, image.size.height);
+    [button setImage:image forState:UIControlStateNormal];
+    [button setTintColor:[UIColor colorWithRed:29.f/255.f
+                                         green:245.f/255.f
+                                          blue:106.f/255.f
+                                         alpha:1.f]];
+    [button addTarget:self
+               action:@selector(likeFrontCardView)
+     forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:button];
+}
+#pragma mark Control Events
+- (void)noneFrontCardView
+{
+    [self.frontCardView mdc_swipe:MDCSwipeDirectionLeft];
+}
+- (void)likeFrontCardView
+{
+    [self.frontCardView mdc_swipe:MDCSwipeDirectionRight];
 }
 #pragma lazy
 - (NSMutableArray *)people
