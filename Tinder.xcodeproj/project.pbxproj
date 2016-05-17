@@ -29,6 +29,7 @@
 		F5A4773A1CEAD082000D318F /* ChoosePersonView.m in Sources */ = {isa = PBXBuildFile; fileRef = F5A477391CEAD082000D318F /* ChoosePersonView.m */; };
 		F5A4773E1CEAF35D000D318F /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = F5A4773D1CEAF35D000D318F /* Person.m */; };
 		F5A477411CEAF4ED000D318F /* ImageLabelView.m in Sources */ = {isa = PBXBuildFile; fileRef = F5A477401CEAF4ED000D318F /* ImageLabelView.m */; };
+		F5A477441CEAFCE0000D318F /* ChoosePersonVc.m in Sources */ = {isa = PBXBuildFile; fileRef = F5A477431CEAFCE0000D318F /* ChoosePersonVc.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +95,8 @@
 		F5A4773D1CEAF35D000D318F /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
 		F5A4773F1CEAF4ED000D318F /* ImageLabelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageLabelView.h; sourceTree = "<group>"; };
 		F5A477401CEAF4ED000D318F /* ImageLabelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageLabelView.m; sourceTree = "<group>"; };
+		F5A477421CEAFCE0000D318F /* ChoosePersonVc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChoosePersonVc.h; sourceTree = "<group>"; };
+		F5A477431CEAFCE0000D318F /* ChoosePersonVc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChoosePersonVc.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,7 +179,7 @@
 				F56C90C61CD2524D0056AB1F /* DDNavigationBarItem.m */,
 				F51E196F1CCE2D3300C281F1 /* ViewController.h */,
 				F51E19701CCE2D3300C281F1 /* ViewController.m */,
-				F56398D11CE5906000D185A4 /* New Group1 */,
+				F56398D11CE5906000D185A4 /* ViewController */,
 				F56398CE1CE58F7600D185A4 /* DDSwipeableVc.h */,
 				F56398CF1CE58F7600D185A4 /* DDSwipeableVc.m */,
 				F5A4773B1CEAF34B000D318F /* Model */,
@@ -242,11 +245,13 @@
 			name = "New Group";
 			sourceTree = "<group>";
 		};
-		F56398D11CE5906000D185A4 /* New Group1 */ = {
+		F56398D11CE5906000D185A4 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				F5A477421CEAFCE0000D318F /* ChoosePersonVc.h */,
+				F5A477431CEAFCE0000D318F /* ChoosePersonVc.m */,
 			);
-			name = "New Group1";
+			name = ViewController;
 			sourceTree = "<group>";
 		};
 		F5A477371CEAD068000D318F /* View */ = {
@@ -452,6 +457,7 @@
 			files = (
 				F5A4773A1CEAD082000D318F /* ChoosePersonView.m in Sources */,
 				F56398D01CE58F7600D185A4 /* DDSwipeableVc.m in Sources */,
+				F5A477441CEAFCE0000D318F /* ChoosePersonVc.m in Sources */,
 				F51E19711CCE2D3300C281F1 /* ViewController.m in Sources */,
 				F56C90C71CD2524D0056AB1F /* DDNavigationBarItem.m in Sources */,
 				F50B1EA21CCFC49F00E192EC /* DDTinderNavigationBar.m in Sources */,
