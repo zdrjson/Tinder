@@ -22,24 +22,36 @@ static const CGFloat ChoosePersonButtonVerticalPadding = 20.f;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     self.frontCardView = [self popPersonViewWithFrame:[self frontCardViewFrame]];
     [self.view addSubview:self.frontCardView];
     
     
     self.backCardView = [self popPersonViewWithFrame:[self backCardViewFrame]];
     [self.view insertSubview:self.backCardView belowSubview:self.frontCardView];
-    
+   
     [self constructNopeButton];
     [self constructLikedButton];
     
     
 }
 #pragma mark - MDCSwipeToChooseDelegate
+- (void)viewDidCancelSwipe:(UIView *)view {
+    NSLog(@"You could't decide no %@.",self.currrentPerson.name);
+}
 - (void)view:(UIView *)view wasChosenWithDirection:(MDCSwipeDirection)direction {
     if (direction == MDCSwipeDirectionLeft) {
         NSLog(@"You noped %@.",self.currrentPerson.name);
     } else {
         NSLog(@"You liked %@.",self.currrentPerson.name);
+    }
+    self.frontCardView = self.backCardView;
+    if ((self.backCardView = [self popPersonViewWithFrame:[self backCardViewFrame]])) {
+        self.backCardView.alpha = 0.f;
+        [self.view insertSubview:self.backCardView belowSubview:self.frontCardView];
+        [UIView animateWithDuration:0.5 delay:0.0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+            self.backCardView.alpha = 1.f;
+        } completion:nil];
     }
 }
 - (void)setFrontCardView:(ChoosePersonView *)frontCardView
@@ -48,6 +60,7 @@ static const CGFloat ChoosePersonButtonVerticalPadding = 20.f;
     self.currrentPerson = frontCardView.person;
 }
 - (ChoosePersonView *)popPersonViewWithFrame:(CGRect)frame{
+    
     if (!self.people.count) {
         return nil;
     }
@@ -58,7 +71,7 @@ static const CGFloat ChoosePersonButtonVerticalPadding = 20.f;
         CGRect frame = [self backCardViewFrame];
         self.backCardView.frame = CGRectMake(frame.origin.x, frame.origin.y - (state.thresholdRatio * 10.f), CGRectGetWidth(frame), CGRectGetHeight(frame));
     };
-    NSLog(@"%@",self.people);
+    
     ChoosePersonView *personView = [[ChoosePersonView alloc] initWithFrame:frame person:self.people[0] options:options];
     [self.people removeObjectAtIndex:0];
     return personView;
@@ -87,6 +100,7 @@ static const CGFloat ChoosePersonButtonVerticalPadding = 20.f;
                                           blue:37.f/255.f
                                          alpha:1.f]];
     [button addTarget:self action:@selector(noneFrontCardView) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:button];
 }
 - (void)constructLikedButton
 {
@@ -116,7 +130,7 @@ static const CGFloat ChoosePersonButtonVerticalPadding = 20.f;
 - (NSMutableArray *)people
 {
     if (!_people) {
-        _people = [[NSMutableArray alloc] initWithArray:@[
+        _people = [NSMutableArray arrayWithArray:@[
                                                           [[Person alloc] initWithName:@"Finn"
                                                                                  image:[UIImage imageNamed:@"finn"]
                                                                                    age:15
@@ -142,6 +156,7 @@ static const CGFloat ChoosePersonButtonVerticalPadding = 20.f;
                                                                numberOfSharedInterests:1
                                                                         numberOfPhotos:2],
                                                           ]];
+        
         
     }
     return _people;
