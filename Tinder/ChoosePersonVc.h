@@ -12,6 +12,7 @@
 
 @property (nonatomic, strong) Person *currrentPerson;
 @property (nonatomic, strong) ChoosePersonView *frontCardView;
+@property (nonatomic, strong) ChoosePersonView *middelCardView;
 @property (nonatomic, strong) ChoosePersonView *backCardView;
 
 
