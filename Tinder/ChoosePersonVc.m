@@ -12,10 +12,16 @@
 
 static const CGFloat ChoosePersonButtonHorizontalPadding = 80.f;
 static const CGFloat ChoosePersonButtonVerticalPadding = 20.f;
+static const CGFloat horizontalPadding = 20.f;
+static const CGFloat topPadding = 60.f;
+static const CGFloat bottomPadding = 200.f;
 
-@interface ChoosePersonVc ()
+@interface ChoosePersonVc () <MDCSwipeToChooseDelegate>
+@property (nonatomic, strong) Person *currrentPerson;
 @property (nonatomic, strong) NSMutableArray *people;
-
+@property (nonatomic, strong) ChoosePersonView *frontCardView;
+@property (nonatomic, strong) ChoosePersonView *middelCardView;
+@property (nonatomic, strong) ChoosePersonView *backCardView;
 @end
 
 @implementation ChoosePersonVc
@@ -23,16 +29,19 @@ static const CGFloat ChoosePersonButtonVerticalPadding = 20.f;
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    
+     self.backCardView = [self popPersonViewWithFrame:[self backCardViewFrame]];
+    [self.view addSubview:self.backCardView];
+    
     self.frontCardView = [self popPersonViewWithFrame:[self frontCardViewFrame]];
     [self.view addSubview:self.frontCardView];
     
+
     
-    self.backCardView = [self popPersonViewWithFrame:[self backCardViewFrame]];
-    [self.view insertSubview:self.backCardView belowSubview:self.frontCardView];
+
    
     [self constructNopeButton];
     [self constructLikedButton];
-    
     
 }
 #pragma mark - MDCSwipeToChooseDelegate
@@ -54,11 +63,7 @@ static const CGFloat ChoosePersonButtonVerticalPadding = 20.f;
         } completion:nil];
     }
 }
-- (void)setFrontCardView:(ChoosePersonView *)frontCardView
-{
-    _frontCardView = frontCardView;
-    self.currrentPerson = frontCardView.person;
-}
+
 - (ChoosePersonView *)popPersonViewWithFrame:(CGRect)frame{
     
     if (!self.people.count) {
@@ -69,8 +74,11 @@ static const CGFloat ChoosePersonButtonVerticalPadding = 20.f;
     options.threshold = 160.f;
     options.onPan = ^(MDCPanState *state) {
         CGRect frame = [self backCardViewFrame];
+        NSLog(@"%f",state.thresholdRatio);
         self.backCardView.frame = CGRectMake(frame.origin.x, frame.origin.y - (state.thresholdRatio * 10.f), CGRectGetWidth(frame), CGRectGetHeight(frame));
     };
+    
+    
     
     ChoosePersonView *personView = [[ChoosePersonView alloc] initWithFrame:frame person:self.people[0] options:options];
     [self.people removeObjectAtIndex:0];
@@ -79,14 +87,22 @@ static const CGFloat ChoosePersonButtonVerticalPadding = 20.f;
 }
 #pragma mark - View Contruction
 - (CGRect)frontCardViewFrame {
-    CGFloat horizontalPadding = 20.f;
-    CGFloat topPadding = 60.f;
-    CGFloat bottomPadding = 200.f;
     return CGRectMake(horizontalPadding, topPadding, CGRectGetWidth(self.view.frame) - (horizontalPadding * 2), CGRectGetHeight(self.view.frame) - bottomPadding);
 }
 - (CGRect)backCardViewFrame {
     CGRect frontFrame = [self frontCardViewFrame];
     return CGRectMake(frontFrame.origin.x, frontFrame.origin.y + 10.f, CGRectGetWidth(frontFrame), CGRectGetHeight(frontFrame));
+}
+#pragma mark Control Events
+- (void)noneFrontCardView
+{
+    [self.people addObject:self.people.lastObject];
+    [self.frontCardView mdc_swipe:MDCSwipeDirectionLeft];
+}
+- (void)likeFrontCardView
+{
+    [self.people addObject:self.people.lastObject];
+    [self.frontCardView mdc_swipe:MDCSwipeDirectionRight];
 }
 
 - (void)constructNopeButton
@@ -117,16 +133,12 @@ static const CGFloat ChoosePersonButtonVerticalPadding = 20.f;
      forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:button];
 }
-#pragma mark Control Events
-- (void)noneFrontCardView
+#pragma setter & getter
+- (void)setFrontCardView:(ChoosePersonView *)frontCardView
 {
-    [self.frontCardView mdc_swipe:MDCSwipeDirectionLeft];
+    _frontCardView = frontCardView;
+    self.currrentPerson = frontCardView.person;
 }
-- (void)likeFrontCardView
-{
-    [self.frontCardView mdc_swipe:MDCSwipeDirectionRight];
-}
-#pragma lazy
 - (NSMutableArray *)people
 {
     if (!_people) {
