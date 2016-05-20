@@ -1,15 +1,40 @@
 PODS:
+  - AsyncDisplayKit (1.9.73):
+    - AsyncDisplayKit/PINRemoteImage (= 1.9.73)
+  - AsyncDisplayKit/ASDealloc2MainObject (1.9.73)
+  - AsyncDisplayKit/Core (1.9.73):
+    - AsyncDisplayKit/ASDealloc2MainObject
+  - AsyncDisplayKit/PINRemoteImage (1.9.73):
+    - AsyncDisplayKit/Core
+    - PINRemoteImage/iOS (>= 3.0.0-beta.2)
+  - FMDB (2.6.2):
+    - FMDB/standard (= 2.6.2)
+  - FMDB/standard (2.6.2)
   - MDCSwipeToChoose (0.2.3)
+  - PINCache (2.2.2)
+  - PINRemoteImage/Core (3.0.0-beta.2):
+    - PINCache (>= 2.1)
+  - PINRemoteImage/iOS (3.0.0-beta.2):
+    - PINRemoteImage/Core
+  - YYCache (1.0.3)
   - ZLSwipeableView (0.0.8)
 
 DEPENDENCIES:
+  - AsyncDisplayKit
+  - FMDB
   - MDCSwipeToChoose
+  - YYCache
   - ZLSwipeableView
 
 SPEC CHECKSUMS:
+  AsyncDisplayKit: cc906c5ddff9d34c8f5ea2f18ba092033c5516a3
+  FMDB: 854a0341b4726e53276f2a8996f06f1b80f9259a
   MDCSwipeToChoose: 56239d98b4558c66e7c3c9069482befd26092270
+  PINCache: 078426d356ab95ef875e9e62e5c35a2ea3333c28
+  PINRemoteImage: 197554c5ba57a6ae90f5db441651180039fc9062
+  YYCache: 282f35b5b0990833d0b7a06d864a87141a021da2
   ZLSwipeableView: df385760ff4838935cdbcb62878ac5acd7355949
 
-PODFILE CHECKSUM: f40ef7d3f6d4353e521ecd09451b823e21c1cd09
+PODFILE CHECKSUM: e84983fb261d6c3a6bfe9802ab388b0bcd961a70
 
 COCOAPODS: 1.0.0

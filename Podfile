@@ -4,5 +4,8 @@ inhibit_all_warnings!
 target ‘Tinder’ do
 pod 'ZLSwipeableView'
 pod "MDCSwipeToChoose"
+pod 'FMDB'
+pod 'YYCache'
+pod 'AsyncDisplayKit'
 end
 

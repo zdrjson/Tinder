@@ -33,6 +33,9 @@ static const CGFloat bottomPadding = 200.f;
      self.backCardView = [self popPersonViewWithFrame:[self backCardViewFrame]];
     [self.view addSubview:self.backCardView];
     
+    self.middelCardView = [self popPersonViewWithFrame:[self middleCardViewFrame]];
+    [self.view addSubview:self.middelCardView];
+    
     self.frontCardView = [self popPersonViewWithFrame:[self frontCardViewFrame]];
     [self.view addSubview:self.frontCardView];
     
@@ -54,10 +57,12 @@ static const CGFloat bottomPadding = 200.f;
     } else {
         NSLog(@"You liked %@.",self.currrentPerson.name);
     }
-    self.frontCardView = self.backCardView;
+    self.frontCardView = self.middelCardView;
     if ((self.backCardView = [self popPersonViewWithFrame:[self backCardViewFrame]])) {
+        
         self.backCardView.alpha = 0.f;
         [self.view insertSubview:self.backCardView belowSubview:self.frontCardView];
+        
         [UIView animateWithDuration:0.5 delay:0.0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
             self.backCardView.alpha = 1.f;
         } completion:nil];
@@ -73,9 +78,13 @@ static const CGFloat bottomPadding = 200.f;
     options.delegate = self;
     options.threshold = 160.f;
     options.onPan = ^(MDCPanState *state) {
-        CGRect frame = [self backCardViewFrame];
+        CGRect frame = [self frontCardViewFrame];
         NSLog(@"%f",state.thresholdRatio);
-        self.backCardView.frame = CGRectMake(frame.origin.x, frame.origin.y - (state.thresholdRatio * 10.f), CGRectGetWidth(frame), CGRectGetHeight(frame));
+        
+        self.middelCardView.frame = CGRectMake(frame.origin.x, frame.origin.y - (state.thresholdRatio * 5.f), CGRectGetWidth(frame), CGRectGetHeight(frame));
+        
+          CGRect frame1 = [self middleCardViewFrame];
+         self.backCardView.frame = CGRectMake(frame1.origin.x, frame1.origin.y - (state.thresholdRatio * 10.f), CGRectGetWidth(frame1), CGRectGetHeight(frame1));
     };
     
     
@@ -83,15 +92,18 @@ static const CGFloat bottomPadding = 200.f;
     ChoosePersonView *personView = [[ChoosePersonView alloc] initWithFrame:frame person:self.people[0] options:options];
     [self.people removeObjectAtIndex:0];
     return personView;
-    
 }
 #pragma mark - View Contruction
 - (CGRect)frontCardViewFrame {
     return CGRectMake(horizontalPadding, topPadding, CGRectGetWidth(self.view.frame) - (horizontalPadding * 2), CGRectGetHeight(self.view.frame) - bottomPadding);
 }
 - (CGRect)backCardViewFrame {
+    CGRect frontFrame = [self middleCardViewFrame];
+    return CGRectMake(frontFrame.origin.x, frontFrame.origin.y + 5.f, CGRectGetWidth(frontFrame), CGRectGetHeight(frontFrame));
+}
+- (CGRect)middleCardViewFrame {
     CGRect frontFrame = [self frontCardViewFrame];
-    return CGRectMake(frontFrame.origin.x, frontFrame.origin.y + 10.f, CGRectGetWidth(frontFrame), CGRectGetHeight(frontFrame));
+    return CGRectMake(frontFrame.origin.x, frontFrame.origin.y + 5.f, CGRectGetWidth(frontFrame), CGRectGetHeight(frontFrame));
 }
 #pragma mark Control Events
 - (void)noneFrontCardView
