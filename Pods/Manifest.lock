@@ -17,6 +17,7 @@ PODS:
   - PINRemoteImage/iOS (3.0.0-beta.2):
     - PINRemoteImage/Core
   - YYCache (1.0.3)
+  - YYModel (1.0.3)
   - ZLSwipeableView (0.0.8)
 
 DEPENDENCIES:
@@ -24,6 +25,7 @@ DEPENDENCIES:
   - FMDB
   - MDCSwipeToChoose
   - YYCache
+  - YYModel
   - ZLSwipeableView
 
 SPEC CHECKSUMS:
@@ -33,8 +35,9 @@ SPEC CHECKSUMS:
   PINCache: 078426d356ab95ef875e9e62e5c35a2ea3333c28
   PINRemoteImage: 197554c5ba57a6ae90f5db441651180039fc9062
   YYCache: 282f35b5b0990833d0b7a06d864a87141a021da2
+  YYModel: 63142c2f07c5c8c9d1c261689cf3827ea6ab2886
   ZLSwipeableView: df385760ff4838935cdbcb62878ac5acd7355949
 
-PODFILE CHECKSUM: e84983fb261d6c3a6bfe9802ab388b0bcd961a70
+PODFILE CHECKSUM: 3a825e899ae6d94d351c0388f1170aec8795855e
 
 COCOAPODS: 1.0.0

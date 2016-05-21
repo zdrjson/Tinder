@@ -7,5 +7,7 @@ pod "MDCSwipeToChoose"
 pod 'FMDB'
 pod 'YYCache'
 pod 'AsyncDisplayKit'
+pod 'YYModel'
+
 end
 
