@@ -8,6 +8,7 @@ pod 'FMDB'
 pod 'YYCache'
 pod 'AsyncDisplayKit'
 pod 'YYModel'
+pod 'IQKeyboardManager'
 
 end
 

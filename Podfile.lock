@@ -10,6 +10,7 @@ PODS:
   - FMDB (2.6.2):
     - FMDB/standard (= 2.6.2)
   - FMDB/standard (2.6.2)
+  - IQKeyboardManager (4.0.3)
   - MDCSwipeToChoose (0.2.3)
   - PINCache (2.2.2)
   - PINRemoteImage/Core (3.0.0-beta.2):
@@ -23,6 +24,7 @@ PODS:
 DEPENDENCIES:
   - AsyncDisplayKit
   - FMDB
+  - IQKeyboardManager
   - MDCSwipeToChoose
   - YYCache
   - YYModel
@@ -31,6 +33,7 @@ DEPENDENCIES:
 SPEC CHECKSUMS:
   AsyncDisplayKit: cbd10f28030c0b904cef1bd8e7d96d775c5b0484
   FMDB: 854a0341b4726e53276f2a8996f06f1b80f9259a
+  IQKeyboardManager: be9695ffc5a52077deb4847608f338771022d6d1
   MDCSwipeToChoose: 56239d98b4558c66e7c3c9069482befd26092270
   PINCache: 078426d356ab95ef875e9e62e5c35a2ea3333c28
   PINRemoteImage: 197554c5ba57a6ae90f5db441651180039fc9062
@@ -38,6 +41,6 @@ SPEC CHECKSUMS:
   YYModel: 63142c2f07c5c8c9d1c261689cf3827ea6ab2886
   ZLSwipeableView: df385760ff4838935cdbcb62878ac5acd7355949
 
-PODFILE CHECKSUM: 3a825e899ae6d94d351c0388f1170aec8795855e
+PODFILE CHECKSUM: efdd793d6ba3860d35f9fc3aaa345953c94f1a66
 
 COCOAPODS: 1.0.0
