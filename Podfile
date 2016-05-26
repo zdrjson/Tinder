@@ -9,6 +9,8 @@ pod 'YYCache'
 pod 'AsyncDisplayKit'
 pod 'YYModel'
 pod 'IQKeyboardManager'
-
+pod 'SCRecorder'
+pod 'YYText'
+pod 'JSQMessagesViewController'
 end
 

@@ -11,36 +11,48 @@ PODS:
     - FMDB/standard (= 2.6.2)
   - FMDB/standard (2.6.2)
   - IQKeyboardManager (4.0.3)
+  - JSQMessagesViewController (7.3.0):
+    - JSQSystemSoundPlayer (~> 2.0.1)
+  - JSQSystemSoundPlayer (2.0.1)
   - MDCSwipeToChoose (0.2.3)
   - PINCache (2.2.2)
   - PINRemoteImage/Core (3.0.0-beta.2):
     - PINCache (>= 2.1)
   - PINRemoteImage/iOS (3.0.0-beta.2):
     - PINRemoteImage/Core
+  - SCRecorder (2.7.0)
   - YYCache (1.0.3)
   - YYModel (1.0.3)
+  - YYText (1.0.5)
   - ZLSwipeableView (0.0.8)
 
 DEPENDENCIES:
   - AsyncDisplayKit
   - FMDB
   - IQKeyboardManager
+  - JSQMessagesViewController
   - MDCSwipeToChoose
+  - SCRecorder
   - YYCache
   - YYModel
+  - YYText
   - ZLSwipeableView
 
 SPEC CHECKSUMS:
   AsyncDisplayKit: cbd10f28030c0b904cef1bd8e7d96d775c5b0484
   FMDB: 854a0341b4726e53276f2a8996f06f1b80f9259a
   IQKeyboardManager: be9695ffc5a52077deb4847608f338771022d6d1
+  JSQMessagesViewController: aa79a81b21387430d66aa657e5d1c5494b0ba307
+  JSQSystemSoundPlayer: c5850e77a4363ffd374cd851154b9af93264ed8d
   MDCSwipeToChoose: 56239d98b4558c66e7c3c9069482befd26092270
   PINCache: 078426d356ab95ef875e9e62e5c35a2ea3333c28
   PINRemoteImage: 197554c5ba57a6ae90f5db441651180039fc9062
+  SCRecorder: bbb521dbc222908876ec9cd9156bbc8a893bed44
   YYCache: 282f35b5b0990833d0b7a06d864a87141a021da2
   YYModel: 63142c2f07c5c8c9d1c261689cf3827ea6ab2886
+  YYText: ac09660c9ccd9b817f409a20caa6f5587444d2ae
   ZLSwipeableView: df385760ff4838935cdbcb62878ac5acd7355949
 
-PODFILE CHECKSUM: efdd793d6ba3860d35f9fc3aaa345953c94f1a66
+PODFILE CHECKSUM: 37ae621e636a0242db1c7189bcd5003cf0b22697
 
 COCOAPODS: 1.0.0
