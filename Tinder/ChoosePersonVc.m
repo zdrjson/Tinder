@@ -30,21 +30,23 @@ static const CGFloat bottomPadding = 200.f;
     [super viewDidLoad];
     
     
-     self.backCardView = [self popPersonViewWithFrame:[self backCardViewFrame]];
-    [self.view addSubview:self.backCardView];
+//     self.backCardView = [self popPersonViewWithFrame:[self backCardViewFrame]];
+//    [self.view addSubview:self.backCardView];
+//    
+//    self.middelCardView = [self popPersonViewWithFrame:[self middleCardViewFrame]];
+//    [self.view addSubview:self.middelCardView];
+//    
+//    self.frontCardView = [self popPersonViewWithFrame:[self frontCardViewFrame]];
+//    [self.view addSubview:self.frontCardView];
+//    
+//
+//    
+//
+//   
+//    [self constructNopeButton];
+//    [self constructLikedButton];
     
-    self.middelCardView = [self popPersonViewWithFrame:[self middleCardViewFrame]];
-    [self.view addSubview:self.middelCardView];
     
-    self.frontCardView = [self popPersonViewWithFrame:[self frontCardViewFrame]];
-    [self.view addSubview:self.frontCardView];
-    
-
-    
-
-   
-    [self constructNopeButton];
-    [self constructLikedButton];
     
 }
 #pragma mark - MDCSwipeToChooseDelegate
