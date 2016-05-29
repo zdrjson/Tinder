@@ -26,6 +26,8 @@
 		F56C90D31CD2EC510056AB1F /* MiddleVc.m in Sources */ = {isa = PBXBuildFile; fileRef = F56C90D21CD2EC510056AB1F /* MiddleVc.m */; };
 		F56C90D61CD2EC650056AB1F /* RightVc.m in Sources */ = {isa = PBXBuildFile; fileRef = F56C90D51CD2EC650056AB1F /* RightVc.m */; };
 		F56C90D91CD2EC710056AB1F /* LeftVc.m in Sources */ = {isa = PBXBuildFile; fileRef = F56C90D81CD2EC710056AB1F /* LeftVc.m */; };
+		F5A101841CF8555200DEF86F /* DDNavVc.m in Sources */ = {isa = PBXBuildFile; fileRef = F5A101831CF8555200DEF86F /* DDNavVc.m */; };
+		F5A101871CF8556F00DEF86F /* DDMiddleVc.m in Sources */ = {isa = PBXBuildFile; fileRef = F5A101861CF8556F00DEF86F /* DDMiddleVc.m */; };
 		F5A4773A1CEAD082000D318F /* ChoosePersonView.m in Sources */ = {isa = PBXBuildFile; fileRef = F5A477391CEAD082000D318F /* ChoosePersonView.m */; };
 		F5A4773E1CEAF35D000D318F /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = F5A4773D1CEAF35D000D318F /* Person.m */; };
 		F5A477411CEAF4ED000D318F /* ImageLabelView.m in Sources */ = {isa = PBXBuildFile; fileRef = F5A477401CEAF4ED000D318F /* ImageLabelView.m */; };
@@ -89,6 +91,10 @@
 		F56C90D51CD2EC650056AB1F /* RightVc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RightVc.m; sourceTree = "<group>"; };
 		F56C90D71CD2EC710056AB1F /* LeftVc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftVc.h; sourceTree = "<group>"; };
 		F56C90D81CD2EC710056AB1F /* LeftVc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftVc.m; sourceTree = "<group>"; };
+		F5A101821CF8555200DEF86F /* DDNavVc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDNavVc.h; sourceTree = "<group>"; };
+		F5A101831CF8555200DEF86F /* DDNavVc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDNavVc.m; sourceTree = "<group>"; };
+		F5A101851CF8556F00DEF86F /* DDMiddleVc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDMiddleVc.h; sourceTree = "<group>"; };
+		F5A101861CF8556F00DEF86F /* DDMiddleVc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDMiddleVc.m; sourceTree = "<group>"; };
 		F5A477381CEAD082000D318F /* ChoosePersonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChoosePersonView.h; sourceTree = "<group>"; };
 		F5A477391CEAD082000D318F /* ChoosePersonView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChoosePersonView.m; sourceTree = "<group>"; };
 		F5A4773C1CEAF35D000D318F /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
@@ -170,6 +176,10 @@
 				F51E199F1CCE5C8700C281F1 /* TinderNavigationController */,
 				F51E196C1CCE2D3300C281F1 /* AppDelegate.h */,
 				F51E196D1CCE2D3300C281F1 /* AppDelegate.m */,
+				F5A101821CF8555200DEF86F /* DDNavVc.h */,
+				F5A101831CF8555200DEF86F /* DDNavVc.m */,
+				F5A101851CF8556F00DEF86F /* DDMiddleVc.h */,
+				F5A101861CF8556F00DEF86F /* DDMiddleVc.m */,
 				F53533CA1CE006F700E79155 /* New Group */,
 				F56C90D41CD2EC650056AB1F /* RightVc.h */,
 				F56C90D51CD2EC650056AB1F /* RightVc.m */,
@@ -461,12 +471,14 @@
 				F51E19711CCE2D3300C281F1 /* ViewController.m in Sources */,
 				F56C90C71CD2524D0056AB1F /* DDNavigationBarItem.m in Sources */,
 				F50B1EA21CCFC49F00E192EC /* DDTinderNavigationBar.m in Sources */,
+				F5A101871CF8556F00DEF86F /* DDMiddleVc.m in Sources */,
 				F51E19771CCE2D3300C281F1 /* Tinder.xcdatamodeld in Sources */,
 				F50E5AED1CE2C0E900C8E627 /* DDCGUtilities.m in Sources */,
 				F51E19A21CCE5CE300C281F1 /* DDTinderNavigaitonController.m in Sources */,
 				F53533CD1CE0072000E79155 /* RadarView.m in Sources */,
 				F5A477411CEAF4ED000D318F /* ImageLabelView.m in Sources */,
 				F56C90D31CD2EC510056AB1F /* MiddleVc.m in Sources */,
+				F5A101841CF8555200DEF86F /* DDNavVc.m in Sources */,
 				F51E196E1CCE2D3300C281F1 /* AppDelegate.m in Sources */,
 				F51E196B1CCE2D3300C281F1 /* main.m in Sources */,
 				F5A4773E1CEAF35D000D318F /* Person.m in Sources */,

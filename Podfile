@@ -5,12 +5,25 @@ target ‘Tinder’ do
 pod 'ZLSwipeableView'
 pod "MDCSwipeToChoose"
 pod 'FMDB'
-pod 'YYCache'
+
 pod 'AsyncDisplayKit'
+
+pod 'YYDispatchQueuePool'
+pod 'YYText'
+pod 'YYAsyncLayer'
+pod 'YYCache'
+pod 'YYImage'
+pod 'YYWebImage'
 pod 'YYModel'
+pod 'YYCategories'
+pod 'YYKeyboardManager'
+
 pod 'IQKeyboardManager'
 pod 'SCRecorder'
-pod 'YYText'
 pod 'JSQMessagesViewController'
+pod 'KMNavigationBarTransition'
+pod 'Masonry'
+pod 'ReactiveCocoa', '~> 2.5'
+pod "MagicalRecord"
 end
 

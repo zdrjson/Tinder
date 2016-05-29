@@ -14,16 +14,40 @@ PODS:
   - JSQMessagesViewController (7.3.0):
     - JSQSystemSoundPlayer (~> 2.0.1)
   - JSQSystemSoundPlayer (2.0.1)
+  - KMNavigationBarTransition (0.0.8)
+  - MagicalRecord (2.3.2):
+    - MagicalRecord/Core (= 2.3.2)
+  - MagicalRecord/Core (2.3.2)
+  - Masonry (1.0.0)
   - MDCSwipeToChoose (0.2.3)
   - PINCache (2.2.2)
   - PINRemoteImage/Core (3.0.0-beta.2):
     - PINCache (>= 2.1)
   - PINRemoteImage/iOS (3.0.0-beta.2):
     - PINRemoteImage/Core
+  - ReactiveCocoa (2.5):
+    - ReactiveCocoa/UI (= 2.5)
+  - ReactiveCocoa/Core (2.5):
+    - ReactiveCocoa/no-arc
+  - ReactiveCocoa/no-arc (2.5)
+  - ReactiveCocoa/UI (2.5):
+    - ReactiveCocoa/Core
   - SCRecorder (2.7.0)
+  - YYAsyncLayer (1.0)
   - YYCache (1.0.3)
+  - YYCategories (1.0.3):
+    - YYCategories/no-arc (= 1.0.3)
+  - YYCategories/no-arc (1.0.3)
+  - YYDispatchQueuePool (1.0)
+  - YYImage (1.0.2):
+    - YYImage/Core (= 1.0.2)
+  - YYImage/Core (1.0.2)
+  - YYKeyboardManager (1.0.1)
   - YYModel (1.0.3)
   - YYText (1.0.5)
+  - YYWebImage (1.0.3):
+    - YYCache
+    - YYImage
   - ZLSwipeableView (0.0.8)
 
 DEPENDENCIES:
@@ -31,11 +55,21 @@ DEPENDENCIES:
   - FMDB
   - IQKeyboardManager
   - JSQMessagesViewController
+  - KMNavigationBarTransition
+  - MagicalRecord
+  - Masonry
   - MDCSwipeToChoose
+  - ReactiveCocoa (~> 2.5)
   - SCRecorder
+  - YYAsyncLayer
   - YYCache
+  - YYCategories
+  - YYDispatchQueuePool
+  - YYImage
+  - YYKeyboardManager
   - YYModel
   - YYText
+  - YYWebImage
   - ZLSwipeableView
 
 SPEC CHECKSUMS:
@@ -44,15 +78,25 @@ SPEC CHECKSUMS:
   IQKeyboardManager: be9695ffc5a52077deb4847608f338771022d6d1
   JSQMessagesViewController: aa79a81b21387430d66aa657e5d1c5494b0ba307
   JSQSystemSoundPlayer: c5850e77a4363ffd374cd851154b9af93264ed8d
+  KMNavigationBarTransition: e87fb2b3a194b0d7fded5fd560df83c6f43b942f
+  MagicalRecord: 53bed74b4323b930992a725be713e53b37d19755
+  Masonry: b529bb169217897b6354d4b56b1fada6d475b13d
   MDCSwipeToChoose: 56239d98b4558c66e7c3c9069482befd26092270
   PINCache: 078426d356ab95ef875e9e62e5c35a2ea3333c28
   PINRemoteImage: 197554c5ba57a6ae90f5db441651180039fc9062
+  ReactiveCocoa: e2db045570aa97c695e7aa97c2bcab222ae51f4a
   SCRecorder: bbb521dbc222908876ec9cd9156bbc8a893bed44
+  YYAsyncLayer: df6b01ebc695c5f6b4c15dd5c23fa3e081eb25c0
   YYCache: 282f35b5b0990833d0b7a06d864a87141a021da2
+  YYCategories: 0fd4d9eb0994d8d0e355beb4081c8f7202a82b7b
+  YYDispatchQueuePool: 3dfb2274bcc74207688dde8ac6f7bdd46871dd7b
+  YYImage: 2cc79ed49b9549b71c6715cefe7b0f5ab3d33abf
+  YYKeyboardManager: ff53d2e80d1808567a7f004028bd200d9469a89f
   YYModel: 63142c2f07c5c8c9d1c261689cf3827ea6ab2886
   YYText: ac09660c9ccd9b817f409a20caa6f5587444d2ae
+  YYWebImage: 8da75a611fd0d2e0f58a273f9ca0bc731614cb0d
   ZLSwipeableView: df385760ff4838935cdbcb62878ac5acd7355949
 
-PODFILE CHECKSUM: 37ae621e636a0242db1c7189bcd5003cf0b22697
+PODFILE CHECKSUM: bedf0c7c822c4ea461bb43319b7727150e90c4c5
 
 COCOAPODS: 1.0.0

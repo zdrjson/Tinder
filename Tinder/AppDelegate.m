@@ -13,6 +13,8 @@
 #import "RightVc.h"
 #import "MiddleVc.h"
 #import "ChoosePersonVc.h"
+#import "DDNavVc.h"
+#import "DDMiddleVc.h"
 @interface AppDelegate ()
 
 @end
@@ -22,20 +24,21 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    DDTinderNavigaitonController *tinderNavigationController = [DDTinderNavigaitonController new];
-    
-    
-    tinderNavigationController.paggedViewControllers = @[[LeftVc new],[MiddleVc new],[RightVc new]];
-    
-    tinderNavigationController.navbarItemViews = @[[DDNavigationBarItem new],
-                                                   [DDNavigationBarItem new],
-                                                   [DDNavigationBarItem new]];
-    
-    [tinderNavigationController setCurrentPage:1 animated:NO];
+//    DDTinderNavigaitonController *tinderNavigationController = [DDTinderNavigaitonController new];
+//    
+//    
+//    tinderNavigationController.paggedViewControllers = @[[LeftVc new],[MiddleVc new],[RightVc new]];
+//    
+//    tinderNavigationController.navbarItemViews = @[[DDNavigationBarItem new],
+//                                                   [DDNavigationBarItem new],
+//                                                   [DDNavigationBarItem new]];
+//    
+//    [tinderNavigationController setCurrentPage:1 animated:NO];
     
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor whiteColor];
-    self.window.rootViewController = tinderNavigationController;
+    
+    self.window.rootViewController = [[DDNavVc alloc] initWithRootViewController:[DDMiddleVc new]];
     [self.window makeKeyWindow];
     
     return YES;
