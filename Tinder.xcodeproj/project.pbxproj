@@ -10,6 +10,10 @@
 		99F5E9A66822DD54653CFD64 /* libPods-Tinder.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4720E233DDBD832C64149A1C /* libPods-Tinder.a */; };
 		F50B1EA21CCFC49F00E192EC /* DDTinderNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = F50B1EA11CCFC49F00E192EC /* DDTinderNavigationBar.m */; };
 		F50E5AED1CE2C0E900C8E627 /* DDCGUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = F50E5AEC1CE2C0E900C8E627 /* DDCGUtilities.m */; };
+		F51055B81CFBE6F600F4B4AD /* DDRadarView.m in Sources */ = {isa = PBXBuildFile; fileRef = F51055B71CFBE6F600F4B4AD /* DDRadarView.m */; };
+		F51055BB1CFBE72000F4B4AD /* DDLeftView.m in Sources */ = {isa = PBXBuildFile; fileRef = F51055BA1CFBE72000F4B4AD /* DDLeftView.m */; };
+		F51055BE1CFBE72D00F4B4AD /* DDMiddleView.m in Sources */ = {isa = PBXBuildFile; fileRef = F51055BD1CFBE72D00F4B4AD /* DDMiddleView.m */; };
+		F51055C11CFBE73800F4B4AD /* DDRightView.m in Sources */ = {isa = PBXBuildFile; fileRef = F51055C01CFBE73800F4B4AD /* DDRightView.m */; };
 		F51E196B1CCE2D3300C281F1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F51E196A1CCE2D3300C281F1 /* main.m */; };
 		F51E196E1CCE2D3300C281F1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F51E196D1CCE2D3300C281F1 /* AppDelegate.m */; };
 		F51E19711CCE2D3300C281F1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F51E19701CCE2D3300C281F1 /* ViewController.m */; };
@@ -60,6 +64,14 @@
 		F50B1EA31CD0F2E700E192EC /* DDMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DDMacro.h; sourceTree = "<group>"; };
 		F50E5AEB1CE2C0E900C8E627 /* DDCGUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDCGUtilities.h; sourceTree = "<group>"; };
 		F50E5AEC1CE2C0E900C8E627 /* DDCGUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDCGUtilities.m; sourceTree = "<group>"; };
+		F51055B61CFBE6F600F4B4AD /* DDRadarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDRadarView.h; sourceTree = "<group>"; };
+		F51055B71CFBE6F600F4B4AD /* DDRadarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDRadarView.m; sourceTree = "<group>"; };
+		F51055B91CFBE72000F4B4AD /* DDLeftView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDLeftView.h; sourceTree = "<group>"; };
+		F51055BA1CFBE72000F4B4AD /* DDLeftView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDLeftView.m; sourceTree = "<group>"; };
+		F51055BC1CFBE72D00F4B4AD /* DDMiddleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDMiddleView.h; sourceTree = "<group>"; };
+		F51055BD1CFBE72D00F4B4AD /* DDMiddleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDMiddleView.m; sourceTree = "<group>"; };
+		F51055BF1CFBE73800F4B4AD /* DDRightView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDRightView.h; sourceTree = "<group>"; };
+		F51055C01CFBE73800F4B4AD /* DDRightView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDRightView.m; sourceTree = "<group>"; };
 		F51E19661CCE2D3300C281F1 /* Tinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F51E196A1CCE2D3300C281F1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F51E196C1CCE2D3300C281F1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -180,6 +192,14 @@
 				F5A101831CF8555200DEF86F /* DDNavVc.m */,
 				F5A101851CF8556F00DEF86F /* DDMiddleVc.h */,
 				F5A101861CF8556F00DEF86F /* DDMiddleVc.m */,
+				F51055B61CFBE6F600F4B4AD /* DDRadarView.h */,
+				F51055B71CFBE6F600F4B4AD /* DDRadarView.m */,
+				F51055B91CFBE72000F4B4AD /* DDLeftView.h */,
+				F51055BA1CFBE72000F4B4AD /* DDLeftView.m */,
+				F51055BC1CFBE72D00F4B4AD /* DDMiddleView.h */,
+				F51055BD1CFBE72D00F4B4AD /* DDMiddleView.m */,
+				F51055BF1CFBE73800F4B4AD /* DDRightView.h */,
+				F51055C01CFBE73800F4B4AD /* DDRightView.m */,
 				F53533CA1CE006F700E79155 /* New Group */,
 				F56C90D41CD2EC650056AB1F /* RightVc.h */,
 				F56C90D51CD2EC650056AB1F /* RightVc.m */,
@@ -478,8 +498,12 @@
 				F53533CD1CE0072000E79155 /* RadarView.m in Sources */,
 				F5A477411CEAF4ED000D318F /* ImageLabelView.m in Sources */,
 				F56C90D31CD2EC510056AB1F /* MiddleVc.m in Sources */,
+				F51055C11CFBE73800F4B4AD /* DDRightView.m in Sources */,
+				F51055B81CFBE6F600F4B4AD /* DDRadarView.m in Sources */,
 				F5A101841CF8555200DEF86F /* DDNavVc.m in Sources */,
 				F51E196E1CCE2D3300C281F1 /* AppDelegate.m in Sources */,
+				F51055BB1CFBE72000F4B4AD /* DDLeftView.m in Sources */,
+				F51055BE1CFBE72D00F4B4AD /* DDMiddleView.m in Sources */,
 				F51E196B1CCE2D3300C281F1 /* main.m in Sources */,
 				F5A4773E1CEAF35D000D318F /* Person.m in Sources */,
 				F56C90D61CD2EC650056AB1F /* RightVc.m in Sources */,
