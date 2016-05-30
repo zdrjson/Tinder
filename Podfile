@@ -17,6 +17,7 @@ pod 'YYWebImage'
 pod 'YYModel'
 pod 'YYCategories'
 pod 'YYKeyboardManager'
+#pod 'YYKit'
 
 pod 'IQKeyboardManager'
 pod 'SCRecorder'

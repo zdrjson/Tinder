@@ -11,7 +11,7 @@ static CGFloat const kavatarViewRadius = 40.0f;
 @interface DDMiddleVc ()
 
 @property (nonatomic, strong) UIButton *avatarViewBtn;
-
+@property (nonatomic, strong) UIScrollView *scrollView;
 @end
 
 @implementation DDMiddleVc
@@ -19,6 +19,8 @@ static CGFloat const kavatarViewRadius = 40.0f;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    [self.view addSubview:self.scrollView];
     [self.view addSubview:self.avatarViewBtn];
     
     [NSTimer scheduledTimerWithTimeInterval:0.8 target:self selector:@selector(click) userInfo:nil repeats:YES];
@@ -85,6 +87,15 @@ static CGFloat const kavatarViewRadius = 40.0f;
         
     }
     return _avatarViewBtn;
+}
+- (UIScrollView *)scrollView
+{
+    if (!_scrollView) {
+        _scrollView = [[UIScrollView alloc] init];
+        _scrollView.frame = self.view.frame;
+        _scrollView.contentSize = CGSizeMake(3 * self.view.frame.size.width, self.view.frame.size.height);
+    }
+    return _scrollView;
 }
 - (void)avatarViewBtnAction
 {
