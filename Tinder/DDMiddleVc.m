@@ -12,7 +12,11 @@
 #import "DDRightView.h"
 #import "DDRadarView.h"
 #import <Masonry/Masonry.h>
-
+//RGB颜色
+#define XWColor(r,g,b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
+#define XWColorRGBA(r, g, b, a) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:a]
+//随机色
+#define XWRandomColor XWColor(arc4random_uniform(256),arc4random_uniform(256),arc4random_uniform(256))
 @interface DDMiddleVc ()
 
 
@@ -31,20 +35,21 @@
     [super viewDidLoad];
     
     [self setupScrollView];
-//   [self generateContent];
-        [self setupChildViews];
 
-    [self.middleView addSubview:self.ddRadarView];
-    [self.ddRadarView mas_makeConstraints:^(MASConstraintMaker *make) {
-        (void)make.center;
-        make.size.mas_equalTo(CGSizeMake(kavatarViewRadius * 2, kavatarViewRadius * 2));
-    }];
+    
+    [self setupChildViews];
+
     
     
-
-//    [NSTimer scheduledTimerWithTimeInterval:0.8 target:self selector:@selector(click:) userInfo:nil repeats:YES];
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"stop" style:UIBarButtonItemStyleDone target:self action:@selector(stop)];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"star" style:UIBarButtonItemStyleDone target:self action:@selector(star)];
 }
-
+- (void)stop {
+    [self.ddRadarView stopScan];
+}
+- (void)star {
+     [self.ddRadarView starScan];
+}
 - (void)setupChildViews
 {
     UIView* contentView = UIView.new;
@@ -61,7 +66,7 @@
     for (int i = 0; i < 3; i++) {
         UIView *view = UIView.new;
         
-        view.backgroundColor = [self randomColor];
+        view.backgroundColor = XWRandomColor;
         [contentView addSubview:view];
         [view mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.equalTo(lastView ? lastView.mas_right : @0);
@@ -96,6 +101,15 @@
     [contentView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.right.equalTo(lastView.mas_right);
     }];
+    
+    
+    
+    [self.middleView addSubview:self.ddRadarView];
+    [self.ddRadarView mas_makeConstraints:^(MASConstraintMaker *make) {
+        (void)make.center;
+        make.size.mas_equalTo(CGSizeMake(kavatarViewRadius * 2, kavatarViewRadius * 2));
+    }];
+
 
 }
 
@@ -143,12 +157,6 @@
 }
 
 
-- (UIColor *)randomColor {
-    CGFloat hue = ( arc4random() % 256 / 256.0 );  //  0.0 to 1.0
-    CGFloat saturation = ( arc4random() % 128 / 256.0 ) + 0.5;  //  0.5 to 1.0, away from white
-    CGFloat brightness = ( arc4random() % 128 / 256.0 ) + 0.5;  //  0.5 to 1.0, away from black
-    return [UIColor colorWithHue:hue saturation:saturation brightness:brightness alpha:1];
-}
 
 
 

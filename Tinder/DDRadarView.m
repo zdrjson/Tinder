@@ -12,7 +12,7 @@
 @interface DDRadarView ()
 
 @property (nonatomic, strong) UIButton *avatarViewBtn;
-
+@property (nonatomic, strong) NSTimer *timer;
 @end
 
 @implementation DDRadarView
@@ -25,7 +25,8 @@
             (void)make.center;
             make.size.mas_equalTo(CGSizeMake( kavatarViewRadius * 2, kavatarViewRadius * 2));
         }];
-        
+       self.timer = [NSTimer scheduledTimerWithTimeInterval:0.8 target:self selector:@selector(click) userInfo:nil repeats:YES];
+        [[NSRunLoop currentRunLoop] addTimer:self.timer forMode:NSRunLoopCommonModes];
     }
     return self;
 }
@@ -106,5 +107,13 @@
     // Drawing code
 }
 */
+
+- (void)starScan {
+   [self.timer setFireDate:[NSDate distantPast]];
+}
+
+- (void)stopScan {
+   [self.timer setFireDate:[NSDate distantFuture]];
+}
 
 @end

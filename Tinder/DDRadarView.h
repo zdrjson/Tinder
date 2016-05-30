@@ -10,4 +10,8 @@
 static CGFloat const kavatarViewRadius = 40.0f;
 @interface DDRadarView : UIView
 
+- (void)starScan;
+
+- (void)stopScan;
+
 @end
