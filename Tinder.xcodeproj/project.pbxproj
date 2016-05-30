@@ -14,6 +14,7 @@
 		F51055BB1CFBE72000F4B4AD /* DDLeftView.m in Sources */ = {isa = PBXBuildFile; fileRef = F51055BA1CFBE72000F4B4AD /* DDLeftView.m */; };
 		F51055BE1CFBE72D00F4B4AD /* DDMiddleView.m in Sources */ = {isa = PBXBuildFile; fileRef = F51055BD1CFBE72D00F4B4AD /* DDMiddleView.m */; };
 		F51055C11CFBE73800F4B4AD /* DDRightView.m in Sources */ = {isa = PBXBuildFile; fileRef = F51055C01CFBE73800F4B4AD /* DDRightView.m */; };
+		F51055C81CFC4D2B00F4B4AD /* DDApiManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F51055C71CFC4D2A00F4B4AD /* DDApiManager.m */; };
 		F51E196B1CCE2D3300C281F1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F51E196A1CCE2D3300C281F1 /* main.m */; };
 		F51E196E1CCE2D3300C281F1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F51E196D1CCE2D3300C281F1 /* AppDelegate.m */; };
 		F51E19711CCE2D3300C281F1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F51E19701CCE2D3300C281F1 /* ViewController.m */; };
@@ -72,6 +73,8 @@
 		F51055BD1CFBE72D00F4B4AD /* DDMiddleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDMiddleView.m; sourceTree = "<group>"; };
 		F51055BF1CFBE73800F4B4AD /* DDRightView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDRightView.h; sourceTree = "<group>"; };
 		F51055C01CFBE73800F4B4AD /* DDRightView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDRightView.m; sourceTree = "<group>"; };
+		F51055C61CFC4D2A00F4B4AD /* DDApiManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDApiManager.h; sourceTree = "<group>"; };
+		F51055C71CFC4D2A00F4B4AD /* DDApiManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDApiManager.m; sourceTree = "<group>"; };
 		F51E19661CCE2D3300C281F1 /* Tinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F51E196A1CCE2D3300C281F1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F51E196C1CCE2D3300C281F1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -271,6 +274,8 @@
 				F56C90D21CD2EC510056AB1F /* MiddleVc.m */,
 				F53533CB1CE0072000E79155 /* RadarView.h */,
 				F53533CC1CE0072000E79155 /* RadarView.m */,
+				F51055C61CFC4D2A00F4B4AD /* DDApiManager.h */,
+				F51055C71CFC4D2A00F4B4AD /* DDApiManager.m */,
 			);
 			name = "New Group";
 			sourceTree = "<group>";
@@ -491,6 +496,7 @@
 				F51E19711CCE2D3300C281F1 /* ViewController.m in Sources */,
 				F56C90C71CD2524D0056AB1F /* DDNavigationBarItem.m in Sources */,
 				F50B1EA21CCFC49F00E192EC /* DDTinderNavigationBar.m in Sources */,
+				F51055C81CFC4D2B00F4B4AD /* DDApiManager.m in Sources */,
 				F5A101871CF8556F00DEF86F /* DDMiddleVc.m in Sources */,
 				F51E19771CCE2D3300C281F1 /* Tinder.xcdatamodeld in Sources */,
 				F50E5AED1CE2C0E900C8E627 /* DDCGUtilities.m in Sources */,
