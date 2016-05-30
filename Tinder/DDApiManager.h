@@ -36,5 +36,5 @@
 @interface DDApiManager : NSObject
 @property (nonatomic, weak) id<DDApiMangerCallBackDelegate> delegate;
 @property (nonatomic, weak) id<DDApiMangerParamSource> paramSource;
-@property (nonatomic, weak) id<DDApiManagerVaildator> *child; 
+@property (nonatomic, weak) id<DDApiManagerVaildator> validator; //里面会调用NSObject的方法，所以这里不用id
 @end
