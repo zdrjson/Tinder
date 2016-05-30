@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+static CGFloat const kavatarViewRadius = 40.0f;
 @interface DDRadarView : UIView
 
 @end
