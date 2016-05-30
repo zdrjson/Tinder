@@ -31,12 +31,12 @@ static CGFloat const kavatarViewRadius = 40.0f;
     [super viewDidLoad];
     self.automaticallyAdjustsScrollViewInsets = YES;
     [self setupScrollView];
-  
-    
+//   [self generateContent];
+        [self setupChildViews];
+
 //    [self  setupLeftView];
 //    [self  setupMiddleView];
 //    [self  setupRightView];
-//    [self setupChildViews];
     
 //    [self.view addSubview:self.avatarViewBtn];
     
@@ -53,31 +53,51 @@ static CGFloat const kavatarViewRadius = 40.0f;
     }];
     
     UIView *lastView;
-    CGFloat height = [UIScreen mainScreen].bounds.size.width;
+    CGFloat width = [UIScreen mainScreen].bounds.size.width;
     
-    for (int i = 0; i < 1; i++) {
+    for (int i = 0; i < 3; i++) {
         UIView *view = UIView.new;
         view.backgroundColor = [self randomColor];
         [contentView addSubview:view];
-        
-//        UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(singleTap:)];
-//        [view addGestureRecognizer:singleTap];
-        
         [view mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.right.equalTo(lastView ? lastView.mas_right : @0);
+            make.left.equalTo(lastView ? lastView.mas_right : @0);
             make.top.equalTo(@0);
             make.height.equalTo(contentView.mas_height);
-            make.width.equalTo(@(height));
+            make.width.equalTo(@(width));
         }];
         
-        height += [UIScreen mainScreen].bounds.size.width;
+        switch (i) {
+            case 0:
+            {
+                
+            }
+                break;
+            case 1:
+            {
+                
+            }
+                break;
+            case 2:
+            {
+                
+            }
+                break;
+                
+            default:
+                break;
+        }
         lastView = view;
     }
     
     [contentView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.right.equalTo(lastView.mas_right);
     }];
-    
+
+}
+
+- (void)viewDidLayoutSubviews {
+    [super viewDidLayoutSubviews];
+     [self.scrollView setContentOffset: CGPointMake(320, 0) animated:NO];
 }
 - (void)setupScrollView
 {
@@ -85,7 +105,7 @@ static CGFloat const kavatarViewRadius = 40.0f;
     [self.scrollView mas_makeConstraints:^(MASConstraintMaker *make) {
         (void)make.edges;
     }];
-    [self generateContent];
+   
 
 }
 - (void) setupLeftView {
@@ -192,44 +212,12 @@ static CGFloat const kavatarViewRadius = 40.0f;
            _scrollView.backgroundColor = [UIColor grayColor];
 //        _scrollView.contentSize = CGSizeMake(3 * self.view.frame.size.width, self.view.frame.size.height);
         _scrollView.pagingEnabled = YES;
+        _scrollView.bounces = NO;
+        _scrollView.showsHorizontalScrollIndicator = NO;
     }
     return _scrollView;
 }
-- (void)generateContent {
-    UIView* contentView = UIView.new;
-    [self.scrollView addSubview:contentView];
-    
-    [contentView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.edges.equalTo(self.scrollView);
-        make.width.equalTo(self.scrollView);
-    }];
-    
-    UIView *lastView;
-    CGFloat height = 25;
-    
-    for (int i = 0; i < 10; i++) {
-        UIView *view = UIView.new;
-        view.backgroundColor = [self randomColor];
-        [contentView addSubview:view];
-        
-        UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(singleTap:)];
-        [view addGestureRecognizer:singleTap];
-        
-        [view mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.top.equalTo(lastView ? lastView.mas_bottom : @0);
-            make.left.equalTo(@0);
-            make.width.equalTo(contentView.mas_width);
-            make.height.equalTo(@(height));
-        }];
-        
-        height += 25;
-        lastView = view;
-    }
-    
-    [contentView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.bottom.equalTo(lastView.mas_bottom);
-    }];
-}
+
 
 - (UIColor *)randomColor {
     CGFloat hue = ( arc4random() % 256 / 256.0 );  //  0.0 to 1.0
@@ -238,10 +226,7 @@ static CGFloat const kavatarViewRadius = 40.0f;
     return [UIColor colorWithHue:hue saturation:saturation brightness:brightness alpha:1];
 }
 
-- (void)singleTap:(UITapGestureRecognizer*)sender {
-    [sender.view setAlpha:sender.view.alpha / 1.20]; // To see something happen on screen when you tap :O
-    [self.scrollView scrollRectToVisible:sender.view.frame animated:YES];
-};
+
 - (void)avatarViewBtnAction
 {
      [self click];
