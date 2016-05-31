@@ -37,6 +37,7 @@
 		F5A4773E1CEAF35D000D318F /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = F5A4773D1CEAF35D000D318F /* Person.m */; };
 		F5A477411CEAF4ED000D318F /* ImageLabelView.m in Sources */ = {isa = PBXBuildFile; fileRef = F5A477401CEAF4ED000D318F /* ImageLabelView.m */; };
 		F5A477441CEAFCE0000D318F /* ChoosePersonVc.m in Sources */ = {isa = PBXBuildFile; fileRef = F5A477431CEAFCE0000D318F /* ChoosePersonVc.m */; };
+		F5EE3CF71CFD64AE00EA97BD /* DDURLResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = F5EE3CF61CFD64AE00EA97BD /* DDURLResponse.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -119,6 +120,8 @@
 		F5A477401CEAF4ED000D318F /* ImageLabelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageLabelView.m; sourceTree = "<group>"; };
 		F5A477421CEAFCE0000D318F /* ChoosePersonVc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChoosePersonVc.h; sourceTree = "<group>"; };
 		F5A477431CEAFCE0000D318F /* ChoosePersonVc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChoosePersonVc.m; sourceTree = "<group>"; };
+		F5EE3CF51CFD64AE00EA97BD /* DDURLResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDURLResponse.h; sourceTree = "<group>"; };
+		F5EE3CF61CFD64AE00EA97BD /* DDURLResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDURLResponse.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -276,6 +279,8 @@
 				F56C90D21CD2EC510056AB1F /* MiddleVc.m */,
 				F53533CB1CE0072000E79155 /* RadarView.h */,
 				F53533CC1CE0072000E79155 /* RadarView.m */,
+				F5EE3CF51CFD64AE00EA97BD /* DDURLResponse.h */,
+				F5EE3CF61CFD64AE00EA97BD /* DDURLResponse.m */,
 				F51055C61CFC4D2A00F4B4AD /* DDApiManager.h */,
 				F51055C71CFC4D2A00F4B4AD /* DDApiManager.m */,
 			);
@@ -506,6 +511,7 @@
 				F53533CD1CE0072000E79155 /* RadarView.m in Sources */,
 				F5A477411CEAF4ED000D318F /* ImageLabelView.m in Sources */,
 				F56C90D31CD2EC510056AB1F /* MiddleVc.m in Sources */,
+				F5EE3CF71CFD64AE00EA97BD /* DDURLResponse.m in Sources */,
 				F51055C11CFBE73800F4B4AD /* DDRightView.m in Sources */,
 				F51055B81CFBE6F600F4B4AD /* DDRadarView.m in Sources */,
 				F5A101841CF8555200DEF86F /* DDNavVc.m in Sources */,
