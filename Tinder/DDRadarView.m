@@ -7,7 +7,7 @@
 //
 
 #import "DDRadarView.h"
-#import <Masonry/Masonry.h>
+
 
 @interface DDRadarView ()
 
@@ -20,6 +20,9 @@
 {
     self = [super init];
     if (self) {
+        
+//        self.backgroundColor = [UIColor greenColor];
+        
         [self addSubview:self.avatarViewBtn];
         [self.avatarViewBtn mas_makeConstraints:^(MASConstraintMaker *make) {
             (void)make.center;
@@ -35,9 +38,10 @@
 {
     if (!_avatarViewBtn) {
         _avatarViewBtn = [[UIButton alloc] init];
+        _avatarViewBtn.userInteractionEnabled = NO;
         _avatarViewBtn.layer.cornerRadius = kavatarViewRadius ;
         _avatarViewBtn.layer.masksToBounds = YES;
-        [_avatarViewBtn addTarget:self action:@selector(avatarViewBtnAction) forControlEvents:UIControlEventTouchUpInside];
+//        [_avatarViewBtn addTarget:self action:@selector(avatarViewBtnAction) forControlEvents:UIControlEventTouchUpInside];
         _avatarViewBtn.backgroundColor = [UIColor redColor];
         
     }
@@ -45,7 +49,7 @@
 }
 - (void)avatarViewBtnAction
 {
-    [self click];
+//    [self click];
 }
 //点击事件的动画
 -(void)click{
@@ -99,7 +103,62 @@
   
     
 }
-
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    
+    [self click];
+    
+    
+    // 移除动画
+    [self.avatarViewBtn.layer pop_removeAllAnimations];
+    
+    POPSpringAnimation *spring = [POPSpringAnimation animationWithPropertyNamed:kPOPLayerScaleXY];
+    
+    // 设置代理
+    spring.delegate            = self;
+    
+    // 动画起始值 + 动画结束值
+    spring.fromValue           = [NSValue valueWithCGSize:CGSizeMake(1.f, 1.f)];
+    spring.toValue             = [NSValue valueWithCGSize:CGSizeMake(0.5f, 0.5f)];
+    
+    // 参数的设置
+//    spring.springSpeed         = 12;
+//    spring.springBounciness    = 11.164021492004395;
+//    spring.dynamicsMass        = 1;
+//    spring.dynamicsFriction    = 8.1296300888061523;
+//    spring.dynamicsTension     = 116.40476226806641;
+    
+    // 执行动画
+    [self.avatarViewBtn.layer pop_addAnimation:spring forKey:nil];
+    
+}
+- (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    
+  [self backAnimation];
+}
+- (void)touchesCancelled:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    [self backAnimation];
+}
+- (void)backAnimation {
+    POPSpringAnimation *spring = [POPSpringAnimation animationWithPropertyNamed:kPOPLayerScaleXY];
+    
+    // 设置代理
+    spring.delegate            = self;
+    
+    // 动画起始值 + 动画结束值
+    spring.fromValue           = [NSValue valueWithCGSize:CGSizeMake(0.5f, 0.5f)];
+    spring.toValue             = [NSValue valueWithCGSize:CGSizeMake(1.0f, 1.0f)];
+    spring.removedOnCompletion = YES;
+    
+    // 参数的设置
+    spring.springSpeed         = 12;
+    spring.springBounciness    = 11.164021492004395;
+    spring.dynamicsMass        = 1;
+    spring.dynamicsFriction    = 8.1296300888061523;
+    spring.dynamicsTension     = 116.40476226806641;
+    
+    // 执行动画
+    [self.avatarViewBtn.layer pop_addAnimation:spring forKey:nil];
+}
 /*
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.

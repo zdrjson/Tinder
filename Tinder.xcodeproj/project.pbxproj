@@ -75,6 +75,7 @@
 		F51055C01CFBE73800F4B4AD /* DDRightView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDRightView.m; sourceTree = "<group>"; };
 		F51055C61CFC4D2A00F4B4AD /* DDApiManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDApiManager.h; sourceTree = "<group>"; };
 		F51055C71CFC4D2A00F4B4AD /* DDApiManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDApiManager.m; sourceTree = "<group>"; };
+		F51055C91CFD209400F4B4AD /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		F51E19661CCE2D3300C281F1 /* Tinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F51E196A1CCE2D3300C281F1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F51E196C1CCE2D3300C281F1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -230,6 +231,7 @@
 		F51E19691CCE2D3300C281F1 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				F51055C91CFD209400F4B4AD /* PrefixHeader.pch */,
 				F50B1EA31CD0F2E700E192EC /* DDMacro.h */,
 				F51E196A1CCE2D3300C281F1 /* main.m */,
 				F50E5AEB1CE2C0E900C8E627 /* DDCGUtilities.h */,
@@ -655,6 +657,7 @@
 			baseConfigurationReference = BCE4F152676E6E74CE4ACADA /* Pods-Tinder.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/Tinder/PrefixHeader.pch";
 				INFOPLIST_FILE = Tinder/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = zdrzdr.github.com.Tinder;
@@ -667,6 +670,7 @@
 			baseConfigurationReference = B5FC2EB09B16457699B3B73C /* Pods-Tinder.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/Tinder/PrefixHeader.pch";
 				INFOPLIST_FILE = Tinder/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = zdrzdr.github.com.Tinder;

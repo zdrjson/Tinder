@@ -25,6 +25,7 @@ PODS:
     - PINCache (>= 2.1)
   - PINRemoteImage/iOS (3.0.0-beta.2):
     - PINRemoteImage/Core
+  - pop (1.0.9)
   - ReactiveCocoa (2.5):
     - ReactiveCocoa/UI (= 2.5)
   - ReactiveCocoa/Core (2.5):
@@ -59,6 +60,7 @@ DEPENDENCIES:
   - MagicalRecord
   - Masonry
   - MDCSwipeToChoose
+  - pop
   - ReactiveCocoa (~> 2.5)
   - SCRecorder
   - YYAsyncLayer
@@ -84,6 +86,7 @@ SPEC CHECKSUMS:
   MDCSwipeToChoose: 56239d98b4558c66e7c3c9069482befd26092270
   PINCache: 078426d356ab95ef875e9e62e5c35a2ea3333c28
   PINRemoteImage: 197554c5ba57a6ae90f5db441651180039fc9062
+  pop: f667631a5108a2e60d9e8797c9b32ddaf2080bce
   ReactiveCocoa: e2db045570aa97c695e7aa97c2bcab222ae51f4a
   SCRecorder: bbb521dbc222908876ec9cd9156bbc8a893bed44
   YYAsyncLayer: df6b01ebc695c5f6b4c15dd5c23fa3e081eb25c0
@@ -97,6 +100,6 @@ SPEC CHECKSUMS:
   YYWebImage: 8da75a611fd0d2e0f58a273f9ca0bc731614cb0d
   ZLSwipeableView: df385760ff4838935cdbcb62878ac5acd7355949
 
-PODFILE CHECKSUM: 47ee40c6f980be7e950062494d1b88cf6da873f4
+PODFILE CHECKSUM: 6a8119fca21c9243e39a677aa4ad8e45c0017b5b
 
 COCOAPODS: 1.0.0

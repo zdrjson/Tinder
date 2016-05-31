@@ -19,6 +19,7 @@ pod 'YYCategories'
 pod 'YYKeyboardManager'
 #pod 'YYKit'
 
+pod 'pop'
 pod 'IQKeyboardManager'
 pod 'SCRecorder'
 pod 'JSQMessagesViewController'
