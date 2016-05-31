@@ -5,6 +5,8 @@ target ‘Tinder’ do
 pod 'ZLSwipeableView'
 pod "MDCSwipeToChoose"
 pod 'FMDB'
+pod 'AFNetworking'
+pod 'SDWebImage'
 
 pod 'AsyncDisplayKit'
 

@@ -1,4 +1,19 @@
 PODS:
+  - AFNetworking (3.1.0):
+    - AFNetworking/NSURLSession (= 3.1.0)
+    - AFNetworking/Reachability (= 3.1.0)
+    - AFNetworking/Security (= 3.1.0)
+    - AFNetworking/Serialization (= 3.1.0)
+    - AFNetworking/UIKit (= 3.1.0)
+  - AFNetworking/NSURLSession (3.1.0):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.1.0)
+  - AFNetworking/Security (3.1.0)
+  - AFNetworking/Serialization (3.1.0)
+  - AFNetworking/UIKit (3.1.0):
+    - AFNetworking/NSURLSession
   - AsyncDisplayKit (1.9.74):
     - AsyncDisplayKit/PINRemoteImage (= 1.9.74)
   - AsyncDisplayKit/ASDealloc2MainObject (1.9.74)
@@ -11,14 +26,14 @@ PODS:
     - FMDB/standard (= 2.6.2)
   - FMDB/standard (2.6.2)
   - IQKeyboardManager (4.0.3)
-  - JSQMessagesViewController (7.3.0):
+  - JSQMessagesViewController (7.3.1):
     - JSQSystemSoundPlayer (~> 2.0.1)
   - JSQSystemSoundPlayer (2.0.1)
   - KMNavigationBarTransition (0.0.8)
   - MagicalRecord (2.3.2):
     - MagicalRecord/Core (= 2.3.2)
   - MagicalRecord/Core (2.3.2)
-  - Masonry (1.0.0)
+  - Masonry (1.0.1)
   - MDCSwipeToChoose (0.2.3)
   - PINCache (2.2.2)
   - PINRemoteImage/Core (3.0.0-beta.2):
@@ -34,6 +49,9 @@ PODS:
   - ReactiveCocoa/UI (2.5):
     - ReactiveCocoa/Core
   - SCRecorder (2.7.0)
+  - SDWebImage (3.7.6):
+    - SDWebImage/Core (= 3.7.6)
+  - SDWebImage/Core (3.7.6)
   - YYAsyncLayer (1.0)
   - YYCache (1.0.3)
   - YYCategories (1.0.3):
@@ -52,6 +70,7 @@ PODS:
   - ZLSwipeableView (0.0.8)
 
 DEPENDENCIES:
+  - AFNetworking
   - AsyncDisplayKit
   - FMDB
   - IQKeyboardManager
@@ -63,6 +82,7 @@ DEPENDENCIES:
   - pop
   - ReactiveCocoa (~> 2.5)
   - SCRecorder
+  - SDWebImage
   - YYAsyncLayer
   - YYCache
   - YYCategories
@@ -75,20 +95,22 @@ DEPENDENCIES:
   - ZLSwipeableView
 
 SPEC CHECKSUMS:
+  AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   AsyncDisplayKit: cbd10f28030c0b904cef1bd8e7d96d775c5b0484
   FMDB: 854a0341b4726e53276f2a8996f06f1b80f9259a
   IQKeyboardManager: be9695ffc5a52077deb4847608f338771022d6d1
-  JSQMessagesViewController: aa79a81b21387430d66aa657e5d1c5494b0ba307
+  JSQMessagesViewController: 3847120a97a7ab3bdc701f166c59f3955f7801c7
   JSQSystemSoundPlayer: c5850e77a4363ffd374cd851154b9af93264ed8d
   KMNavigationBarTransition: e87fb2b3a194b0d7fded5fd560df83c6f43b942f
   MagicalRecord: 53bed74b4323b930992a725be713e53b37d19755
-  Masonry: b529bb169217897b6354d4b56b1fada6d475b13d
+  Masonry: a1a931a0d08870ed8ae415a2ea5ea68ebcac77df
   MDCSwipeToChoose: 56239d98b4558c66e7c3c9069482befd26092270
   PINCache: 078426d356ab95ef875e9e62e5c35a2ea3333c28
   PINRemoteImage: 197554c5ba57a6ae90f5db441651180039fc9062
   pop: f667631a5108a2e60d9e8797c9b32ddaf2080bce
   ReactiveCocoa: e2db045570aa97c695e7aa97c2bcab222ae51f4a
   SCRecorder: bbb521dbc222908876ec9cd9156bbc8a893bed44
+  SDWebImage: c325cf02c30337336b95beff20a13df489ec0ec9
   YYAsyncLayer: df6b01ebc695c5f6b4c15dd5c23fa3e081eb25c0
   YYCache: 282f35b5b0990833d0b7a06d864a87141a021da2
   YYCategories: 0fd4d9eb0994d8d0e355beb4081c8f7202a82b7b
@@ -100,6 +122,6 @@ SPEC CHECKSUMS:
   YYWebImage: 8da75a611fd0d2e0f58a273f9ca0bc731614cb0d
   ZLSwipeableView: df385760ff4838935cdbcb62878ac5acd7355949
 
-PODFILE CHECKSUM: 6a8119fca21c9243e39a677aa4ad8e45c0017b5b
+PODFILE CHECKSUM: bd6c95c8c1765cf811291fe1d1be450029cd009b
 
 COCOAPODS: 1.0.0
