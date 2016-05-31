@@ -9,5 +9,8 @@
 #import "DDApiManager.h"
 
 @implementation DDApiManager
-
+- (void)a{
+    __weak typeof(self) weakSelf = self;
+    
+}
 @end

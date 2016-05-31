@@ -89,4 +89,24 @@ typedef NS_ENUM(NSUInteger, DDApiManagerErrorType) {
  尽量使用loadData这个方法，这个方法会通过param source来获得参数,这使得参数的生成逻辑位于controller中的国定位置
  */
 - (NSInteger)loadData;
+
+- (void)cancelAllRequests;
+- (void)cancelRequestWithRequestId:(NSInteger)requestID;
+
+// 拦截器方法，继承之后需要调用一下super
+- (BOOL)beforePerformSuccessWithResponse:(DDURLResponse *)response;
+- (BOOL)afterPerformSuccessWithResponse:(DDURLResponse *)response;
+
+- (BOOL)beforePerformFailWithResponse:(DDURLResponse *)response;
+- (void)afterPerformFailWithResponse:(DDURLResponse *)response;
+
+- (BOOL)shouldCallApiWithParams:(NSDictionary *)params;
+- (void)afterCallingApiWithParams:(NSDictionary *)params;
+
+- (NSDictionary *)reformParams:(NSDictionary *)params;
+- (void)cleanData;
+- (BOOL)shouldCache;
+
+- (void)successedOnCallingApi:(DDURLResponse *)response;
+- (void)failedOnCallingApi:(DDURLResponse *)response withErrorType:(DDApiManagerErrorType)errorType;
 @end
