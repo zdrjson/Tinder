@@ -3,7 +3,7 @@ inhibit_all_warnings!
 
 target ‘Tinder’ do
 pod 'ZLSwipeableView'
-pod "MDCSwipeToChoose"
+pod 'MDCSwipeToChoose'
 pod 'FMDB'
 pod 'AFNetworking'
 pod 'SDWebImage'
@@ -21,6 +21,18 @@ pod 'YYCategories'
 pod 'YYKeyboardManager'
 #pod 'YYKit'
 
+#pod 'YTKNetwork'
+pod 'DDLogger'
+pod 'CTVideoPlayerView'
+pod 'CocoaAsyncSocket' 
+pod 'TCBlobDownload'
+pod 'VIMediaCache'
+pod 'FLAnimatedImage'
+pod 'ZFPlayer'
+pod 'XMPPFramework'
+
+pod 'SDCycleScrollView'
+pod 'SDAutoLayout'
 pod 'pop'
 pod 'IQKeyboardManager'
 pod 'SCRecorder'
