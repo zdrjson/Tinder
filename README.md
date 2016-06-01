@@ -1,2 +1,4 @@
 # Tinder
-date and meet friend
+![](https://github.com/zdrjson/Tinder/blob/master/Tinder.gif)
+
+
