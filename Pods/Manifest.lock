@@ -56,6 +56,7 @@ PODS:
     - MagicalRecord/Core (= 2.3.2)
   - MagicalRecord/Core (2.3.2)
   - Masonry (1.0.1)
+  - MBProgressHUD (0.9.2)
   - MDCSwipeToChoose (0.2.3)
   - PINCache (2.2.2)
   - PINRemoteImage/Core (3.0.0-beta.2):
@@ -77,6 +78,7 @@ PODS:
   - SDWebImage (3.7.6):
     - SDWebImage/Core (= 3.7.6)
   - SDWebImage/Core (3.7.6)
+  - SVProgressHUD (2.0.3)
   - TCBlobDownload (2.1.1)
   - VIMediaCache (0.1)
   - XMPPFramework (3.6.6):
@@ -253,6 +255,7 @@ DEPENDENCIES:
   - KMNavigationBarTransition
   - MagicalRecord
   - Masonry
+  - MBProgressHUD
   - MDCSwipeToChoose
   - pop
   - ReactiveCocoa (~> 2.5)
@@ -260,6 +263,7 @@ DEPENDENCIES:
   - SDAutoLayout
   - SDCycleScrollView
   - SDWebImage
+  - SVProgressHUD
   - TCBlobDownload
   - VIMediaCache
   - XMPPFramework
@@ -293,6 +297,7 @@ SPEC CHECKSUMS:
   KMNavigationBarTransition: e87fb2b3a194b0d7fded5fd560df83c6f43b942f
   MagicalRecord: 53bed74b4323b930992a725be713e53b37d19755
   Masonry: a1a931a0d08870ed8ae415a2ea5ea68ebcac77df
+  MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1
   MDCSwipeToChoose: 56239d98b4558c66e7c3c9069482befd26092270
   PINCache: 078426d356ab95ef875e9e62e5c35a2ea3333c28
   PINRemoteImage: 197554c5ba57a6ae90f5db441651180039fc9062
@@ -302,6 +307,7 @@ SPEC CHECKSUMS:
   SDAutoLayout: c18678b6ae28c67d89cb132e770cfbac9ee20d25
   SDCycleScrollView: f72904c77698a7f93a41bcbbc2d78b073bf7326c
   SDWebImage: c325cf02c30337336b95beff20a13df489ec0ec9
+  SVProgressHUD: b0830714205bea1317ea1a2ebc71e5633af334d4
   TCBlobDownload: 8726f054cc00bb5f66a57bb0c99764842dfa5c9f
   VIMediaCache: 1f5fec19aa3a818a9a2e47fa2699b422c8530450
   XMPPFramework: b06c210b0b71c08aa41a646bffd2021fa43bb43b
@@ -317,6 +323,6 @@ SPEC CHECKSUMS:
   ZFPlayer: bcb2f6bab181195e9ef2eb037498bd2771b611b0
   ZLSwipeableView: df385760ff4838935cdbcb62878ac5acd7355949
 
-PODFILE CHECKSUM: 1d135d3575fbba113b3ffbe3e99169c1e49d30e4
+PODFILE CHECKSUM: a80510dab496cbaacb559cdbedbeaa640ea26381
 
 COCOAPODS: 1.0.0

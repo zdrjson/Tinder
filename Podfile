@@ -4,9 +4,14 @@ inhibit_all_warnings!
 target ‘Tinder’ do
 pod 'ZLSwipeableView'
 pod 'MDCSwipeToChoose'
+#pod 'Koloda'
+
 pod 'FMDB'
 pod 'AFNetworking'
 pod 'SDWebImage'
+
+pod 'SVProgressHUD'
+pod 'MBProgressHUD'
 
 pod 'AsyncDisplayKit'
 
@@ -21,6 +26,11 @@ pod 'YYCategories'
 pod 'YYKeyboardManager'
 #pod 'YYKit'
 
+#target 'TinderTests' do
+#    inherit! :search_paths
+#    pod 'YTKNetwork'
+#    
+#end
 #pod 'YTKNetwork'
 pod 'DDLogger'
 pod 'CTVideoPlayerView'
