@@ -32,6 +32,7 @@ pod 'YYKeyboardManager'
 #    
 #end
 #pod 'YTKNetwork'
+pod "MWPhotoBrowser"
 pod 'JazzHands'
 pod 'Aspects'
 pod 'DDLogger'
