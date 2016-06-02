@@ -32,6 +32,8 @@ pod 'YYKeyboardManager'
 #    
 #end
 #pod 'YTKNetwork'
+pod 'JazzHands'
+pod 'Aspects'
 pod 'DDLogger'
 pod 'CTVideoPlayerView'
 pod 'CocoaAsyncSocket' 

@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
+typedef void(^AXCallback) ()
 @interface DDApiProxy : NSObject
 
 @end

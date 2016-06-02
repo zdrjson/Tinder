@@ -14,6 +14,7 @@ PODS:
   - AFNetworking/Serialization (3.1.0)
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
+  - Aspects (1.4.1)
   - AsyncDisplayKit (1.9.74):
     - AsyncDisplayKit/PINRemoteImage (= 1.9.74)
   - AsyncDisplayKit/ASDealloc2MainObject (1.9.74)
@@ -48,6 +49,7 @@ PODS:
   - HandyFrame (1.1.0)
   - ICTextView (2.0.1)
   - IQKeyboardManager (4.0.3)
+  - JazzHands (2.0.8)
   - JSQMessagesViewController (7.3.1):
     - JSQSystemSoundPlayer (~> 2.0.1)
   - JSQSystemSoundPlayer (2.0.1)
@@ -244,6 +246,7 @@ PODS:
 
 DEPENDENCIES:
   - AFNetworking
+  - Aspects
   - AsyncDisplayKit
   - CocoaAsyncSocket
   - CTVideoPlayerView
@@ -251,6 +254,7 @@ DEPENDENCIES:
   - FLAnimatedImage
   - FMDB
   - IQKeyboardManager
+  - JazzHands
   - JSQMessagesViewController
   - KMNavigationBarTransition
   - MagicalRecord
@@ -281,6 +285,7 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  Aspects: 7595ba96a6727a58ebcbfc954497fc5d2fdde546
   AsyncDisplayKit: cbd10f28030c0b904cef1bd8e7d96d775c5b0484
   CocoaAsyncSocket: a18c75dca4b08723628a0bacca6e94803d90be91
   CocoaLumberjack: 628fca2e88ef06f7cf6817309aa405f325d9a6fa
@@ -292,6 +297,7 @@ SPEC CHECKSUMS:
   HandyFrame: 97a9d4069bcd191dfbbbb4aa08390e3b8076e9bf
   ICTextView: 937aca5dd49e39e9cca41ababe8c55bf99c634fc
   IQKeyboardManager: be9695ffc5a52077deb4847608f338771022d6d1
+  JazzHands: 355dc5c2b6fc38ee460d0ed7836c69539263f477
   JSQMessagesViewController: 3847120a97a7ab3bdc701f166c59f3955f7801c7
   JSQSystemSoundPlayer: c5850e77a4363ffd374cd851154b9af93264ed8d
   KMNavigationBarTransition: e87fb2b3a194b0d7fded5fd560df83c6f43b942f
@@ -323,6 +329,6 @@ SPEC CHECKSUMS:
   ZFPlayer: bcb2f6bab181195e9ef2eb037498bd2771b611b0
   ZLSwipeableView: df385760ff4838935cdbcb62878ac5acd7355949
 
-PODFILE CHECKSUM: a80510dab496cbaacb559cdbedbeaa640ea26381
+PODFILE CHECKSUM: ef61f9de6fa3c8b6c7c0a9cb915b043d464df5f7
 
 COCOAPODS: 1.0.0
