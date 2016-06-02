@@ -9,5 +9,5 @@
 #import <Foundation/Foundation.h>
 
 @interface DDURLResponse : NSObject
-
+@property (nonatomic, assign) NSInteger requestId;
 @end

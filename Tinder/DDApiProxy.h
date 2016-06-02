@@ -7,7 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
-typedef void(^AXCallback) ()
+//typedef void(^AXCallback) ()
 @interface DDApiProxy : NSObject
 
++ (instancetype)sharedInstance;
+
+- (NSInteger)callGetWithParams:(NSDictionary *)params serviceIdentifier:(NSString *)servieIdentifier methodName:(NSString *)methodName success:(
 @end

@@ -81,6 +81,7 @@
 		F51055C91CFD209400F4B4AD /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		F51BF8391D003CA800F9603A /* DDApiProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDApiProxy.h; sourceTree = "<group>"; };
 		F51BF83A1D003CA800F9603A /* DDApiProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDApiProxy.m; sourceTree = "<group>"; };
+		F51BF83E1D00422800F9603A /* DDNetworkingConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDNetworkingConfiguration.h; sourceTree = "<group>"; };
 		F51E19661CCE2D3300C281F1 /* Tinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F51E196A1CCE2D3300C281F1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F51E196C1CCE2D3300C281F1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -188,6 +189,23 @@
 				F51BF83A1D003CA800F9603A /* DDApiProxy.m */,
 			);
 			name = APIProxy;
+			sourceTree = "<group>";
+		};
+		F51BF83C1D00412200F9603A /* URLResponse */ = {
+			isa = PBXGroup;
+			children = (
+				F5EE3CF51CFD64AE00EA97BD /* DDURLResponse.h */,
+				F5EE3CF61CFD64AE00EA97BD /* DDURLResponse.m */,
+			);
+			name = URLResponse;
+			sourceTree = "<group>";
+		};
+		F51BF83D1D0041F800F9603A /* Configurations */ = {
+			isa = PBXGroup;
+			children = (
+				F51BF83E1D00422800F9603A /* DDNetworkingConfiguration.h */,
+			);
+			name = Configurations;
 			sourceTree = "<group>";
 		};
 		F51E195D1CCE2D3200C281F1 = {
@@ -302,8 +320,8 @@
 				F56C90D21CD2EC510056AB1F /* MiddleVc.m */,
 				F53533CB1CE0072000E79155 /* RadarView.h */,
 				F53533CC1CE0072000E79155 /* RadarView.m */,
-				F5EE3CF51CFD64AE00EA97BD /* DDURLResponse.h */,
-				F5EE3CF61CFD64AE00EA97BD /* DDURLResponse.m */,
+				F51BF83D1D0041F800F9603A /* Configurations */,
+				F51BF83C1D00412200F9603A /* URLResponse */,
 				F51BF8381D003C7600F9603A /* APIProxy */,
 				F51BF8371D003C7100F9603A /* BaseAPIManager */,
 			);
