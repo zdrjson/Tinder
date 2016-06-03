@@ -68,6 +68,8 @@ pod 'VIMediaCache'
 pod 'FLAnimatedImage'
 pod 'ZFPlayer'
 pod 'XMPPFramework'
+pod 'DZNEmptyDataSet'
+pod 'BlocksKit'
 
 pod 'SDCycleScrollView'
 pod 'SDAutoLayout'
