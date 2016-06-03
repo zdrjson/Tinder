@@ -52,13 +52,15 @@ pod 'JLRoutes'
 pod "MWPhotoBrowser"
 pod 'JazzHands'
 pod 'Aspects'
-
+pod 'JSPatch'
 #pod 'DDLogger'
+
 
 pod 'JHChainableAnimations'
 pod 'VCTransitionsLibrary'
 pod 'ZFDragableModalTransition'
 
+pod 'MHVideoPhotoGallery'
 pod 'CTVideoPlayerView'
 pod 'CocoaAsyncSocket' 
 pod 'TCBlobDownload'

@@ -1,6 +1,6 @@
 Persistence, Persistance, lol.
 
-2016-05-26: I'm still maintaining this pod~ Welcome issues and PRs, and I'm glad to hear you are using this pod in your project.
+2016-06-03: make migration works better! I'm still maintaining this pod~ Welcome issues and PRs, and I'm glad to hear you are using this pod in your project.
 
 define the marco `CTPersistanceShowSQLLog` to show SQL log.
 
@@ -134,7 +134,9 @@ go to `Build Phases` and add `sqlite3` into your library list.
 
 NOTICE:
 
-you can `only` use **CTPersistanceQueryCommand** to do your migration job, and `DO NOT` use **CTPersistanceTable**
+You should use **CTPersistanceQueryCommand** to do your migration job, and **MUST USE initWithQueryCommand:** to create your table in Migration Steps. Otherwise will results an infinite loop.
+
+**DO NOT USE init: WHEN CREATE A TABLE, USE initWithQueryCommand: INSTEAD**
 
 ### 1. create migration step object which confirm to `<CTPersistanceMigrationStep>`
 
