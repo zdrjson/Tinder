@@ -74,6 +74,7 @@ pod 'BlocksKit'
 pod 'FreeStreamer'
 pod 'RealReachability'
 pod 'Reachability'
+pod 'SSKeychain'
 
 pod 'SDCycleScrollView'
 pod 'SDAutoLayout'

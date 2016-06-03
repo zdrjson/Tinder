@@ -126,6 +126,7 @@ PODS:
   - SDWebImage/Core (3.7.6)
   - Shimmer (1.0.2)
   - SlackTextViewController (1.9.3)
+  - SSKeychain (1.4.0)
   - SVProgressHUD (2.0.3)
   - TCBlobDownload (2.1.1)
   - TTTAttributedLabel (1.13.3)
@@ -338,6 +339,7 @@ DEPENDENCIES:
   - SDWebImage
   - Shimmer
   - SlackTextViewController
+  - SSKeychain
   - SVProgressHUD
   - TCBlobDownload
   - TTTAttributedLabel
@@ -406,6 +408,7 @@ SPEC CHECKSUMS:
   SDWebImage: c325cf02c30337336b95beff20a13df489ec0ec9
   Shimmer: c5374be1c2b0c9e292fb05b339a513cf291cac86
   SlackTextViewController: bd2a34c188d4f7dec93cf42388f38551263fac82
+  SSKeychain: c71293fa57216a40ab06c23f4085387583293de4
   SVProgressHUD: b0830714205bea1317ea1a2ebc71e5633af334d4
   TCBlobDownload: 8726f054cc00bb5f66a57bb0c99764842dfa5c9f
   TTTAttributedLabel: 6f3174aef8e738f44dff97c2eb7d8184f6ab6277
@@ -428,6 +431,6 @@ SPEC CHECKSUMS:
   ZFPlayer: bcb2f6bab181195e9ef2eb037498bd2771b611b0
   ZLSwipeableView: df385760ff4838935cdbcb62878ac5acd7355949
 
-PODFILE CHECKSUM: ec00a63bef38ba108d12f10ad570749191a91ecb
+PODFILE CHECKSUM: 4afe32c3b860cdc5d587b4f1e3312bb5a5419595
 
 COCOAPODS: 1.0.1
