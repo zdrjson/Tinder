@@ -40,6 +40,7 @@ PODS:
     - AFNetworking
     - CTPersistance
     - HandyFrame
+  - DACircularProgress (2.3.1)
   - DDLogger (1.1.3):
     - ICTextView (~> 2.0.1)
   - FLAnimatedImage (1.0.12)
@@ -60,6 +61,10 @@ PODS:
   - Masonry (1.0.1)
   - MBProgressHUD (0.9.2)
   - MDCSwipeToChoose (0.2.3)
+  - MWPhotoBrowser (2.1.2):
+    - DACircularProgress (~> 2.3)
+    - MBProgressHUD (~> 0.9)
+    - SDWebImage (!= 3.7.2, ~> 3.7)
   - PINCache (2.2.2)
   - PINRemoteImage/Core (3.0.0-beta.2):
     - PINCache (>= 2.1)
@@ -261,6 +266,7 @@ DEPENDENCIES:
   - Masonry
   - MBProgressHUD
   - MDCSwipeToChoose
+  - MWPhotoBrowser
   - pop
   - ReactiveCocoa (~> 2.5)
   - SCRecorder
@@ -291,6 +297,7 @@ SPEC CHECKSUMS:
   CocoaLumberjack: 628fca2e88ef06f7cf6817309aa405f325d9a6fa
   CTPersistance: 5931e007843fc36236ed456c1bdfa5f07d4d6308
   CTVideoPlayerView: d013f7787a01e00ca4295637e4c287c697b069ce
+  DACircularProgress: 4dd437c0fc3da5161cb289e07ac449493d41db71
   DDLogger: 32b579dec01e726b8bb3f15aaa189400abe994ba
   FLAnimatedImage: 4a0b56255d9b05f18b6dd7ee06871be5d3b89e31
   FMDB: 854a0341b4726e53276f2a8996f06f1b80f9259a
@@ -305,6 +312,7 @@ SPEC CHECKSUMS:
   Masonry: a1a931a0d08870ed8ae415a2ea5ea68ebcac77df
   MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1
   MDCSwipeToChoose: 56239d98b4558c66e7c3c9069482befd26092270
+  MWPhotoBrowser: 5836d7aa041dc05a13de380c246826578adc5ea5
   PINCache: 078426d356ab95ef875e9e62e5c35a2ea3333c28
   PINRemoteImage: 197554c5ba57a6ae90f5db441651180039fc9062
   pop: f667631a5108a2e60d9e8797c9b32ddaf2080bce
@@ -329,6 +337,6 @@ SPEC CHECKSUMS:
   ZFPlayer: bcb2f6bab181195e9ef2eb037498bd2771b611b0
   ZLSwipeableView: df385760ff4838935cdbcb62878ac5acd7355949
 
-PODFILE CHECKSUM: ef61f9de6fa3c8b6c7c0a9cb915b043d464df5f7
+PODFILE CHECKSUM: 826f71256c64abe6c7fa5b8ba61ec62141f1f837
 
 COCOAPODS: 1.0.0
