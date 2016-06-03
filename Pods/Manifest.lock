@@ -64,6 +64,8 @@ PODS:
   - FMDB (2.6.2):
     - FMDB/standard (= 2.6.2)
   - FMDB/standard (2.6.2)
+  - FreeStreamer (3.5.6):
+    - Reachability (~> 3.0)
   - GPUImage (0.1.7)
   - HandyFrame (1.1.0)
   - IQKeyboardManager (4.0.3)
@@ -102,6 +104,7 @@ PODS:
   - PNChart (0.8.9):
     - UICountingLabel (~> 1.2.0)
   - pop (1.0.9)
+  - Reachability (3.2)
   - ReactiveCocoa (2.5):
     - ReactiveCocoa/UI (= 2.5)
   - ReactiveCocoa/Core (2.5):
@@ -109,6 +112,11 @@ PODS:
   - ReactiveCocoa/no-arc (2.5)
   - ReactiveCocoa/UI (2.5):
     - ReactiveCocoa/Core
+  - RealReachability (1.1.7):
+    - RealReachability/Connection (= 1.1.7)
+    - RealReachability/Ping (= 1.1.7)
+  - RealReachability/Connection (1.1.7)
+  - RealReachability/Ping (1.1.7)
   - SCRecorder (2.7.0)
   - SDAutoLayout (2.1.1)
   - SDCycleScrollView (1.65):
@@ -125,6 +133,7 @@ PODS:
   - UITableView+FDTemplateLayoutCell (1.4)
   - VCTransitionsLibrary (1.5.0)
   - VIMediaCache (0.1)
+  - WebViewJavascriptBridge (5.0.5)
   - XMPPFramework (3.6.6):
     - XMPPFramework/Authentication (= 3.6.6)
     - XMPPFramework/BandwidthMonitor (= 3.6.6)
@@ -301,6 +310,7 @@ DEPENDENCIES:
   - FLAnimatedImage
   - FlatUIKit
   - FMDB
+  - FreeStreamer
   - GPUImage
   - IQKeyboardManager
   - JazzHands
@@ -318,8 +328,10 @@ DEPENDENCIES:
   - MWPhotoBrowser
   - PNChart
   - pop
+  - Reachability
   - ReactiveCocoa (= 2.5)
   - ReactiveCocoa (~> 2.5)
+  - RealReachability
   - SCRecorder
   - SDAutoLayout
   - SDCycleScrollView
@@ -332,6 +344,7 @@ DEPENDENCIES:
   - UITableView+FDTemplateLayoutCell
   - VCTransitionsLibrary
   - VIMediaCache
+  - WebViewJavascriptBridge
   - XMPPFramework
   - YYAsyncLayer
   - YYCache
@@ -362,6 +375,7 @@ SPEC CHECKSUMS:
   FLAnimatedImage: 4a0b56255d9b05f18b6dd7ee06871be5d3b89e31
   FlatUIKit: 1b41f0d4952ce8d970d8479ce79df54a960242c4
   FMDB: 854a0341b4726e53276f2a8996f06f1b80f9259a
+  FreeStreamer: 4907b628e65b1a95a5beb66737a9bef01a683929
   GPUImage: 733a5f0fab92df9de1c37ba9df520a833ccb406d
   HandyFrame: 97a9d4069bcd191dfbbbb4aa08390e3b8076e9bf
   IQKeyboardManager: be9695ffc5a52077deb4847608f338771022d6d1
@@ -383,7 +397,9 @@ SPEC CHECKSUMS:
   PINRemoteImage: 197554c5ba57a6ae90f5db441651180039fc9062
   PNChart: 84774d225c2126ded6c93d4dbe6ae98c3a73c2d2
   pop: f667631a5108a2e60d9e8797c9b32ddaf2080bce
+  Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
   ReactiveCocoa: e2db045570aa97c695e7aa97c2bcab222ae51f4a
+  RealReachability: 8b6644c6b3145f7552ed83bffb52c49b0f3b55e3
   SCRecorder: bbb521dbc222908876ec9cd9156bbc8a893bed44
   SDAutoLayout: c18678b6ae28c67d89cb132e770cfbac9ee20d25
   SDCycleScrollView: f72904c77698a7f93a41bcbbc2d78b073bf7326c
@@ -397,6 +413,7 @@ SPEC CHECKSUMS:
   UITableView+FDTemplateLayoutCell: 234e1582bcc4e18461af91155123bb96538ed030
   VCTransitionsLibrary: d61fd9b7b6721942f0d583bcc0e7f8c31ec9271b
   VIMediaCache: 1f5fec19aa3a818a9a2e47fa2699b422c8530450
+  WebViewJavascriptBridge: a4d502315f1b8d9a51cd6a9174147ed567ec3bc5
   XMPPFramework: b06c210b0b71c08aa41a646bffd2021fa43bb43b
   YYAsyncLayer: df6b01ebc695c5f6b4c15dd5c23fa3e081eb25c0
   YYCache: 282f35b5b0990833d0b7a06d864a87141a021da2
@@ -411,6 +428,6 @@ SPEC CHECKSUMS:
   ZFPlayer: bcb2f6bab181195e9ef2eb037498bd2771b611b0
   ZLSwipeableView: df385760ff4838935cdbcb62878ac5acd7355949
 
-PODFILE CHECKSUM: 5615b88fce6efc37be44769e35af8f1da4676441
+PODFILE CHECKSUM: ec00a63bef38ba108d12f10ad570749191a91ecb
 
 COCOAPODS: 1.0.1
