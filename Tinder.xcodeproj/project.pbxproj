@@ -364,12 +364,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F51E19961CCE2D3400C281F1 /* Build configuration list for PBXNativeTarget "Tinder" */;
 			buildPhases = (
-				1845146DF34A967146AB56DD /* 📦 Check Pods Manifest.lock */,
+				1845146DF34A967146AB56DD /* [CP] Check Pods Manifest.lock */,
 				F51E19621CCE2D3200C281F1 /* Sources */,
 				F51E19631CCE2D3200C281F1 /* Frameworks */,
 				F51E19641CCE2D3200C281F1 /* Resources */,
-				4625C1646D8DF53D27A8CDF4 /* 📦 Embed Pods Frameworks */,
-				9CA74F51464BA6C7AAEA0484 /* 📦 Copy Pods Resources */,
+				4625C1646D8DF53D27A8CDF4 /* [CP] Embed Pods Frameworks */,
+				9CA74F51464BA6C7AAEA0484 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -486,14 +486,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		1845146DF34A967146AB56DD /* 📦 Check Pods Manifest.lock */ = {
+		1845146DF34A967146AB56DD /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -501,14 +501,14 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		4625C1646D8DF53D27A8CDF4 /* 📦 Embed Pods Frameworks */ = {
+		4625C1646D8DF53D27A8CDF4 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -516,14 +516,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Tinder/Pods-Tinder-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		9CA74F51464BA6C7AAEA0484 /* 📦 Copy Pods Resources */ = {
+		9CA74F51464BA6C7AAEA0484 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;

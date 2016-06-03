@@ -32,10 +32,33 @@ pod 'YYKeyboardManager'
 #    
 #end
 #pod 'YTKNetwork'
+pod 'ReactiveCocoa', '2.5'
+pod 'FDFullscreenPopGesture'
+pod 'GPUImage'
+
+#pod 'RestKit'
+pod 'Mantle'
+
+pod 'CocoaLumberjack'
+pod 'FlatUIKit'
+pod 'PNChart'
+pod "SlackTextViewController"
+pod 'Shimmer'
+pod 'FastImageCache'
+pod 'TTTAttributedLabel'
+
+pod 'UITableView+FDTemplateLayoutCell'
+pod 'JLRoutes'
 pod "MWPhotoBrowser"
 pod 'JazzHands'
 pod 'Aspects'
-pod 'DDLogger'
+
+#pod 'DDLogger'
+
+pod 'JHChainableAnimations'
+pod 'VCTransitionsLibrary'
+pod 'ZFDragableModalTransition'
+
 pod 'CTVideoPlayerView'
 pod 'CocoaAsyncSocket' 
 pod 'TCBlobDownload'

@@ -41,16 +41,19 @@ PODS:
     - CTPersistance
     - HandyFrame
   - DACircularProgress (2.3.1)
-  - DDLogger (1.1.3):
-    - ICTextView (~> 2.0.1)
+  - FastImageCache (1.5.1)
+  - FDFullscreenPopGesture (1.1)
   - FLAnimatedImage (1.0.12)
+  - FlatUIKit (1.6.2)
   - FMDB (2.6.2):
     - FMDB/standard (= 2.6.2)
   - FMDB/standard (2.6.2)
+  - GPUImage (0.1.7)
   - HandyFrame (1.1.0)
-  - ICTextView (2.0.1)
   - IQKeyboardManager (4.0.3)
   - JazzHands (2.0.8)
+  - JHChainableAnimations (1.3.0)
+  - JLRoutes (1.6)
   - JSQMessagesViewController (7.3.1):
     - JSQSystemSoundPlayer (~> 2.0.1)
   - JSQSystemSoundPlayer (2.0.1)
@@ -58,6 +61,9 @@ PODS:
   - MagicalRecord (2.3.2):
     - MagicalRecord/Core (= 2.3.2)
   - MagicalRecord/Core (2.3.2)
+  - Mantle (2.0.7):
+    - Mantle/extobjc (= 2.0.7)
+  - Mantle/extobjc (2.0.7)
   - Masonry (1.0.1)
   - MBProgressHUD (0.9.2)
   - MDCSwipeToChoose (0.2.3)
@@ -70,6 +76,8 @@ PODS:
     - PINCache (>= 2.1)
   - PINRemoteImage/iOS (3.0.0-beta.2):
     - PINRemoteImage/Core
+  - PNChart (0.8.9):
+    - UICountingLabel (~> 1.2.0)
   - pop (1.0.9)
   - ReactiveCocoa (2.5):
     - ReactiveCocoa/UI (= 2.5)
@@ -85,8 +93,14 @@ PODS:
   - SDWebImage (3.7.6):
     - SDWebImage/Core (= 3.7.6)
   - SDWebImage/Core (3.7.6)
+  - Shimmer (1.0.2)
+  - SlackTextViewController (1.9.3)
   - SVProgressHUD (2.0.3)
   - TCBlobDownload (2.1.1)
+  - TTTAttributedLabel (2.0.0)
+  - UICountingLabel (1.2.0)
+  - UITableView+FDTemplateLayoutCell (1.4)
+  - VCTransitionsLibrary (1.5.0)
   - VIMediaCache (0.1)
   - XMPPFramework (3.6.6):
     - XMPPFramework/Authentication (= 3.6.6)
@@ -254,27 +268,41 @@ DEPENDENCIES:
   - Aspects
   - AsyncDisplayKit
   - CocoaAsyncSocket
+  - CocoaLumberjack
   - CTVideoPlayerView
-  - DDLogger
+  - FastImageCache
+  - FDFullscreenPopGesture
   - FLAnimatedImage
+  - FlatUIKit
   - FMDB
+  - GPUImage
   - IQKeyboardManager
   - JazzHands
+  - JHChainableAnimations
+  - JLRoutes
   - JSQMessagesViewController
   - KMNavigationBarTransition
   - MagicalRecord
+  - Mantle
   - Masonry
   - MBProgressHUD
   - MDCSwipeToChoose
   - MWPhotoBrowser
+  - PNChart
   - pop
+  - ReactiveCocoa (= 2.5)
   - ReactiveCocoa (~> 2.5)
   - SCRecorder
   - SDAutoLayout
   - SDCycleScrollView
   - SDWebImage
+  - Shimmer
+  - SlackTextViewController
   - SVProgressHUD
   - TCBlobDownload
+  - TTTAttributedLabel
+  - UITableView+FDTemplateLayoutCell
+  - VCTransitionsLibrary
   - VIMediaCache
   - XMPPFramework
   - YYAsyncLayer
@@ -298,31 +326,43 @@ SPEC CHECKSUMS:
   CTPersistance: 5931e007843fc36236ed456c1bdfa5f07d4d6308
   CTVideoPlayerView: d013f7787a01e00ca4295637e4c287c697b069ce
   DACircularProgress: 4dd437c0fc3da5161cb289e07ac449493d41db71
-  DDLogger: 32b579dec01e726b8bb3f15aaa189400abe994ba
+  FastImageCache: 2e7a6f677b15336eb3d1a4092a494676256c891d
+  FDFullscreenPopGesture: a8a620179e3d9c40e8e00256dcee1c1a27c6d0f0
   FLAnimatedImage: 4a0b56255d9b05f18b6dd7ee06871be5d3b89e31
+  FlatUIKit: 1b41f0d4952ce8d970d8479ce79df54a960242c4
   FMDB: 854a0341b4726e53276f2a8996f06f1b80f9259a
+  GPUImage: 733a5f0fab92df9de1c37ba9df520a833ccb406d
   HandyFrame: 97a9d4069bcd191dfbbbb4aa08390e3b8076e9bf
-  ICTextView: 937aca5dd49e39e9cca41ababe8c55bf99c634fc
   IQKeyboardManager: be9695ffc5a52077deb4847608f338771022d6d1
   JazzHands: 355dc5c2b6fc38ee460d0ed7836c69539263f477
+  JHChainableAnimations: 22085fcb04ca87349e584573558e637f659fd769
+  JLRoutes: 435d791422e96c9b9b5e1c4db1aedb3ae1b1a08f
   JSQMessagesViewController: 3847120a97a7ab3bdc701f166c59f3955f7801c7
   JSQSystemSoundPlayer: c5850e77a4363ffd374cd851154b9af93264ed8d
   KMNavigationBarTransition: e87fb2b3a194b0d7fded5fd560df83c6f43b942f
   MagicalRecord: 53bed74b4323b930992a725be713e53b37d19755
+  Mantle: bc40bb061d8c2c6fb48d5083e04d928c3b7f73d9
   Masonry: a1a931a0d08870ed8ae415a2ea5ea68ebcac77df
   MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1
   MDCSwipeToChoose: 56239d98b4558c66e7c3c9069482befd26092270
   MWPhotoBrowser: 5836d7aa041dc05a13de380c246826578adc5ea5
   PINCache: 078426d356ab95ef875e9e62e5c35a2ea3333c28
   PINRemoteImage: 197554c5ba57a6ae90f5db441651180039fc9062
+  PNChart: 84774d225c2126ded6c93d4dbe6ae98c3a73c2d2
   pop: f667631a5108a2e60d9e8797c9b32ddaf2080bce
   ReactiveCocoa: e2db045570aa97c695e7aa97c2bcab222ae51f4a
   SCRecorder: bbb521dbc222908876ec9cd9156bbc8a893bed44
   SDAutoLayout: c18678b6ae28c67d89cb132e770cfbac9ee20d25
   SDCycleScrollView: f72904c77698a7f93a41bcbbc2d78b073bf7326c
   SDWebImage: c325cf02c30337336b95beff20a13df489ec0ec9
+  Shimmer: c5374be1c2b0c9e292fb05b339a513cf291cac86
+  SlackTextViewController: bd2a34c188d4f7dec93cf42388f38551263fac82
   SVProgressHUD: b0830714205bea1317ea1a2ebc71e5633af334d4
   TCBlobDownload: 8726f054cc00bb5f66a57bb0c99764842dfa5c9f
+  TTTAttributedLabel: 8cffe8e127e4e82ff3af1e5386d4cd0ad000b656
+  UICountingLabel: 1db4e7d023e1762171eb226d6dff47a7a84f27aa
+  UITableView+FDTemplateLayoutCell: 234e1582bcc4e18461af91155123bb96538ed030
+  VCTransitionsLibrary: d61fd9b7b6721942f0d583bcc0e7f8c31ec9271b
   VIMediaCache: 1f5fec19aa3a818a9a2e47fa2699b422c8530450
   XMPPFramework: b06c210b0b71c08aa41a646bffd2021fa43bb43b
   YYAsyncLayer: df6b01ebc695c5f6b4c15dd5c23fa3e081eb25c0
@@ -337,6 +377,6 @@ SPEC CHECKSUMS:
   ZFPlayer: bcb2f6bab181195e9ef2eb037498bd2771b611b0
   ZLSwipeableView: df385760ff4838935cdbcb62878ac5acd7355949
 
-PODFILE CHECKSUM: 826f71256c64abe6c7fa5b8ba61ec62141f1f837
+PODFILE CHECKSUM: 22245f7760fc9d60e02157805b8ce6b1a2362efe
 
-COCOAPODS: 1.0.0
+COCOAPODS: 1.0.1

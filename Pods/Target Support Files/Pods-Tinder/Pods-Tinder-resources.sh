@@ -48,8 +48,8 @@ EOM
       ibtool --reference-external-strings-file --errors --warnings --notices --minimum-deployment-target ${!DEPLOYMENT_TARGET_SETTING_NAME} --output-format human-readable-text --compile "${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/`basename \"$RESOURCE_PATH\" .storyboard`.storyboardc" "$RESOURCE_PATH" --sdk "${SDKROOT}" ${TARGET_DEVICE_ARGS}
       ;;
     *.xib)
-      echo "ibtool --reference-external-strings-file --errors --warnings --notices --minimum-deployment-target ${!DEPLOYMENT_TARGET_SETTING_NAME} --output-format human-readable-text --compile ${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/`basename \"$RESOURCE_PATH\" .xib`.nib $RESOURCE_PATH --sdk ${SDKROOT}"
-      ibtool --reference-external-strings-file --errors --warnings --notices --minimum-deployment-target ${!DEPLOYMENT_TARGET_SETTING_NAME} --output-format human-readable-text --compile "${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/`basename \"$RESOURCE_PATH\" .xib`.nib" "$RESOURCE_PATH" --sdk "${SDKROOT}"
+      echo "ibtool --reference-external-strings-file --errors --warnings --notices --minimum-deployment-target ${!DEPLOYMENT_TARGET_SETTING_NAME} --output-format human-readable-text --compile ${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/`basename \"$RESOURCE_PATH\" .xib`.nib $RESOURCE_PATH --sdk ${SDKROOT} ${TARGET_DEVICE_ARGS}"
+      ibtool --reference-external-strings-file --errors --warnings --notices --minimum-deployment-target ${!DEPLOYMENT_TARGET_SETTING_NAME} --output-format human-readable-text --compile "${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/`basename \"$RESOURCE_PATH\" .xib`.nib" "$RESOURCE_PATH" --sdk "${SDKROOT}" ${TARGET_DEVICE_ARGS}
       ;;
     *.framework)
       echo "mkdir -p ${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}"
@@ -80,13 +80,16 @@ EOM
   esac
 }
 if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_resource "DDLogger/DDLogger/ddlog_check_icon_normal@2x.png"
-  install_resource "DDLogger/DDLogger/ddlog_check_icon_normal@3x.png"
-  install_resource "DDLogger/DDLogger/ddlog_check_icon_selected@2x.png"
-  install_resource "DDLogger/DDLogger/ddlog_check_icon_selected@3x.png"
-  install_resource "DDLogger/DDLogger/DDLogDetailViewController.xib"
-  install_resource "DDLogger/DDLogger/DDLogListTableViewCell.xib"
-  install_resource "DDLogger/DDLogger/DDLogListTableViewController.xib"
+  install_resource "FlatUIKit/Resources/flat-ui-icons-regular.ttf"
+  install_resource "FlatUIKit/Resources/Lato-Bold.ttf"
+  install_resource "FlatUIKit/Resources/Lato-Italic.ttf"
+  install_resource "FlatUIKit/Resources/Lato-Light.ttf"
+  install_resource "FlatUIKit/Resources/Lato-Regular.ttf"
+  install_resource "GPUImage/framework/Resources/lookup.png"
+  install_resource "GPUImage/framework/Resources/lookup_amatorka.png"
+  install_resource "GPUImage/framework/Resources/lookup_miss_etikate.png"
+  install_resource "GPUImage/framework/Resources/lookup_soft_elegance_1.png"
+  install_resource "GPUImage/framework/Resources/lookup_soft_elegance_2.png"
   install_resource "IQKeyboardManager/IQKeyboardManager/Resources/IQKeyboardManager.bundle"
   install_resource "JSQMessagesViewController/JSQMessagesViewController/Assets/JSQMessagesAssets.bundle"
   install_resource "JSQMessagesViewController/JSQMessagesViewController/Controllers/JSQMessagesViewController.xib"
@@ -110,13 +113,16 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_resource "ZFPlayer/ZFPlayer/ZFPlayer.bundle"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_resource "DDLogger/DDLogger/ddlog_check_icon_normal@2x.png"
-  install_resource "DDLogger/DDLogger/ddlog_check_icon_normal@3x.png"
-  install_resource "DDLogger/DDLogger/ddlog_check_icon_selected@2x.png"
-  install_resource "DDLogger/DDLogger/ddlog_check_icon_selected@3x.png"
-  install_resource "DDLogger/DDLogger/DDLogDetailViewController.xib"
-  install_resource "DDLogger/DDLogger/DDLogListTableViewCell.xib"
-  install_resource "DDLogger/DDLogger/DDLogListTableViewController.xib"
+  install_resource "FlatUIKit/Resources/flat-ui-icons-regular.ttf"
+  install_resource "FlatUIKit/Resources/Lato-Bold.ttf"
+  install_resource "FlatUIKit/Resources/Lato-Italic.ttf"
+  install_resource "FlatUIKit/Resources/Lato-Light.ttf"
+  install_resource "FlatUIKit/Resources/Lato-Regular.ttf"
+  install_resource "GPUImage/framework/Resources/lookup.png"
+  install_resource "GPUImage/framework/Resources/lookup_amatorka.png"
+  install_resource "GPUImage/framework/Resources/lookup_miss_etikate.png"
+  install_resource "GPUImage/framework/Resources/lookup_soft_elegance_1.png"
+  install_resource "GPUImage/framework/Resources/lookup_soft_elegance_2.png"
   install_resource "IQKeyboardManager/IQKeyboardManager/Resources/IQKeyboardManager.bundle"
   install_resource "JSQMessagesViewController/JSQMessagesViewController/Assets/JSQMessagesAssets.bundle"
   install_resource "JSQMessagesViewController/JSQMessagesViewController/Controllers/JSQMessagesViewController.xib"
