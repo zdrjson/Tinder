@@ -59,6 +59,8 @@ pod 'JSPatch'
 pod 'JHChainableAnimations'
 pod 'VCTransitionsLibrary'
 pod 'ZFDragableModalTransition'
+pod 'RMPZoomTransitionAnimator'
+
 
 pod 'WebViewJavascriptBridge'
 pod 'MHVideoPhotoGallery'

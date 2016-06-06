@@ -15,6 +15,7 @@
 		F51055BE1CFBE72D00F4B4AD /* DDMiddleView.m in Sources */ = {isa = PBXBuildFile; fileRef = F51055BD1CFBE72D00F4B4AD /* DDMiddleView.m */; };
 		F51055C11CFBE73800F4B4AD /* DDRightView.m in Sources */ = {isa = PBXBuildFile; fileRef = F51055C01CFBE73800F4B4AD /* DDRightView.m */; };
 		F51055C81CFC4D2B00F4B4AD /* DDApiBaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F51055C71CFC4D2A00F4B4AD /* DDApiBaseManager.m */; };
+		F511706F1D0562F200183EE9 /* NSThread+DDAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = F511706E1D0562F200183EE9 /* NSThread+DDAdd.m */; };
 		F51AAB741D01A6BB001FE416 /* NSURLRequest+DDNetworkingMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = F51AAB731D01A6BB001FE416 /* NSURLRequest+DDNetworkingMethods.m */; };
 		F51BF83B1D003CA800F9603A /* DDApiProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = F51BF83A1D003CA800F9603A /* DDApiProxy.m */; };
 		F51E196B1CCE2D3300C281F1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F51E196A1CCE2D3300C281F1 /* main.m */; };
@@ -80,6 +81,8 @@
 		F51055C61CFC4D2A00F4B4AD /* DDApiBaseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDApiBaseManager.h; sourceTree = "<group>"; };
 		F51055C71CFC4D2A00F4B4AD /* DDApiBaseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDApiBaseManager.m; sourceTree = "<group>"; };
 		F51055C91CFD209400F4B4AD /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		F511706D1D0562F200183EE9 /* NSThread+DDAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSThread+DDAdd.h"; sourceTree = "<group>"; };
+		F511706E1D0562F200183EE9 /* NSThread+DDAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSThread+DDAdd.m"; sourceTree = "<group>"; };
 		F51AAB721D01A6BB001FE416 /* NSURLRequest+DDNetworkingMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURLRequest+DDNetworkingMethods.h"; sourceTree = "<group>"; };
 		F51AAB731D01A6BB001FE416 /* NSURLRequest+DDNetworkingMethods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURLRequest+DDNetworkingMethods.m"; sourceTree = "<group>"; };
 		F51BF8391D003CA800F9603A /* DDApiProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDApiProxy.h; sourceTree = "<group>"; };
@@ -181,6 +184,8 @@
 			children = (
 				F51AAB721D01A6BB001FE416 /* NSURLRequest+DDNetworkingMethods.h */,
 				F51AAB731D01A6BB001FE416 /* NSURLRequest+DDNetworkingMethods.m */,
+				F511706D1D0562F200183EE9 /* NSThread+DDAdd.h */,
+				F511706E1D0562F200183EE9 /* NSThread+DDAdd.m */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -551,6 +556,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F511706F1D0562F200183EE9 /* NSThread+DDAdd.m in Sources */,
 				F5A4773A1CEAD082000D318F /* ChoosePersonView.m in Sources */,
 				F56398D01CE58F7600D185A4 /* DDSwipeableVc.m in Sources */,
 				F5A477441CEAFCE0000D318F /* ChoosePersonVc.m in Sources */,

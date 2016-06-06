@@ -117,6 +117,7 @@ PODS:
     - RealReachability/Ping (= 1.1.7)
   - RealReachability/Connection (1.1.7)
   - RealReachability/Ping (1.1.7)
+  - RMPZoomTransitionAnimator (1.0.2)
   - SCRecorder (2.7.0)
   - SDAutoLayout (2.1.1)
   - SDCycleScrollView (1.65):
@@ -333,6 +334,7 @@ DEPENDENCIES:
   - ReactiveCocoa (= 2.5)
   - ReactiveCocoa (~> 2.5)
   - RealReachability
+  - RMPZoomTransitionAnimator
   - SCRecorder
   - SDAutoLayout
   - SDCycleScrollView
@@ -402,6 +404,7 @@ SPEC CHECKSUMS:
   Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
   ReactiveCocoa: e2db045570aa97c695e7aa97c2bcab222ae51f4a
   RealReachability: 8b6644c6b3145f7552ed83bffb52c49b0f3b55e3
+  RMPZoomTransitionAnimator: fa1a0726e8e227069d9d63d30ef403aa12323960
   SCRecorder: bbb521dbc222908876ec9cd9156bbc8a893bed44
   SDAutoLayout: c18678b6ae28c67d89cb132e770cfbac9ee20d25
   SDCycleScrollView: f72904c77698a7f93a41bcbbc2d78b073bf7326c
@@ -431,6 +434,6 @@ SPEC CHECKSUMS:
   ZFPlayer: bcb2f6bab181195e9ef2eb037498bd2771b611b0
   ZLSwipeableView: df385760ff4838935cdbcb62878ac5acd7355949
 
-PODFILE CHECKSUM: 4afe32c3b860cdc5d587b4f1e3312bb5a5419595
+PODFILE CHECKSUM: 0f902919024e90c7200bd0c3df695d7408a0c5c7
 
 COCOAPODS: 1.0.1

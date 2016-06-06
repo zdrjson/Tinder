@@ -21,7 +21,7 @@
 
 @property (nonatomic, strong) CADisplayLink *disPlayLink;
 
-@property (nonatomic,strong) RadarView *imgView;
+
 @property(nonatomic,strong) CALayer *staticLayer;
 @property(nonatomic,strong) CAGradientLayer *staticShadowLayer;
 @property (nonatomic,assign) NSTimeInterval getAddressTime;
@@ -29,7 +29,7 @@
 @end
 
 @implementation MiddleVc
-@synthesize imgView;
+
 #pragma mark 懒加载
 -(CALayer *)staticLayer{
     if (!_staticLayer) {
