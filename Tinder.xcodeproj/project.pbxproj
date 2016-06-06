@@ -15,7 +15,7 @@
 		F51055BE1CFBE72D00F4B4AD /* DDMiddleView.m in Sources */ = {isa = PBXBuildFile; fileRef = F51055BD1CFBE72D00F4B4AD /* DDMiddleView.m */; };
 		F51055C11CFBE73800F4B4AD /* DDRightView.m in Sources */ = {isa = PBXBuildFile; fileRef = F51055C01CFBE73800F4B4AD /* DDRightView.m */; };
 		F51055C81CFC4D2B00F4B4AD /* DDApiBaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F51055C71CFC4D2A00F4B4AD /* DDApiBaseManager.m */; };
-		F511706F1D0562F200183EE9 /* NSThread+DDAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = F511706E1D0562F200183EE9 /* NSThread+DDAdd.m */; };
+		F511706F1D0562F200183EE9 /* NSThread+DDAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = F511706E1D0562F200183EE9 /* NSThread+DDAdd.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		F51AAB741D01A6BB001FE416 /* NSURLRequest+DDNetworkingMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = F51AAB731D01A6BB001FE416 /* NSURLRequest+DDNetworkingMethods.m */; };
 		F51BF83B1D003CA800F9603A /* DDApiProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = F51BF83A1D003CA800F9603A /* DDApiProxy.m */; };
 		F51E196B1CCE2D3300C281F1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F51E196A1CCE2D3300C281F1 /* main.m */; };
