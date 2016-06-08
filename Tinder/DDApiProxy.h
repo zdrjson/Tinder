@@ -15,5 +15,10 @@ typedef void(^AXCallback) (DDURLResponse *response);
 
 - (NSInteger)callGetWithParams:(NSDictionary *)params serviceIdentifier:(NSString *)servieIdentifier methodName:(NSString *)methodName success:(AXCallback)success fail:(AXCallback)fail;
 - (NSInteger)callPOSTWithParams:(NSDictionary *)params serviceIdentifier:(NSString *)servieIdentifier methodName:(NSDictionary *)params success:(AXCallback)success fail:(AXCallback)fail;
+- (NSInteger)callPUTWithParams:(NSDictionary *)params serviceIdentifier:(NSString *)serviedIdentifier methodName:(NSString *)methodName success:(AXCallback)success fail:(AXCallback)fail;
+- (NSInteger)callDELETEWithParams:(NSDictionary *)params serviceIdetifier:(NSString *)servieIdentifier methodName:(NSString *)methodName success:(AXCallback)success fail:(AXCallback)fail;
 
+- (NSNumber *)callApiWithRequest:(NSURLRequest *)request success:(AXCallback)success fail:(AXCallback)fail;
+- (void)cancelRequestWithRequestID:(NSNumber *)requestID;
+- (void)cancelRequestWithRequestList:(NSNumber *)requestList;
 @end
