@@ -54,14 +54,21 @@ pod 'JazzHands'
 pod 'Aspects'
 pod 'JSPatch'
 #pod 'DDLogger'
+#pod 'MLeaksFinder'
 
 
 pod 'JHChainableAnimations'
 pod 'VCTransitionsLibrary'
 pod 'ZFDragableModalTransition'
 pod 'RMPZoomTransitionAnimator'
+pod 'iCarousel'
+
+pod 'zipzap'
+pod 'ZipArchive'
+pod 'SSZipArchive'
 
 
+pod 'DWURunLoopWorkDistribution'
 pod 'WebViewJavascriptBridge'
 pod 'MHVideoPhotoGallery'
 pod 'CTVideoPlayerView'
@@ -69,6 +76,8 @@ pod 'CocoaAsyncSocket'
 pod 'TCBlobDownload'
 pod 'VIMediaCache'
 pod 'FLAnimatedImage'
+pod 'FastImageCache'
+
 pod 'ZFPlayer'
 pod 'XMPPFramework'
 pod 'DZNEmptyDataSet'
@@ -88,5 +97,6 @@ pod 'KMNavigationBarTransition'
 pod 'Masonry'
 pod 'ReactiveCocoa', '~> 2.5'
 pod "MagicalRecord"
+pod 'CTPersistance'
 end
 

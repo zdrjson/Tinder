@@ -8,7 +8,7 @@
 
 #ifndef DDNetworkingConfiguration_h
 #define DDNetworkingConfiguration_h
-
+#import <UIKit/UIKit.h>
 typedef NS_ENUM(NSUInteger, DDAppType) {
     DDAppTypexxx,
 };
@@ -26,9 +26,9 @@ static NSString *DDPasteboardType = @"xxxx";
 static BOOL kCTShouldCache = YES;
 static BOOL kCTServiceOnline = NO;
 
-static NSTimerInterval kCTNetworkingTimeoutSeconds = 20.0f;
-static NSTimerInterval KCTCacheOutdateTimeSeconds = 300;//5分钟的cache过期时间
-static NSTimerInterval kCTCacheCountLimit = 1000; //最多1000条cache
+static NSTimeInterval kCTNetworkingTimeoutSeconds = 20.0f;
+static NSTimeInterval KCTCacheOutdateTimeSeconds = 300;//5分钟的cache过期时间
+static NSUInteger kCTCacheCountLimit = 1000; //最多1000条cache
 //services
 extern NSString *const kCTServiceGDMapV3;
 

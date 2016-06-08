@@ -7,10 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
-//typedef void(^AXCallback) ()
+#import "DDURLResponse.h"
+typedef void(^AXCallback) (DDURLResponse *response);
 @interface DDApiProxy : NSObject
 
 + (instancetype)sharedInstance;
 
-- (NSInteger)callGetWithParams:(NSDictionary *)params serviceIdentifier:(NSString *)servieIdentifier methodName:(NSString *)methodName success:(
+- (NSInteger)callGetWithParams:(NSDictionary *)params serviceIdentifier:(NSString *)servieIdentifier methodName:(NSString *)methodName success:(AXCallback)success fail:(AXCallback)fail;
+- (NSInteger)callPOSTWithParams:(NSDictionary *)params serviceIdentifier:(NSString *)servieIdentifier methodName:(NSDictionary *)params success:(AXCallback)success fail:(AXCallback)fail;
+
 @end

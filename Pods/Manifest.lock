@@ -15,12 +15,12 @@ PODS:
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
   - Aspects (1.4.1)
-  - AsyncDisplayKit (1.9.74):
-    - AsyncDisplayKit/PINRemoteImage (= 1.9.74)
-  - AsyncDisplayKit/ASDealloc2MainObject (1.9.74)
-  - AsyncDisplayKit/Core (1.9.74):
+  - AsyncDisplayKit (1.9.80):
+    - AsyncDisplayKit/PINRemoteImage (= 1.9.80)
+  - AsyncDisplayKit/ASDealloc2MainObject (1.9.80)
+  - AsyncDisplayKit/Core (1.9.80):
     - AsyncDisplayKit/ASDealloc2MainObject
-  - AsyncDisplayKit/PINRemoteImage (1.9.74):
+  - AsyncDisplayKit/PINRemoteImage (1.9.80):
     - AsyncDisplayKit/Core
     - PINRemoteImage/iOS (>= 3.0.0-beta.2)
   - BlocksKit (2.2.5):
@@ -51,11 +51,12 @@ PODS:
   - CocoaLumberjack/Extensions (1.9.2):
     - CocoaLumberjack/Core
   - CTPersistance (1.2.6)
-  - CTVideoPlayerView (1.0.5):
+  - CTVideoPlayerView (1.0.6):
     - AFNetworking
     - CTPersistance
     - HandyFrame
   - DACircularProgress (2.3.1)
+  - DWURunLoopWorkDistribution (1.0.0)
   - DZNEmptyDataSet (1.8.1)
   - FastImageCache (1.5.1)
   - FDFullscreenPopGesture (1.1)
@@ -68,6 +69,7 @@ PODS:
     - Reachability (~> 3.0)
   - GPUImage (0.1.7)
   - HandyFrame (1.1.0)
+  - iCarousel (1.8.2)
   - IQKeyboardManager (4.0.3)
   - JazzHands (2.0.8)
   - JHChainableAnimations (1.3.0)
@@ -75,7 +77,7 @@ PODS:
   - JSPatch (1.0):
     - JSPatch/Core (= 1.0)
   - JSPatch/Core (1.0)
-  - JSQMessagesViewController (7.3.1):
+  - JSQMessagesViewController (7.3.2):
     - JSQSystemSoundPlayer (~> 2.0.1)
   - JSQSystemSoundPlayer (2.0.1)
   - KMNavigationBarTransition (0.0.8)
@@ -122,12 +124,13 @@ PODS:
   - SDAutoLayout (2.1.1)
   - SDCycleScrollView (1.65):
     - SDWebImage (~> 3.7)
-  - SDWebImage (3.7.6):
-    - SDWebImage/Core (= 3.7.6)
-  - SDWebImage/Core (3.7.6)
+  - SDWebImage (3.8.0):
+    - SDWebImage/Core (= 3.8.0)
+  - SDWebImage/Core (3.8.0)
   - Shimmer (1.0.2)
   - SlackTextViewController (1.9.3)
   - SSKeychain (1.4.0)
+  - SSZipArchive (1.2)
   - SVProgressHUD (2.0.3)
   - TCBlobDownload (2.1.1)
   - TTTAttributedLabel (1.13.3)
@@ -296,6 +299,8 @@ PODS:
   - ZFDragableModalTransition (0.6)
   - ZFPlayer (1.1.4):
     - Masonry
+  - ZipArchive (1.4.0)
+  - zipzap (8.1.1)
   - ZLSwipeableView (0.0.8)
 
 DEPENDENCIES:
@@ -305,7 +310,9 @@ DEPENDENCIES:
   - BlocksKit
   - CocoaAsyncSocket
   - CocoaLumberjack
+  - CTPersistance
   - CTVideoPlayerView
+  - DWURunLoopWorkDistribution
   - DZNEmptyDataSet
   - FastImageCache
   - FDFullscreenPopGesture
@@ -314,6 +321,7 @@ DEPENDENCIES:
   - FMDB
   - FreeStreamer
   - GPUImage
+  - iCarousel
   - IQKeyboardManager
   - JazzHands
   - JHChainableAnimations
@@ -342,6 +350,7 @@ DEPENDENCIES:
   - Shimmer
   - SlackTextViewController
   - SSKeychain
+  - SSZipArchive
   - SVProgressHUD
   - TCBlobDownload
   - TTTAttributedLabel
@@ -361,18 +370,21 @@ DEPENDENCIES:
   - YYWebImage
   - ZFDragableModalTransition
   - ZFPlayer
+  - ZipArchive
+  - zipzap
   - ZLSwipeableView
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   Aspects: 7595ba96a6727a58ebcbfc954497fc5d2fdde546
-  AsyncDisplayKit: cbd10f28030c0b904cef1bd8e7d96d775c5b0484
+  AsyncDisplayKit: ab57b10cd058797015c77be10407f3dc13027c85
   BlocksKit: 7f422b971407001178d181a43b99014ea2591fe6
   CocoaAsyncSocket: a18c75dca4b08723628a0bacca6e94803d90be91
   CocoaLumberjack: 628fca2e88ef06f7cf6817309aa405f325d9a6fa
   CTPersistance: 9167ca2e71c2f4c3092bf427652d8f191b22baa0
-  CTVideoPlayerView: d013f7787a01e00ca4295637e4c287c697b069ce
+  CTVideoPlayerView: b9f5abf5b0bcce8ccc7dcebffc8dd07ec2a84347
   DACircularProgress: 4dd437c0fc3da5161cb289e07ac449493d41db71
+  DWURunLoopWorkDistribution: 553fa18b78ccfc5330258210cc810b2c2da6dc0b
   DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
   FastImageCache: 2e7a6f677b15336eb3d1a4092a494676256c891d
   FDFullscreenPopGesture: a8a620179e3d9c40e8e00256dcee1c1a27c6d0f0
@@ -382,12 +394,13 @@ SPEC CHECKSUMS:
   FreeStreamer: 4907b628e65b1a95a5beb66737a9bef01a683929
   GPUImage: 733a5f0fab92df9de1c37ba9df520a833ccb406d
   HandyFrame: 97a9d4069bcd191dfbbbb4aa08390e3b8076e9bf
+  iCarousel: 67c8a43da5a46795b56aadfc96cd36a16f6149b2
   IQKeyboardManager: be9695ffc5a52077deb4847608f338771022d6d1
   JazzHands: 355dc5c2b6fc38ee460d0ed7836c69539263f477
   JHChainableAnimations: 22085fcb04ca87349e584573558e637f659fd769
   JLRoutes: 435d791422e96c9b9b5e1c4db1aedb3ae1b1a08f
   JSPatch: c689ea4dde17441f2f4a95d40dfedb8900c20099
-  JSQMessagesViewController: 3847120a97a7ab3bdc701f166c59f3955f7801c7
+  JSQMessagesViewController: bf14e4d644e1c59476f47f2f8410c34c6c0294f3
   JSQSystemSoundPlayer: c5850e77a4363ffd374cd851154b9af93264ed8d
   KMNavigationBarTransition: e87fb2b3a194b0d7fded5fd560df83c6f43b942f
   MagicalRecord: 53bed74b4323b930992a725be713e53b37d19755
@@ -408,10 +421,11 @@ SPEC CHECKSUMS:
   SCRecorder: bbb521dbc222908876ec9cd9156bbc8a893bed44
   SDAutoLayout: c18678b6ae28c67d89cb132e770cfbac9ee20d25
   SDCycleScrollView: f72904c77698a7f93a41bcbbc2d78b073bf7326c
-  SDWebImage: c325cf02c30337336b95beff20a13df489ec0ec9
+  SDWebImage: 7d9fe229266696de91eadf840c77ca15efd4bbd2
   Shimmer: c5374be1c2b0c9e292fb05b339a513cf291cac86
   SlackTextViewController: bd2a34c188d4f7dec93cf42388f38551263fac82
   SSKeychain: c71293fa57216a40ab06c23f4085387583293de4
+  SSZipArchive: 251093c65f98d6ea282c50bc404bfa631d9fd721
   SVProgressHUD: b0830714205bea1317ea1a2ebc71e5633af334d4
   TCBlobDownload: 8726f054cc00bb5f66a57bb0c99764842dfa5c9f
   TTTAttributedLabel: 6f3174aef8e738f44dff97c2eb7d8184f6ab6277
@@ -432,8 +446,10 @@ SPEC CHECKSUMS:
   YYWebImage: 8da75a611fd0d2e0f58a273f9ca0bc731614cb0d
   ZFDragableModalTransition: 0d294eaaba6edfcb9839595de765f9ca06a4b524
   ZFPlayer: bcb2f6bab181195e9ef2eb037498bd2771b611b0
+  ZipArchive: e25a4373192673e3229ac8d6e9f64a3e5713c966
+  zipzap: 940162d9c9c60472c2eab341385e4214da0fdf1c
   ZLSwipeableView: df385760ff4838935cdbcb62878ac5acd7355949
 
-PODFILE CHECKSUM: 0f902919024e90c7200bd0c3df695d7408a0c5c7
+PODFILE CHECKSUM: 3ad138905f638dab599f4720808494af0c37899a
 
 COCOAPODS: 1.0.1

@@ -1,12 +1,12 @@
 //
-//  ASDisplayNodeLayoutContext.mm
+//  ASLayoutTransition.mm
 //  AsyncDisplayKit
 //
 //  Created by Huy Nguyen on 3/8/16.
 //  Copyright © 2016 Facebook. All rights reserved.
 //
 
-#import "ASDisplayNodeLayoutContext.h"
+#import "ASLayoutTransition.h"
 
 #import "ASDisplayNode.h"
 #import "ASDisplayNodeInternal.h"
@@ -18,7 +18,7 @@
 #import "NSArray+Diffing.h"
 #import "ASEqualityHelpers.h"
 
-@implementation ASDisplayNodeLayoutContext {
+@implementation ASLayoutTransition {
   ASDN::RecursiveMutex _propertyLock;
   BOOL _calculatedSubnodeOperations;
   NSArray<ASDisplayNode *> *_insertedSubnodes;
@@ -29,17 +29,13 @@
 
 - (instancetype)initWithNode:(ASDisplayNode *)node
                pendingLayout:(ASLayout *)pendingLayout
-      pendingConstrainedSize:(ASSizeRange)pendingConstrainedSize
               previousLayout:(ASLayout *)previousLayout
-     previousConstrainedSize:(ASSizeRange)previousConstrainedSize
 {
   self = [super init];
   if (self) {
     _node = node;
     _pendingLayout = pendingLayout;
-    _pendingConstrainedSize = pendingConstrainedSize;
     _previousLayout = previousLayout;
-    _previousConstrainedSize = previousConstrainedSize;
   }
   return self;
 }
@@ -129,9 +125,9 @@
 {
   ASDN::MutexLocker l(_propertyLock);
   if ([key isEqualToString:ASTransitionContextFromLayoutKey]) {
-    return _previousConstrainedSize;
+    return _previousLayout.constrainedSizeRange;
   } else if ([key isEqualToString:ASTransitionContextToLayoutKey]) {
-    return _pendingConstrainedSize;
+    return _pendingLayout.constrainedSizeRange;
   } else {
     return ASSizeRangeMake(CGSizeZero, CGSizeZero);
   }

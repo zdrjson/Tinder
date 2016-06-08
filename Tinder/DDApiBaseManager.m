@@ -93,37 +93,52 @@
                 self.isLoading = YES;
                 switch (self.child.requestType) {
                     case DDApiBaseManagerRequestTypeGet: {
-                        <#statement#>
+                        
                         break;
                     }
                     case DDApiBaseManagerRequestTypePost: {
-                        <#statement#>
+                        
                         break;
                     }
                     case DDApiBaseManagerRequestTypePut: {
-                        <#statement#>
+                        
                         break;
                     }
                     case DDApiBaseManagerRequestTypeDelete: {
-                        <#statement#>
+                        
                         break;
                     }
                 }
             }
         }
     }
+    return 0;
 }
 
 - (void)loadDataFromNative
 {
+    NSString *methodName = self.child.methodName;
+    NSDictionary *result = (NSDictionary *)[[NSUserDefaults standardUserDefaults] objectForKey:methodName];
+    
+    if (result) {
+        
+    }
     
 }
 - (BOOL)shouldLoadFromNative
 {
+    return YES;
 }
 #pragma mark - private methods
 - (void)removeRequestIdWithRequestID:(NSInteger)requestId
 {
+    
+}
+- (BOOL)hasCacheWithParams:(NSDictionary *)params {
+    NSString *serviceIdentifier = self.child.serviceType;
+    NSString *methodName = self.child.methodName;
+//    NSData *result = [self.cah]
+    return YES;
     
 }
 @end

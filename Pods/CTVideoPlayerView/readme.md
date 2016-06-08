@@ -1,5 +1,21 @@
 # CTVideoPlayerView
 
+## Features
+
+- it's an UIView
+- plays local media or streams remote media over HTTP
+- customizable UI and user interaction
+- no size restrictions
+- orientation change support
+- simple API
+- playback time observe, video duration
+- download & native file management
+
+todo:
+- cache played video which comes from a remote url
+- play youtube
+- play [RTSP](https://en.wikipedia.org/wiki/Real_Time_Streaming_Protocol) / [RTMP](https://en.wikipedia.org/wiki/Real_Time_Messaging_Protocol)
+
 ## CocoaPods
 
 `pod "CTVideoPlayerView"`
@@ -11,6 +27,18 @@
 `import <CTVideoPlayerView/CTVideoViewCommonHeader.h>`
 
 ### 2. play
+
+in short:
+```objective-c
+CTVideoView *videoView = [[CTVideoView alloc] init];
+videoView.frame = CGRectMake(0,0,100,100);
+[self.view addSubview:videoView];
+
+videoView.videoUrl = [NSURL URLWithString:@"http://7xs8ft.com2.z0.glb.qiniucdn.com/rcd_vid_865e1fff817746d29ecc4996f93b7f74"]; // mp4 playable
+[videoView play];
+```
+
+long story:
 
 ```objective-c
 @interface SingleVideoViewController ()
@@ -59,7 +87,7 @@
 
 ### Download Video
 
-set download strategy to `CTVideoViewDownloadStrategyDownloadOnlyForeground` or `CTVideoViewDownloadStrategyDownloadOnlyForeground` to enable `Download`
+set download strategy to `CTVideoViewDownloadStrategyDownloadOnlyForeground` or `CTVideoViewDownloadStrategyDownloadForegroundAndBackground` to enable `Download`
 ```objective-C
 [CTVideoManager sharedInstance].downloadStrategy = CTVideoViewDownloadStrategyDownloadForegroundAndBackground;
 
@@ -164,24 +192,66 @@ You may want more method in this data center, you can fire an issue to tell me w
 
 ### Observe Time
 
-1. set `shouldObservePlayTime` to YES.
+#### 1. set `shouldObservePlayTime` to YES.
 
 ```objective-C
 videoView.shouldObservePlayTime = YES;
 ```
 
-2. set `timeDelegate`
+#### 2. set `timeDelegate`
 
 ```objective-C
 videoView.timeDelegate = self;
 ```
 
-3. implement `- (void)videoView:didPlayToSecond:` in timeDelegate
+#### 3. implement `- (void)videoView:didPlayToSecond:` in timeDelegate
 
 ```objective-C
 - (void)videoView:(CTVideoView *)videoView didPlayToSecond:(CGFloat)second
 {
 	NSLog(@"%f", second);
+}
+```
+### Customize Operation Button
+
+#### 1. set custmized button
+
+```objective-C
+videoView.playButton = customizedPlayButton;
+videoView.retryButton = customizedRetryButton;
+```
+
+#### 2. set `id<CTVideoViewButtonDelegate>` and implement methods to layout your button
+
+If you don't do this, the buttons will be layouted as size of CGSizeMake(100, 60), and will be put in center of the video. 
+
+use `pod "HandyFrame"` will make your layout code easy and clean.
+
+```objective-C
+#import <HandyFrame/UIView+LayoutMethods.h>
+```
+
+set the button delegate
+
+```objective-C
+videoView.buttonDelegate = self;
+```
+
+layout with [HandyFrame](https://github.com/casatwy/HandyAutoLayout)
+
+```objective-C
+- (void)videoView:(CTVideoView *)videoView layoutPlayButton:(UIButton *)playButton
+{
+    playButton.size = CGSizeMake(100, 60);
+	[playButton rightInContainer:5 shouldResize:NO];
+   	[playButton bottomInContainer:5 shouldResize:NO];
+}
+
+- (void)videoView:(CTVideoView *)videoView layoutRetryButton:(UIButton *)retryButton
+{
+    retryButton.size = CGSizeMake(100, 60);
+	[retryButton rightInContainer:5 shouldResize:NO];
+   	[retryButton bottomInContainer:5 shouldResize:NO];
 }
 ```
 

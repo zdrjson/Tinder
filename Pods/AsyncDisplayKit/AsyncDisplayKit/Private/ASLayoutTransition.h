@@ -1,5 +1,5 @@
 //
-//  ASDisplayNodeLayoutContext.h
+//  ASLayoutTransition.h
 //  AsyncDisplayKit
 //
 //  Created by Huy Nguyen on 3/8/16.
@@ -12,19 +12,15 @@
 @class ASDisplayNode;
 @class ASLayout;
 
-@interface ASDisplayNodeLayoutContext : NSObject <_ASTransitionContextLayoutDelegate>
+@interface ASLayoutTransition : NSObject <_ASTransitionContextLayoutDelegate>
 
 @property (nonatomic, readonly, weak) ASDisplayNode *node;
 @property (nonatomic, readonly, strong) ASLayout *pendingLayout;
-@property (nonatomic, readonly, assign) ASSizeRange pendingConstrainedSize;
 @property (nonatomic, readonly, strong) ASLayout *previousLayout;
-@property (nonatomic, readonly, assign) ASSizeRange previousConstrainedSize;
 
 - (instancetype)initWithNode:(ASDisplayNode *)node
                pendingLayout:(ASLayout *)pendingLayout
-      pendingConstrainedSize:(ASSizeRange)pendingConstrainedSize
-              previousLayout:(ASLayout *)previousLayout
-     previousConstrainedSize:(ASSizeRange)previousConstrainedSize;
+              previousLayout:(ASLayout *)previousLayout;
 
 - (void)applySubnodeInsertions;
 
