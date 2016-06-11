@@ -59,6 +59,8 @@ PODS:
   - DWURunLoopWorkDistribution (1.0.0)
   - DZNEmptyDataSet (1.8.1)
   - FastImageCache (1.5.1)
+  - FCUUID (1.2.0):
+    - UICKeyChainStore (~> 2.1.0)
   - FDFullscreenPopGesture (1.1)
   - FLAnimatedImage (1.0.12)
   - FlatUIKit (1.6.2)
@@ -134,6 +136,7 @@ PODS:
   - SVProgressHUD (2.0.3)
   - TCBlobDownload (2.1.1)
   - TTTAttributedLabel (1.13.3)
+  - UICKeyChainStore (2.1.0)
   - UICountingLabel (1.2.0)
   - UITableView+FDTemplateLayoutCell (1.4)
   - VCTransitionsLibrary (1.5.0)
@@ -315,6 +318,7 @@ DEPENDENCIES:
   - DWURunLoopWorkDistribution
   - DZNEmptyDataSet
   - FastImageCache
+  - FCUUID
   - FDFullscreenPopGesture
   - FLAnimatedImage
   - FlatUIKit
@@ -387,6 +391,7 @@ SPEC CHECKSUMS:
   DWURunLoopWorkDistribution: 553fa18b78ccfc5330258210cc810b2c2da6dc0b
   DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
   FastImageCache: 2e7a6f677b15336eb3d1a4092a494676256c891d
+  FCUUID: 9bfe031d35b7c221a7c66156a0af45d4eb49c3b6
   FDFullscreenPopGesture: a8a620179e3d9c40e8e00256dcee1c1a27c6d0f0
   FLAnimatedImage: 4a0b56255d9b05f18b6dd7ee06871be5d3b89e31
   FlatUIKit: 1b41f0d4952ce8d970d8479ce79df54a960242c4
@@ -429,6 +434,7 @@ SPEC CHECKSUMS:
   SVProgressHUD: b0830714205bea1317ea1a2ebc71e5633af334d4
   TCBlobDownload: 8726f054cc00bb5f66a57bb0c99764842dfa5c9f
   TTTAttributedLabel: 6f3174aef8e738f44dff97c2eb7d8184f6ab6277
+  UICKeyChainStore: f1cbd42216a113f0165de1e733e62905b8823432
   UICountingLabel: 1db4e7d023e1762171eb226d6dff47a7a84f27aa
   UITableView+FDTemplateLayoutCell: 234e1582bcc4e18461af91155123bb96538ed030
   VCTransitionsLibrary: d61fd9b7b6721942f0d583bcc0e7f8c31ec9271b
@@ -450,6 +456,6 @@ SPEC CHECKSUMS:
   zipzap: 940162d9c9c60472c2eab341385e4214da0fdf1c
   ZLSwipeableView: df385760ff4838935cdbcb62878ac5acd7355949
 
-PODFILE CHECKSUM: 3ad138905f638dab599f4720808494af0c37899a
+PODFILE CHECKSUM: 59d2b1a366c21c55ef71193162732d052a2d13ef
 
 COCOAPODS: 1.0.1

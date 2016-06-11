@@ -88,6 +88,7 @@ pod 'Reachability'
 
 pod 'SSKeychain'
 pod 'FCUUID'
+#pod 'KeychainItemWrapper'
 
 pod 'SDCycleScrollView'
 pod 'SDAutoLayout'
