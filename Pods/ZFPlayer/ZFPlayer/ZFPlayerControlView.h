@@ -58,6 +58,8 @@ typedef void(^SliderTapBlock)(CGFloat value);
 @property (nonatomic, strong, readonly) UIButton                *downLoadBtn;
 /** 切换分辨率按钮 */
 @property (nonatomic, strong, readonly) UIButton                *resolutionBtn;
+/** 播放按钮 */
+@property (nonatomic, strong, readonly) UIButton                *playeBtn;
 /** 分辨率的名称 */
 @property (nonatomic, strong) NSArray                           *resolutionArray;
 /** 切换分辨率的block */

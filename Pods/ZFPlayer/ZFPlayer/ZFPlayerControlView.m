@@ -57,6 +57,8 @@
 @property (nonatomic, strong) UIButton                *resolutionBtn;
 /** 分辨率的View */
 @property (nonatomic, strong) UIView                  *resolutionView;
+/** 播放按钮 */
+@property (nonatomic, strong) UIButton                *playeBtn;
 
 @end
 
@@ -83,6 +85,7 @@
         [self addSubview:self.activity];
         [self addSubview:self.repeatBtn];
         [self addSubview:self.horizontalLabel];
+        [self addSubview:self.playeBtn];
         
         [self.topImageView addSubview:self.resolutionBtn];
         
@@ -190,6 +193,10 @@
     [self.repeatBtn mas_makeConstraints:^(MASConstraintMaker *make) {
          make.center.equalTo(self);
     }];
+    
+    [self.playeBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.center.equalTo(self);
+    }];
 }
 
 #pragma mark - Action
@@ -244,6 +251,7 @@
     self.totalTimeLabel.text    = @"00:00";
     self.horizontalLabel.hidden = YES;
     self.repeatBtn.hidden       = YES;
+    self.playeBtn.hidden        = YES;
     self.resolutionView.hidden  = YES;
     self.backgroundColor        = [UIColor clearColor];
     self.downLoadBtn.enabled    = YES;
@@ -254,6 +262,7 @@
     self.horizontalLabel.hidden = YES;
     self.repeatBtn.hidden       = YES;
     self.resolutionView.hidden  = YES;
+    self.playeBtn.hidden        = YES;
     self.downLoadBtn.enabled    = YES;
     self.backgroundColor        = [UIColor clearColor];
 }
@@ -458,6 +467,15 @@
         _resolutionBtn.backgroundColor = RGBA(0, 0, 0, 0.7);
     }
     return _resolutionBtn;
+}
+
+- (UIButton *)playeBtn
+{
+    if (!_playeBtn) {
+        _playeBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        [_playeBtn setImage:[UIImage imageNamed:ZFPlayerSrcName(@"ZFPlayer_play_btn")] forState:UIControlStateNormal];
+    }
+    return _playeBtn;
 }
 
 @end

@@ -84,6 +84,8 @@ typedef NS_ENUM(NSInteger, ZFPlayerState) {
 @property (nonatomic, assign) BOOL                playDidEnd;
 /** 进入后台*/
 @property (nonatomic, assign) BOOL                didEnterBackground;
+/** 是否自动播放 */
+@property (nonatomic, assign) BOOL                isAutoPlay;
 
 #pragma mark - UITableViewCell PlayerView
 
@@ -169,6 +171,7 @@ typedef NS_ENUM(NSInteger, ZFPlayerState) {
     self.didEnterBackground = NO;
     // 视频跳转秒数置0
     self.seekTime           = 0;
+    self.isAutoPlay         = NO;
     // 移除通知
     [[NSNotificationCenter defaultCenter] removeObserver:self];
     // 关闭定时器
@@ -245,6 +248,8 @@ typedef NS_ENUM(NSInteger, ZFPlayerState) {
     [self.controlView.lockBtn addTarget:self action:@selector(lockScreenAction:) forControlEvents:UIControlEventTouchUpInside];
     // 重播
     [self.controlView.repeatBtn addTarget:self action:@selector(repeatPlay:) forControlEvents:UIControlEventTouchUpInside];
+    // 中间按钮播放
+    [self.controlView.playeBtn addTarget:self action:@selector(configZFPlayer) forControlEvents:UIControlEventTouchUpInside];
     // 下载
     [self.controlView.downLoadBtn addTarget:self action:@selector(downloadVideo:) forControlEvents:UIControlEventTouchUpInside];
     
@@ -256,13 +261,15 @@ typedef NS_ENUM(NSInteger, ZFPlayerState) {
 
         NSString *videoStr = weakSelf.videoURLArray[button.tag-200];
         NSURL *videoURL = [NSURL URLWithString:videoStr];
-        if ([videoURL isEqual:weakSelf.videoURL]) { return ;}
+        if ([videoURL isEqual:weakSelf.videoURL]) { return; }
         weakSelf.isChangeResolution = YES;
         // reset player
         [weakSelf resetToPlayNewURL];
         weakSelf.videoURL = videoURL;
         // 从xx秒播放
         weakSelf.seekTime = currentTime;
+        // 切换完分辨率自动播放
+        [weakSelf autoPlayTheVideo];
     
     };
     // 点击slider快进
@@ -307,10 +314,12 @@ typedef NS_ENUM(NSInteger, ZFPlayerState) {
     
     [UIApplication sharedApplication].statusBarHidden = NO;
     
-    // 只要屏幕旋转就显示控制层
-    self.isMaskShowing = NO;
-    // 延迟隐藏controlView
-    [self animateShow];
+    if (!self.isPauseByUser) {
+        // 只要屏幕旋转就显示控制层
+        self.isMaskShowing = NO;
+        // 延迟隐藏controlView
+        [self animateShow];
+    }
     
     // 4s，屏幕宽高比不是16：9的问题,player加到控制器上时候
     if (iPhone4s && !self.isCellVideo) {
@@ -377,9 +386,12 @@ typedef NS_ENUM(NSInteger, ZFPlayerState) {
     [self addNotifications];
     // 根据屏幕的方向设置相关UI
     [self onDeviceOrientationChange];
-
+    
+    self.isPauseByUser = YES;
+    self.controlView.playeBtn.hidden = NO;
+    [self.controlView hideControlView];
     // 设置Player相关参数
-    [self configZFPlayer];
+//    [self configZFPlayer];
 }
 
 /**
@@ -428,10 +440,21 @@ typedef NS_ENUM(NSInteger, ZFPlayerState) {
     [self play];
     self.controlView.startBtn.selected = YES;
     self.isPauseByUser                 = NO;
+    self.controlView.playeBtn.hidden   = YES;
     
     // 强制让系统调用layoutSubviews 两个方法必须同时写
     [self setNeedsLayout]; //是标记 异步刷新 会调但是慢
     [self layoutIfNeeded]; //加上此代码立刻刷新
+}
+
+/**
+ *  自动播放，默认不自动播放
+ */
+- (void)autoPlayTheVideo
+{
+    self.isAutoPlay = YES;
+    // 设置Player相关参数
+    [self configZFPlayer];
 }
 
 /**
@@ -1112,7 +1135,7 @@ typedef NS_ENUM(NSInteger, ZFPlayerState) {
 - (void)startAction:(UIButton *)button
 {
     button.selected    = !button.selected;
-    self.isPauseByUser = !button.isSelected;
+    self.isPauseByUser = !self.isPauseByUser;
     if (button.selected) {
         [self play];
         if (self.state == ZFPlayerStatePause) { self.state = ZFPlayerStatePlaying; }
@@ -1127,6 +1150,7 @@ typedef NS_ENUM(NSInteger, ZFPlayerState) {
  */
 - (void)play
 {
+    self.isPauseByUser = NO;
     [_player play];
 }
 
@@ -1135,7 +1159,8 @@ typedef NS_ENUM(NSInteger, ZFPlayerState) {
  */
 - (void)pause
 {
-     [_player pause];
+    self.isPauseByUser = YES;
+    [_player pause];
 }
 
 /**
@@ -1365,6 +1390,7 @@ typedef NS_ENUM(NSInteger, ZFPlayerState) {
             // 如果点击了暂停按钮
             if (self.isPauseByUser) return ;
             [self play];
+            self.seekTime = 0;
             if (!self.playerItem.isPlaybackLikelyToKeepUp && !self.isLocalVideo) {
                 self.state = ZFPlayerStateBuffering;
             }

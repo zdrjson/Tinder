@@ -28,6 +28,10 @@
 		F51E19871CCE2D3400C281F1 /* TinderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F51E19861CCE2D3400C281F1 /* TinderTests.m */; };
 		F51E19921CCE2D3400C281F1 /* TinderUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = F51E19911CCE2D3400C281F1 /* TinderUITests.m */; };
 		F51E19A21CCE5CE300C281F1 /* DDTinderNavigaitonController.m in Sources */ = {isa = PBXBuildFile; fileRef = F51E19A11CCE5CE300C281F1 /* DDTinderNavigaitonController.m */; };
+		F51EFDFF1D0D2C980086EEE4 /* ZLSwipeableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F51EFDFE1D0D2C980086EEE4 /* ZLSwipeableViewController.m */; };
+		F51EFE021D0D2CC60086EEE4 /* UIColor+FlatColors.m in Sources */ = {isa = PBXBuildFile; fileRef = F51EFE011D0D2CC60086EEE4 /* UIColor+FlatColors.m */; };
+		F51EFE051D0D2CE70086EEE4 /* CardView.m in Sources */ = {isa = PBXBuildFile; fileRef = F51EFE041D0D2CE70086EEE4 /* CardView.m */; };
+		F51EFE081D0D2E020086EEE4 /* HistoryDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F51EFE071D0D2E020086EEE4 /* HistoryDemoViewController.m */; };
 		F53533CD1CE0072000E79155 /* RadarView.m in Sources */ = {isa = PBXBuildFile; fileRef = F53533CC1CE0072000E79155 /* RadarView.m */; };
 		F56398D01CE58F7600D185A4 /* DDSwipeableVc.m in Sources */ = {isa = PBXBuildFile; fileRef = F56398CF1CE58F7600D185A4 /* DDSwipeableVc.m */; };
 		F56C90C71CD2524D0056AB1F /* DDNavigationBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F56C90C61CD2524D0056AB1F /* DDNavigationBarItem.m */; };
@@ -107,6 +111,14 @@
 		F51E19931CCE2D3400C281F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F51E19A01CCE5CE300C281F1 /* DDTinderNavigaitonController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDTinderNavigaitonController.h; sourceTree = "<group>"; };
 		F51E19A11CCE5CE300C281F1 /* DDTinderNavigaitonController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDTinderNavigaitonController.m; sourceTree = "<group>"; };
+		F51EFDFD1D0D2C980086EEE4 /* ZLSwipeableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZLSwipeableViewController.h; sourceTree = "<group>"; };
+		F51EFDFE1D0D2C980086EEE4 /* ZLSwipeableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZLSwipeableViewController.m; sourceTree = "<group>"; };
+		F51EFE001D0D2CC60086EEE4 /* UIColor+FlatColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+FlatColors.h"; sourceTree = "<group>"; };
+		F51EFE011D0D2CC60086EEE4 /* UIColor+FlatColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+FlatColors.m"; sourceTree = "<group>"; };
+		F51EFE031D0D2CE70086EEE4 /* CardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardView.h; sourceTree = "<group>"; };
+		F51EFE041D0D2CE70086EEE4 /* CardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardView.m; sourceTree = "<group>"; };
+		F51EFE061D0D2E020086EEE4 /* HistoryDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HistoryDemoViewController.h; sourceTree = "<group>"; };
+		F51EFE071D0D2E020086EEE4 /* HistoryDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HistoryDemoViewController.m; sourceTree = "<group>"; };
 		F53533CB1CE0072000E79155 /* RadarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RadarView.h; sourceTree = "<group>"; };
 		F53533CC1CE0072000E79155 /* RadarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RadarView.m; sourceTree = "<group>"; };
 		F56398CE1CE58F7600D185A4 /* DDSwipeableVc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDSwipeableVc.h; sourceTree = "<group>"; };
@@ -182,6 +194,8 @@
 		F51AAB711D01A693001FE416 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				F51EFE001D0D2CC60086EEE4 /* UIColor+FlatColors.h */,
+				F51EFE011D0D2CC60086EEE4 /* UIColor+FlatColors.m */,
 				F51AAB721D01A6BB001FE416 /* NSURLRequest+DDNetworkingMethods.h */,
 				F51AAB731D01A6BB001FE416 /* NSURLRequest+DDNetworkingMethods.m */,
 				F511706D1D0562F200183EE9 /* NSThread+DDAdd.h */,
@@ -257,6 +271,12 @@
 				F5A101831CF8555200DEF86F /* DDNavVc.m */,
 				F5A101851CF8556F00DEF86F /* DDMiddleVc.h */,
 				F5A101861CF8556F00DEF86F /* DDMiddleVc.m */,
+				F51EFDFD1D0D2C980086EEE4 /* ZLSwipeableViewController.h */,
+				F51EFDFE1D0D2C980086EEE4 /* ZLSwipeableViewController.m */,
+				F51EFE061D0D2E020086EEE4 /* HistoryDemoViewController.h */,
+				F51EFE071D0D2E020086EEE4 /* HistoryDemoViewController.m */,
+				F51EFE031D0D2CE70086EEE4 /* CardView.h */,
+				F51EFE041D0D2CE70086EEE4 /* CardView.m */,
 				F51055B61CFBE6F600F4B4AD /* DDRadarView.h */,
 				F51055B71CFBE6F600F4B4AD /* DDRadarView.m */,
 				F51055B91CFBE72000F4B4AD /* DDLeftView.h */,
@@ -568,13 +588,17 @@
 				F51E19771CCE2D3300C281F1 /* Tinder.xcdatamodeld in Sources */,
 				F50E5AED1CE2C0E900C8E627 /* DDCGUtilities.m in Sources */,
 				F51E19A21CCE5CE300C281F1 /* DDTinderNavigaitonController.m in Sources */,
+				F51EFE081D0D2E020086EEE4 /* HistoryDemoViewController.m in Sources */,
 				F53533CD1CE0072000E79155 /* RadarView.m in Sources */,
 				F5A477411CEAF4ED000D318F /* ImageLabelView.m in Sources */,
 				F56C90D31CD2EC510056AB1F /* MiddleVc.m in Sources */,
+				F51EFE051D0D2CE70086EEE4 /* CardView.m in Sources */,
+				F51EFDFF1D0D2C980086EEE4 /* ZLSwipeableViewController.m in Sources */,
 				F5EE3CF71CFD64AE00EA97BD /* DDURLResponse.m in Sources */,
 				F51055C11CFBE73800F4B4AD /* DDRightView.m in Sources */,
 				F51055B81CFBE6F600F4B4AD /* DDRadarView.m in Sources */,
 				F51BF83B1D003CA800F9603A /* DDApiProxy.m in Sources */,
+				F51EFE021D0D2CC60086EEE4 /* UIColor+FlatColors.m in Sources */,
 				F5A101841CF8555200DEF86F /* DDNavVc.m in Sources */,
 				F51E196E1CCE2D3300C281F1 /* AppDelegate.m in Sources */,
 				F51055BB1CFBE72000F4B4AD /* DDLeftView.m in Sources */,

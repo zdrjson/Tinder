@@ -96,6 +96,8 @@ pod 'pop'
 pod 'IQKeyboardManager'
 pod 'SCRecorder'
 pod 'JSQMessagesViewController'
+#pod 'Atlas'
+
 pod 'KMNavigationBarTransition'
 pod 'Masonry'
 pod 'ReactiveCocoa', '~> 2.5'

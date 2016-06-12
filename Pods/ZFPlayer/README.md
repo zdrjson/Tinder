@@ -102,6 +102,12 @@ self.playerView.goBackBlock = ^{
  self.playerView.seekTime = 15;
  ```
 
+##### Automatically play the video，not automatically play by default(optional)
+```objc
+// Automatically play the video
+[self.playerView autoPlayTheVideo];
+```
+
 ### Picture effect demonstration
 
 ![Picture effect](https://github.com/renzifeng/ZFPlayer/raw/master/screen.gif)

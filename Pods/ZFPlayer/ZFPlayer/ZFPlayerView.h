@@ -49,6 +49,10 @@ typedef NS_ENUM(NSInteger, ZFPlayerLayerGravity) {
 @property (nonatomic, assign) NSInteger            seekTime;
 
 /**
+ *  自动播放，默认不自动播放
+ */
+- (void)autoPlayTheVideo;
+/**
  *  取消延时隐藏controlView的方法,在ViewController的delloc方法中调用
  *  用于解决：刚打开视频播放器，就关闭该页面，maskView的延时隐藏还未执行。
  */

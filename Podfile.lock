@@ -67,7 +67,7 @@ PODS:
   - FMDB (2.6.2):
     - FMDB/standard (= 2.6.2)
   - FMDB/standard (2.6.2)
-  - FreeStreamer (3.5.6):
+  - FreeStreamer (3.5.7):
     - Reachability (~> 3.0)
   - GPUImage (0.1.7)
   - HandyFrame (1.1.0)
@@ -79,7 +79,7 @@ PODS:
   - JSPatch (1.0):
     - JSPatch/Core (= 1.0)
   - JSPatch/Core (1.0)
-  - JSQMessagesViewController (7.3.2):
+  - JSQMessagesViewController (7.3.3):
     - JSQSystemSoundPlayer (~> 2.0.1)
   - JSQSystemSoundPlayer (2.0.1)
   - KMNavigationBarTransition (0.0.8)
@@ -126,9 +126,9 @@ PODS:
   - SDAutoLayout (2.1.1)
   - SDCycleScrollView (1.65):
     - SDWebImage (~> 3.7)
-  - SDWebImage (3.8.0):
-    - SDWebImage/Core (= 3.8.0)
-  - SDWebImage/Core (3.8.0)
+  - SDWebImage (3.8.1):
+    - SDWebImage/Core (= 3.8.1)
+  - SDWebImage/Core (3.8.1)
   - Shimmer (1.0.2)
   - SlackTextViewController (1.9.3)
   - SSKeychain (1.4.0)
@@ -300,7 +300,7 @@ PODS:
     - YYCache
     - YYImage
   - ZFDragableModalTransition (0.6)
-  - ZFPlayer (1.1.4):
+  - ZFPlayer (1.1.5):
     - Masonry
   - ZipArchive (1.4.0)
   - zipzap (8.1.1)
@@ -396,7 +396,7 @@ SPEC CHECKSUMS:
   FLAnimatedImage: 4a0b56255d9b05f18b6dd7ee06871be5d3b89e31
   FlatUIKit: 1b41f0d4952ce8d970d8479ce79df54a960242c4
   FMDB: 854a0341b4726e53276f2a8996f06f1b80f9259a
-  FreeStreamer: 4907b628e65b1a95a5beb66737a9bef01a683929
+  FreeStreamer: c11b83e4e4010c00d1e1549a37d6719e98252c45
   GPUImage: 733a5f0fab92df9de1c37ba9df520a833ccb406d
   HandyFrame: 97a9d4069bcd191dfbbbb4aa08390e3b8076e9bf
   iCarousel: 67c8a43da5a46795b56aadfc96cd36a16f6149b2
@@ -405,7 +405,7 @@ SPEC CHECKSUMS:
   JHChainableAnimations: 22085fcb04ca87349e584573558e637f659fd769
   JLRoutes: 435d791422e96c9b9b5e1c4db1aedb3ae1b1a08f
   JSPatch: c689ea4dde17441f2f4a95d40dfedb8900c20099
-  JSQMessagesViewController: bf14e4d644e1c59476f47f2f8410c34c6c0294f3
+  JSQMessagesViewController: 0ee3f80237268192a3e8337fd0d787f1a1bf5a7a
   JSQSystemSoundPlayer: c5850e77a4363ffd374cd851154b9af93264ed8d
   KMNavigationBarTransition: e87fb2b3a194b0d7fded5fd560df83c6f43b942f
   MagicalRecord: 53bed74b4323b930992a725be713e53b37d19755
@@ -426,7 +426,7 @@ SPEC CHECKSUMS:
   SCRecorder: bbb521dbc222908876ec9cd9156bbc8a893bed44
   SDAutoLayout: c18678b6ae28c67d89cb132e770cfbac9ee20d25
   SDCycleScrollView: f72904c77698a7f93a41bcbbc2d78b073bf7326c
-  SDWebImage: 7d9fe229266696de91eadf840c77ca15efd4bbd2
+  SDWebImage: 35f9627a3e44b4f292a8a8ce6a531fa488239b91
   Shimmer: c5374be1c2b0c9e292fb05b339a513cf291cac86
   SlackTextViewController: bd2a34c188d4f7dec93cf42388f38551263fac82
   SSKeychain: c71293fa57216a40ab06c23f4085387583293de4
@@ -451,11 +451,11 @@ SPEC CHECKSUMS:
   YYText: ac09660c9ccd9b817f409a20caa6f5587444d2ae
   YYWebImage: 8da75a611fd0d2e0f58a273f9ca0bc731614cb0d
   ZFDragableModalTransition: 0d294eaaba6edfcb9839595de765f9ca06a4b524
-  ZFPlayer: bcb2f6bab181195e9ef2eb037498bd2771b611b0
+  ZFPlayer: d33599f3847e94d689f6ae4e8f02a9fc4ec337a0
   ZipArchive: e25a4373192673e3229ac8d6e9f64a3e5713c966
   zipzap: 940162d9c9c60472c2eab341385e4214da0fdf1c
   ZLSwipeableView: df385760ff4838935cdbcb62878ac5acd7355949
 
-PODFILE CHECKSUM: 59d2b1a366c21c55ef71193162732d052a2d13ef
+PODFILE CHECKSUM: 3bf98c7ba13318252c8ddb586e7c5122afe26ece
 
 COCOAPODS: 1.0.1

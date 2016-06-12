@@ -11,9 +11,12 @@
 #import "DDMiddleView.h"
 #import "DDRightView.h"
 #import "DDRadarView.h"
+#import "ZLSwipeableViewController.h"
+#import "HistoryDemoViewController.h"
+#import "CardView.h"
 
 
-@interface DDMiddleVc ()
+@interface DDMiddleVc () <ZLSwipeableViewDataSource, ZLSwipeableViewDelegate>
 
 #define  Width   [UIScreen mainScreen].bounds.size.width
 #define  Height  [UIScreen mainScreen].bounds.size.height
@@ -24,6 +27,14 @@
 @property (nonatomic, strong) DDRightView *rightView;
 @property (nonatomic, strong) DDRadarView *ddRadarView;
 
+@property (nonatomic, strong) ZLSwipeableView *swipeableView;
+
+@property (nonatomic, strong) NSString *rightNavBarButtonItemTitle;
+@property (nonatomic, strong) UIBarButtonItem *rightNavBarButtonItem;
+
+
+@property (nonatomic, strong) NSArray *colors;
+@property (nonatomic) NSUInteger colorIndex;
 @end
 
 @implementation DDMiddleVc
@@ -32,6 +43,30 @@
 {
     [super viewDidLoad];
     
+    self.colorIndex = 0;
+    self.colors = @[
+                    @"Turquoise",
+                    @"Green Sea",
+                    @"Emerald",
+                    @"Nephritis",
+                    @"Peter River",
+                    @"Belize Hole",
+                    @"Amethyst",
+                    @"Wisteria",
+                    @"Wet Asphalt",
+                    @"Midnight Blue",
+                    @"Sun Flower",
+                    @"Orange",
+                    @"Carrot",
+                    @"Pumpkin",
+                    @"Alizarin",
+                    @"Pomegranate",
+                    @"Clouds",
+                    @"Silver",
+                    @"Concrete",
+                    @"Asbestos"
+                    ];
+
     [self setupScrollView];
 
     
@@ -40,8 +75,43 @@
 
     
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"stop" style:UIBarButtonItemStyleDone target:self action:@selector(stop)];
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"star" style:UIBarButtonItemStyleDone target:self action:@selector(star)];
+//    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"star" style:UIBarButtonItemStyleDone target:self action:@selector(star)];
+    
+    
+    self.rightNavBarButtonItemTitle = @"Rewind";
+    self.rightNavBarButtonItem =
+    [[UIBarButtonItem alloc] initWithTitle:self.rightNavBarButtonItemTitle
+                                     style:UIBarButtonItemStylePlain
+                                    target:self
+                                    action:@selector(rightBarButtonItemAction:)];
+    self.navigationItem.rightBarButtonItem = _rightNavBarButtonItem;
+    [self updateRightBarButtonItem];
+    
+    
 }
+- (void)updateRightBarButtonItem {
+    NSUInteger historyLength = self.swipeableView.history.count;
+    BOOL enabled = historyLength != 0;
+    self.navigationItem.rightBarButtonItem.enabled = enabled;
+    if (!enabled) {
+        self.navigationItem.rightBarButtonItem.title = self.rightNavBarButtonItemTitle;
+        return;
+    }
+    self.navigationItem.rightBarButtonItem.title =
+    [NSString stringWithFormat:@"%@(%lu)", self.rightNavBarButtonItemTitle, historyLength];
+}
+
+- (void)swipeableView:(ZLSwipeableView *)swipeableView
+         didSwipeView:(UIView *)view
+          inDirection:(ZLSwipeableViewDirection)direction {
+    [self updateRightBarButtonItem];
+}
+
+- (void)rightBarButtonItemAction:(UIBarButtonItem *)barButtonItem {
+    [self.swipeableView rewind];
+    [self updateRightBarButtonItem];
+}
+
 - (void)stop {
     [self.ddRadarView stopScan];
 }
@@ -101,18 +171,104 @@
     }];
     
     
-    
+    //中间的View
     [self.middleView addSubview:self.ddRadarView];
     [self.ddRadarView mas_makeConstraints:^(MASConstraintMaker *make) {
         (void)make.center;
         make.size.mas_equalTo(CGSizeMake(kavatarViewRadius * 2, kavatarViewRadius * 2));
     }];
 
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//        [self stop];
+        [self addSwipView];
+        
+    });
 
+}
+
+- (void)addSwipView
+{
+    
+//    ZLSwipeableViewController *zls = [ZLSwipeableViewController new];
+//    [self.view addSubview:zls.view];
+//    [self addChildViewController:zls];
+//    return;
+    ZLSwipeableView *swipeableView = [[ZLSwipeableView alloc] initWithFrame:CGRectZero];
+//    swipeableView.numberOfActiveViews = 1;
+    self.swipeableView = swipeableView;
+    [self.view addSubview:self.swipeableView];
+    
+    // Required Data Source
+    self.swipeableView.dataSource = self;
+    
+    // Optional Delegate
+    self.swipeableView.delegate = self;
+    
+    
+    NSLog(@"%@",self.swipeableView.subviews);
+    
+    
+    [self.swipeableView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.equalTo(UIEdgeInsetsMake(10, 10, 200, 10));
+    }];
+
+}
+
+
+#pragma mark - ZLSwipeableViewDelegate
+//
+//- (void)swipeableView:(ZLSwipeableView *)swipeableView
+//         didSwipeView:(UIView *)view
+//          inDirection:(ZLSwipeableViewDirection)direction {
+//    //    NSLog(@"did swipe in direction: %zd", direction);
+//}
+
+- (void)swipeableView:(ZLSwipeableView *)swipeableView didCancelSwipe:(UIView *)view {
+    //    NSLog(@"did cancel swipe");
+}
+
+- (void)swipeableView:(ZLSwipeableView *)swipeableView
+  didStartSwipingView:(UIView *)view
+           atLocation:(CGPoint)location {
+    //    NSLog(@"did start swiping at location: x %f, y %f", location.x, location.y);
+}
+
+- (void)swipeableView:(ZLSwipeableView *)swipeableView
+          swipingView:(UIView *)view
+           atLocation:(CGPoint)location
+          translation:(CGPoint)translation {
+    //    NSLog(@"swiping at location: x %f, y %f, translation: x %f, y %f", location.x, location.y,
+    //          translation.x, translation.y);
+}
+
+- (void)swipeableView:(ZLSwipeableView *)swipeableView
+    didEndSwipingView:(UIView *)view
+           atLocation:(CGPoint)location {
+    //    NSLog(@"did end swiping at location: x %f, y %f", location.x, location.y);
+}
+
+#pragma mark - ZLSwipeableViewDataSource
+
+- (UIView *)nextViewForSwipeableView:(ZLSwipeableView *)swipeableView {
+    if (self.colorIndex >= self.colors.count) {
+        self.colorIndex = 0;
+        
+    }
+    NSLog(@"%ld %ld",self.colorIndex,self.colors.count);
+    if (self.colorIndex == 5) {
+        return nil;
+    }
+
+    CardView *view = [[CardView alloc] initWithFrame:swipeableView.bounds];
+    view.backgroundColor = XWRandomColor;
+    self.colorIndex++;
+    return view;
 }
 
 - (void)viewDidLayoutSubviews {
     [super viewDidLayoutSubviews];
+    [self.swipeableView loadViewsIfNeeded];
      [self.scrollView setContentOffset: CGPointMake([UIScreen mainScreen].bounds.size.width, 0) animated:NO];
 }
 - (void)setupScrollView
