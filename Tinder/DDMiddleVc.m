@@ -44,29 +44,7 @@
     [super viewDidLoad];
     
     self.colorIndex = 0;
-    self.colors = @[
-                    @"Turquoise",
-                    @"Green Sea",
-                    @"Emerald",
-                    @"Nephritis",
-                    @"Peter River",
-                    @"Belize Hole",
-                    @"Amethyst",
-                    @"Wisteria",
-                    @"Wet Asphalt",
-                    @"Midnight Blue",
-                    @"Sun Flower",
-                    @"Orange",
-                    @"Carrot",
-                    @"Pumpkin",
-                    @"Alizarin",
-                    @"Pomegranate",
-                    @"Clouds",
-                    @"Silver",
-                    @"Concrete",
-                    @"Asbestos"
-                    ];
-
+   
     [self setupScrollView];
 
     
@@ -173,17 +151,25 @@
     
     //中间的View
     [self.middleView addSubview:self.ddRadarView];
+    
     [self.ddRadarView mas_makeConstraints:^(MASConstraintMaker *make) {
         (void)make.center;
         make.size.mas_equalTo(CGSizeMake(kavatarViewRadius * 2, kavatarViewRadius * 2));
     }];
-
     
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [self stop];
-        self.ddRadarView.hidden = YES;
-        [self addSwipView];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         
+        self.ddRadarView.hidden = NO;
+        [self.ddRadarView backAnimation];
+        
+        
+        
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [self stop];
+            self.ddRadarView.hidden = YES;
+            [self addSwipView];
+            
+        });
     });
 
 }
@@ -280,9 +266,7 @@
  
  */
 - (UIView *)nextViewForSwipeableView:(ZLSwipeableView *)swipeableView {
-    if (self.colorIndex >= self.colors.count) {
-        self.colorIndex = 0;
-    }
+    
     NSLog(@"%ld %ld",self.colorIndex,self.colors.count);
     NSLog(@"%@",swipeableView.activeViews);
     if (self.colorIndex == 5) {
@@ -311,6 +295,7 @@
 {
     if (!_ddRadarView) {
         _ddRadarView = [[DDRadarView alloc] init];
+        _ddRadarView.hidden = YES;
     }
     return _ddRadarView;
 }
