@@ -52,7 +52,7 @@
 //    [self click];
 }
 //点击事件的动画
--(void)click{
+-(void)click {
     
     CGFloat width = 4;
     CGRect pathFrame = CGRectMake(0, 0, 4, 4);
@@ -105,6 +105,10 @@
 }
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     
+    [self clickAnimation];
+}
+- (void)clickAnimation {
+    
     [self click];
     
     
@@ -121,15 +125,15 @@
     spring.toValue             = [NSValue valueWithCGSize:CGSizeMake(0.5f, 0.5f)];
     
     // 参数的设置
-//    spring.springSpeed         = 12;
-//    spring.springBounciness    = 11.164021492004395;
-//    spring.dynamicsMass        = 1;
-//    spring.dynamicsFriction    = 8.1296300888061523;
-//    spring.dynamicsTension     = 116.40476226806641;
+    //    spring.springSpeed         = 12;
+    //    spring.springBounciness    = 11.164021492004395;
+    //    spring.dynamicsMass        = 1;
+    //    spring.dynamicsFriction    = 8.1296300888061523;
+    //    spring.dynamicsTension     = 116.40476226806641;
     
     // 执行动画
     [self.avatarViewBtn.layer pop_addAnimation:spring forKey:nil];
-    
+
 }
 - (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     

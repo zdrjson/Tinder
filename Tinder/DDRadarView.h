@@ -14,4 +14,6 @@ static CGFloat const kavatarViewRadius = 40.0f;
 
 - (void)stopScan;
 
+- (void)backAnimation;
+
 @end

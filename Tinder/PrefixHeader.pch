@@ -18,7 +18,7 @@
 #define XWColorRGBA(r, g, b, a) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:a]
 //随机色
 #define XWRandomColor XWColor(arc4random_uniform(256),arc4random_uniform(256),arc4random_uniform(256))
-
+#import "YYCategories.h"
 #import <pop/POP.h>
 
 //define this constant if you want to use Masonry without the 'mas_' prefix

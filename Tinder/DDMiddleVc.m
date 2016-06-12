@@ -180,7 +180,8 @@
 
     
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-//        [self stop];
+        [self stop];
+        self.ddRadarView.hidden = YES;
         [self addSwipView];
         
     });
@@ -190,24 +191,23 @@
 - (void)addSwipView
 {
     
-//    ZLSwipeableViewController *zls = [ZLSwipeableViewController new];
-//    [self.view addSubview:zls.view];
-//    [self addChildViewController:zls];
-//    return;
-    ZLSwipeableView *swipeableView = [[ZLSwipeableView alloc] initWithFrame:CGRectZero];
-//    swipeableView.numberOfActiveViews = 1;
+
+    
+    ZLSwipeableView *swipeableView = [[ZLSwipeableView alloc] initWithFrame:CGRectMake(10, 10, kScreenWidth - 20, kScreenWidth - 20)];
+//    swipeableView.backgroundColor = [UIColor yellowColor];
+//    swipeableView.subviews.firstObject.backgroundColor = [UIColor greenColor];
+//    swipeableView.subviews[1].backgroundColor = [UIColor grayColor];
+//    
+    NSLog(@"%@",swipeableView.subviews);
+    
     self.swipeableView = swipeableView;
-    [self.view addSubview:self.swipeableView];
+    [self.middleView addSubview:self.swipeableView];
     
     // Required Data Source
     self.swipeableView.dataSource = self;
     
     // Optional Delegate
     self.swipeableView.delegate = self;
-    
-    
-    NSLog(@"%@",self.swipeableView.subviews);
-    
     
     [self.swipeableView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(UIEdgeInsetsMake(10, 10, 200, 10));
@@ -246,20 +246,49 @@
     didEndSwipingView:(UIView *)view
            atLocation:(CGPoint)location {
     //    NSLog(@"did end swiping at location: x %f, y %f", location.x, location.y);
+    if (!swipeableView.activeViews.count) {
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+           
+      
+            
+            
+            self.ddRadarView.hidden = NO;
+            [self.ddRadarView backAnimation];
+            
+            [self star];
+            
+            [swipeableView removeFromSuperview];
+            
+            
+        });
+    }
 }
 
 #pragma mark - ZLSwipeableViewDataSource
-
+/**
+ 展示方式
+ 1.一段时间请求到一定量展示
+ 
+ 2.一段时间请求到多少展示多少！
+ 
+ 3.请求到一定量展示
+ 
+ 展示过程中,请求到的处理
+ 1.请求到的接到正在展示的后面
+ 
+ 2.放到下次再展示
+ 
+ */
 - (UIView *)nextViewForSwipeableView:(ZLSwipeableView *)swipeableView {
     if (self.colorIndex >= self.colors.count) {
         self.colorIndex = 0;
-        
     }
     NSLog(@"%ld %ld",self.colorIndex,self.colors.count);
+    NSLog(@"%@",swipeableView.activeViews);
     if (self.colorIndex == 5) {
         return nil;
     }
-
+    
     CardView *view = [[CardView alloc] initWithFrame:swipeableView.bounds];
     view.backgroundColor = XWRandomColor;
     self.colorIndex++;
