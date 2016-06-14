@@ -10,10 +10,43 @@
 #import <AFNetworking/AFNetworking.h>
 
 @interface DDApiProxy ()
+@property (nonatomic, strong) NSMutableDictionary *dispatchTable;
+@property (nonatomic, strong) NSNumber *recordedRequestId;
+
 @property (nonatomic, strong) AFHTTPSessionManager *sessionManager;
 @end
 
 @implementation DDApiProxy
+#pragma mark - getter and setters
+- (NSMutableDictionary *)dispatchTable
+{
+    if (!_dispatchTable) {
+        _dispatchTable = [[NSMutableDictionary alloc] init];
+    }
+    return _dispatchTable;
+}
+- (AFHTTPSessionManager *)sessionManager
+{
+    if (!_sessionManager) {
+        _sessionManager = [AFHTTPSessionManager manager];
+        _sessionManager.responseSerializer = [AFHTTPResponseSerializer serializer];
+        _sessionManager.securityPolicy.allowInvalidCertificates = YES;
+        _sessionManager.securityPolicy.validatesDomainName = NO;
+    }
+    return _sessionManager;
+}
++ (instancetype)sharedInstance
+{
+    static DDApiProxy* instance = nil;
+
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        instance = [DDApiProxy new];
+    });
+
+    return instance;
+}
+
 - (NSNumber *)callApiWithRequest:(NSURLRequest *)request success:(AXCallback)success fail:(AXCallback)fail {
     NSLog(@"%@",request.URL);
     
