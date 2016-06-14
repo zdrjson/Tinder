@@ -17,7 +17,7 @@
 @property (nonatomic, readonly) NSString *onlineApiBaseUrl;
 
 @property (nonatomic, readonly) NSString *offlineApiVersion;
-@property (nonatomic, readonly) NSString *onflineApiVersion;
+@property (nonatomic, readonly) NSString *onlineApiVersion;
 
 @property (nonatomic, readonly) NSString *onlinePublicKey;
 @property (nonatomic, readonly) NSString *offlinePublicKey;
