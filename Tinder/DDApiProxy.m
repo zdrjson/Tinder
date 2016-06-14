@@ -35,6 +35,7 @@
     }
     return _sessionManager;
 }
+#pragma mark - life cycle
 + (instancetype)sharedInstance
 {
     static DDApiProxy* instance = nil;
@@ -46,7 +47,11 @@
 
     return instance;
 }
-
+#pragma mark - public methods
+- (NSInteger)callGetWithParams:(NSDictionary *)params serviceIdentifier:(NSString *)servieIdentifier methodName:(NSString *)methodName success:(AXCallback)success fail:(AXCallback)fail
+{
+//    NSURLRequest *request = [ddre]
+}
 - (NSNumber *)callApiWithRequest:(NSURLRequest *)request success:(AXCallback)success fail:(AXCallback)fail {
     NSLog(@"%@",request.URL);
     

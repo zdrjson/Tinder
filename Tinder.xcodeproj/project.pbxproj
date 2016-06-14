@@ -16,6 +16,9 @@
 		F51055C11CFBE73800F4B4AD /* DDRightView.m in Sources */ = {isa = PBXBuildFile; fileRef = F51055C01CFBE73800F4B4AD /* DDRightView.m */; };
 		F51055C81CFC4D2B00F4B4AD /* DDApiBaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F51055C71CFC4D2A00F4B4AD /* DDApiBaseManager.m */; };
 		F511706F1D0562F200183EE9 /* NSThread+DDAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = F511706E1D0562F200183EE9 /* NSThread+DDAdd.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		F518C2881D100249006A1AA2 /* DDRequestGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = F518C2871D100249006A1AA2 /* DDRequestGenerator.m */; };
+		F518C28C1D100730006A1AA2 /* DDService.m in Sources */ = {isa = PBXBuildFile; fileRef = F518C28B1D100730006A1AA2 /* DDService.m */; };
+		F518C28F1D10074F006A1AA2 /* DDServiceFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = F518C28E1D10074F006A1AA2 /* DDServiceFactory.m */; };
 		F51AAB741D01A6BB001FE416 /* NSURLRequest+DDNetworkingMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = F51AAB731D01A6BB001FE416 /* NSURLRequest+DDNetworkingMethods.m */; };
 		F51BF83B1D003CA800F9603A /* DDApiProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = F51BF83A1D003CA800F9603A /* DDApiProxy.m */; };
 		F51E196B1CCE2D3300C281F1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F51E196A1CCE2D3300C281F1 /* main.m */; };
@@ -87,6 +90,12 @@
 		F51055C91CFD209400F4B4AD /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		F511706D1D0562F200183EE9 /* NSThread+DDAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSThread+DDAdd.h"; sourceTree = "<group>"; };
 		F511706E1D0562F200183EE9 /* NSThread+DDAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSThread+DDAdd.m"; sourceTree = "<group>"; };
+		F518C2861D100249006A1AA2 /* DDRequestGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDRequestGenerator.h; sourceTree = "<group>"; };
+		F518C2871D100249006A1AA2 /* DDRequestGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDRequestGenerator.m; sourceTree = "<group>"; };
+		F518C28A1D100730006A1AA2 /* DDService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDService.h; sourceTree = "<group>"; };
+		F518C28B1D100730006A1AA2 /* DDService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDService.m; sourceTree = "<group>"; };
+		F518C28D1D10074F006A1AA2 /* DDServiceFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDServiceFactory.h; sourceTree = "<group>"; };
+		F518C28E1D10074F006A1AA2 /* DDServiceFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDServiceFactory.m; sourceTree = "<group>"; };
 		F51AAB721D01A6BB001FE416 /* NSURLRequest+DDNetworkingMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURLRequest+DDNetworkingMethods.h"; sourceTree = "<group>"; };
 		F51AAB731D01A6BB001FE416 /* NSURLRequest+DDNetworkingMethods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURLRequest+DDNetworkingMethods.m"; sourceTree = "<group>"; };
 		F51BF8391D003CA800F9603A /* DDApiProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDApiProxy.h; sourceTree = "<group>"; };
@@ -191,6 +200,26 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		F518C2851D100220006A1AA2 /* Generators */ = {
+			isa = PBXGroup;
+			children = (
+				F518C2861D100249006A1AA2 /* DDRequestGenerator.h */,
+				F518C2871D100249006A1AA2 /* DDRequestGenerator.m */,
+			);
+			name = Generators;
+			sourceTree = "<group>";
+		};
+		F518C2891D100706006A1AA2 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				F518C28A1D100730006A1AA2 /* DDService.h */,
+				F518C28B1D100730006A1AA2 /* DDService.m */,
+				F518C28D1D10074F006A1AA2 /* DDServiceFactory.h */,
+				F518C28E1D10074F006A1AA2 /* DDServiceFactory.m */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
 		F51AAB711D01A693001FE416 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
@@ -287,6 +316,8 @@
 				F51055C01CFBE73800F4B4AD /* DDRightView.m */,
 				F51AAB711D01A693001FE416 /* Categories */,
 				F53533CA1CE006F700E79155 /* New Group */,
+				F518C2851D100220006A1AA2 /* Generators */,
+				F518C2891D100706006A1AA2 /* Services */,
 				F56C90D41CD2EC650056AB1F /* RightVc.h */,
 				F56C90D51CD2EC650056AB1F /* RightVc.m */,
 				F56C90D71CD2EC710056AB1F /* LeftVc.h */,
@@ -601,10 +632,13 @@
 				F51EFE021D0D2CC60086EEE4 /* UIColor+FlatColors.m in Sources */,
 				F5A101841CF8555200DEF86F /* DDNavVc.m in Sources */,
 				F51E196E1CCE2D3300C281F1 /* AppDelegate.m in Sources */,
+				F518C2881D100249006A1AA2 /* DDRequestGenerator.m in Sources */,
 				F51055BB1CFBE72000F4B4AD /* DDLeftView.m in Sources */,
+				F518C28C1D100730006A1AA2 /* DDService.m in Sources */,
 				F51055BE1CFBE72D00F4B4AD /* DDMiddleView.m in Sources */,
 				F51AAB741D01A6BB001FE416 /* NSURLRequest+DDNetworkingMethods.m in Sources */,
 				F51E196B1CCE2D3300C281F1 /* main.m in Sources */,
+				F518C28F1D10074F006A1AA2 /* DDServiceFactory.m in Sources */,
 				F5A4773E1CEAF35D000D318F /* Person.m in Sources */,
 				F56C90D61CD2EC650056AB1F /* RightVc.m in Sources */,
 				F56C90D91CD2EC710056AB1F /* LeftVc.m in Sources */,
