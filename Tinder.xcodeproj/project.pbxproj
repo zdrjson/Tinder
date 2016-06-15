@@ -20,6 +20,7 @@
 		F518C28C1D100730006A1AA2 /* DDService.m in Sources */ = {isa = PBXBuildFile; fileRef = F518C28B1D100730006A1AA2 /* DDService.m */; };
 		F518C28F1D10074F006A1AA2 /* DDServiceFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = F518C28E1D10074F006A1AA2 /* DDServiceFactory.m */; };
 		F518C2981D11081D006A1AA2 /* DDLogerConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = F518C2971D11081D006A1AA2 /* DDLogerConfiguration.m */; };
+		F518C29D1D113693006A1AA2 /* DDLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = F518C29C1D113693006A1AA2 /* DDLogger.m */; };
 		F51AAB741D01A6BB001FE416 /* NSURLRequest+DDNetworkingMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = F51AAB731D01A6BB001FE416 /* NSURLRequest+DDNetworkingMethods.m */; };
 		F51BF83B1D003CA800F9603A /* DDApiProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = F51BF83A1D003CA800F9603A /* DDApiProxy.m */; };
 		F51E196B1CCE2D3300C281F1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F51E196A1CCE2D3300C281F1 /* main.m */; };
@@ -100,6 +101,8 @@
 		F518C2961D11081D006A1AA2 /* DDLogerConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDLogerConfiguration.h; sourceTree = "<group>"; };
 		F518C2971D11081D006A1AA2 /* DDLogerConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDLogerConfiguration.m; sourceTree = "<group>"; };
 		F518C29A1D1130C3006A1AA2 /* DDNetworking.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DDNetworking.h; sourceTree = "<group>"; };
+		F518C29B1D113693006A1AA2 /* DDLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDLogger.h; sourceTree = "<group>"; };
+		F518C29C1D113693006A1AA2 /* DDLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDLogger.m; sourceTree = "<group>"; };
 		F51AAB721D01A6BB001FE416 /* NSURLRequest+DDNetworkingMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURLRequest+DDNetworkingMethods.h"; sourceTree = "<group>"; };
 		F51AAB731D01A6BB001FE416 /* NSURLRequest+DDNetworkingMethods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURLRequest+DDNetworkingMethods.m"; sourceTree = "<group>"; };
 		F51BF8391D003CA800F9603A /* DDApiProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDApiProxy.h; sourceTree = "<group>"; };
@@ -227,6 +230,8 @@
 		F518C2931D110793006A1AA2 /* LogComponents */ = {
 			isa = PBXGroup;
 			children = (
+				F518C29B1D113693006A1AA2 /* DDLogger.h */,
+				F518C29C1D113693006A1AA2 /* DDLogger.m */,
 			);
 			name = LogComponents;
 			sourceTree = "<group>";
@@ -662,6 +667,7 @@
 				F53533CD1CE0072000E79155 /* RadarView.m in Sources */,
 				F5A477411CEAF4ED000D318F /* ImageLabelView.m in Sources */,
 				F56C90D31CD2EC510056AB1F /* MiddleVc.m in Sources */,
+				F518C29D1D113693006A1AA2 /* DDLogger.m in Sources */,
 				F51EFE051D0D2CE70086EEE4 /* CardView.m in Sources */,
 				F51EFDFF1D0D2C980086EEE4 /* ZLSwipeableViewController.m in Sources */,
 				F5EE3CF71CFD64AE00EA97BD /* DDURLResponse.m in Sources */,

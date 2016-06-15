@@ -33,7 +33,7 @@ pod 'YYKeyboardManager'
 #end
 #pod 'YTKNetwork'
 pod 'ReactiveCocoa', '2.5'
-pod 'FDFullscreenPopGesture'
+
 pod 'GPUImage'
 
 #pod 'RestKit'
@@ -48,6 +48,9 @@ pod 'FastImageCache'
 pod 'TTTAttributedLabel'
 
 pod 'UITableView+FDTemplateLayoutCell'
+pod 'FDStackView'
+pod 'FDFullscreenPopGesture'
+
 pod 'JLRoutes'
 pod "MWPhotoBrowser"
 pod 'JazzHands'
