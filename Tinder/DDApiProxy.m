@@ -58,7 +58,16 @@
     __block NSURLSessionDataTask *dataTask = nil;
     dataTask = [self.sessionManager dataTaskWithRequest:request completionHandler:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error) {
         NSNumber *requestID = @(dataTask.taskIdentifier);
+        [self.dispatchTable removeObjectForKey:requestID];
+        NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *)response;
+        NSData *responseData = responseObject;
+        NSString *responseString = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
         
+        if (error) {
+            
+        } else {
+            
+        }
     }];
     return @0;
 }

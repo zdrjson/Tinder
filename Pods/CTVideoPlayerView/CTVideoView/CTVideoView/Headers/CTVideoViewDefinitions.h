@@ -69,7 +69,8 @@ typedef NS_ENUM(NSUInteger, CTVideoViewDownloadStrategy) {
 typedef NS_ENUM(NSUInteger, CTVideoViewVideoUrlType) {
     CTVideoViewVideoUrlTypeRemote,
     CTVideoViewVideoUrlTypeNative,
-    CTVideoViewVideoUrlTypeLiveStream
+    CTVideoViewVideoUrlTypeLiveStream,
+    CTVideoViewVideoUrlTypeAsset,
 };
 
 typedef NS_ENUM(NSUInteger, CTVideoViewContentMode) {
@@ -135,6 +136,7 @@ typedef NS_ENUM(NSUInteger, CTVideoViewPrepareStatus) {
 
 @protocol CTVideoViewTimeDelegate <NSObject>
 
+@optional
 - (void)videoViewDidLoadVideoDuration:(CTVideoView *)videoView;
 - (void)videoView:(CTVideoView *)videoView didFinishedMoveToTime:(CMTime)time;
 - (void)videoView:(CTVideoView *)videoView didPlayToSecond:(CGFloat)second; //if you want this method to be called, you should set shouldObservePlayTime to YES.

@@ -113,9 +113,16 @@ static void * kCTVideoViewKVOContext = &kCTVideoViewKVOContext;
         return;
     }
 
+    if (self.assetToPlay) {
+        self.prepareStatus = CTVideoViewPrepareStatusPreparing;
+        [self asynchronouslyLoadURLAsset:self.assetToPlay];
+        return;
+    }
+
     if (self.asset && self.prepareStatus == CTVideoViewPrepareStatusNotPrepared) {
         self.prepareStatus = CTVideoViewPrepareStatusPreparing;
         [self asynchronouslyLoadURLAsset:self.asset];
+        return;
     }
 }
 
@@ -135,7 +142,15 @@ static void * kCTVideoViewKVOContext = &kCTVideoViewKVOContext;
     if (self.prepareStatus == CTVideoViewPrepareStatusPrepareFinished) {
         // hide cover view has moved to CTVideoView+Time
         [self willStartPlay];
-        [self.player play];
+
+        NSInteger currentPlaySecond = (NSInteger)(self.currentPlaySecond * 100);
+        NSInteger totalDurationSeconds = (NSInteger)(self.totalDurationSeconds * 100);
+        if (currentPlaySecond == totalDurationSeconds && totalDurationSeconds > 0) {
+            [self replay];
+        } else {
+            [self.player play];
+        }
+
     } else {
         self.isPreparedForPlay = YES;
         [self prepare];
@@ -211,7 +226,7 @@ static void * kCTVideoViewKVOContext = &kCTVideoViewKVOContext;
 }
 
 #pragma mark - private methods
-- (void)asynchronouslyLoadURLAsset:(AVURLAsset *)asset
+- (void)asynchronouslyLoadURLAsset:(AVAsset *)asset
 {
     if ([self.operationDelegate respondsToSelector:@selector(videoViewWillStartPrepare:)]) {
         [self.operationDelegate videoViewWillStartPrepare:self];
@@ -222,7 +237,7 @@ static void * kCTVideoViewKVOContext = &kCTVideoViewKVOContext;
             StrongSelf;
 
             strongSelf.isVideoUrlChanged = NO;
-            if (asset != strongSelf.asset) {
+            if (asset != strongSelf.asset && asset != strongSelf.assetToPlay) {
                 return;
             }
 
@@ -238,9 +253,8 @@ static void * kCTVideoViewKVOContext = &kCTVideoViewKVOContext;
             }
             
             if (strongSelf.shouldChangeOrientationToFitVideo) {
-                AVAsset *asset = strongSelf.asset;
-                CGFloat videoWidth = [[[strongSelf.asset tracksWithMediaType:AVMediaTypeVideo] firstObject] naturalSize].width;
-                CGFloat videoHeight = [[[strongSelf.asset tracksWithMediaType:AVMediaTypeVideo] firstObject] naturalSize].height;
+                CGFloat videoWidth = [[[asset tracksWithMediaType:AVMediaTypeVideo] firstObject] naturalSize].width;
+                CGFloat videoHeight = [[[asset tracksWithMediaType:AVMediaTypeVideo] firstObject] naturalSize].height;
                 
                 if ([asset CTVideoView_isVideoPortraint]) {
                     if (videoWidth < videoHeight) {
@@ -259,7 +273,7 @@ static void * kCTVideoViewKVOContext = &kCTVideoViewKVOContext;
                 }
             }
             
-            strongSelf.playerItem = [AVPlayerItem playerItemWithAsset:strongSelf.asset];
+            strongSelf.playerItem = [AVPlayerItem playerItemWithAsset:asset];
             strongSelf.prepareStatus = CTVideoViewPrepareStatusPrepareFinished;
 
             if ([strongSelf.operationDelegate respondsToSelector:@selector(videoViewDidFinishPrepare:)]) {
@@ -325,6 +339,9 @@ static void * kCTVideoViewKVOContext = &kCTVideoViewKVOContext;
     if (notification.object == self.player.currentItem) {
         if (self.shouldReplayWhenFinish) {
             [self replay];
+        } else {
+            [self.player seekToTime:kCMTimeZero];
+            [self showPlayButton];
         }
         
         if ([self.operationDelegate respondsToSelector:@selector(videoViewDidFinishPlaying:)]) {
@@ -348,6 +365,16 @@ static void * kCTVideoViewKVOContext = &kCTVideoViewKVOContext;
 }
 
 #pragma mark - getters and setters
+- (void)setAssetToPlay:(AVAsset *)assetToPlay
+{
+    _assetToPlay = assetToPlay;
+    if (assetToPlay) {
+        self.isVideoUrlChanged = YES;
+        self.videoUrlType = CTVideoViewVideoUrlTypeAsset;
+        self.actualVideoUrlType = CTVideoViewVideoUrlTypeAsset;
+    }
+}
+
 - (AVPlayerLayer *)playerLayer
 {
     return (AVPlayerLayer *)self.layer;

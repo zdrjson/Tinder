@@ -103,5 +103,8 @@ pod 'Masonry'
 pod 'ReactiveCocoa', '~> 2.5'
 pod "MagicalRecord"
 pod 'CTPersistance'
+
+pod 'MJExtension'
+pod 'MJRefresh'
 end
 

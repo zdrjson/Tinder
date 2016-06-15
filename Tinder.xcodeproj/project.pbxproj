@@ -19,6 +19,7 @@
 		F518C2881D100249006A1AA2 /* DDRequestGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = F518C2871D100249006A1AA2 /* DDRequestGenerator.m */; };
 		F518C28C1D100730006A1AA2 /* DDService.m in Sources */ = {isa = PBXBuildFile; fileRef = F518C28B1D100730006A1AA2 /* DDService.m */; };
 		F518C28F1D10074F006A1AA2 /* DDServiceFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = F518C28E1D10074F006A1AA2 /* DDServiceFactory.m */; };
+		F518C2981D11081D006A1AA2 /* DDLogerConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = F518C2971D11081D006A1AA2 /* DDLogerConfiguration.m */; };
 		F51AAB741D01A6BB001FE416 /* NSURLRequest+DDNetworkingMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = F51AAB731D01A6BB001FE416 /* NSURLRequest+DDNetworkingMethods.m */; };
 		F51BF83B1D003CA800F9603A /* DDApiProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = F51BF83A1D003CA800F9603A /* DDApiProxy.m */; };
 		F51E196B1CCE2D3300C281F1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F51E196A1CCE2D3300C281F1 /* main.m */; };
@@ -96,6 +97,9 @@
 		F518C28B1D100730006A1AA2 /* DDService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDService.m; sourceTree = "<group>"; };
 		F518C28D1D10074F006A1AA2 /* DDServiceFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDServiceFactory.h; sourceTree = "<group>"; };
 		F518C28E1D10074F006A1AA2 /* DDServiceFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDServiceFactory.m; sourceTree = "<group>"; };
+		F518C2961D11081D006A1AA2 /* DDLogerConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDLogerConfiguration.h; sourceTree = "<group>"; };
+		F518C2971D11081D006A1AA2 /* DDLogerConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDLogerConfiguration.m; sourceTree = "<group>"; };
+		F518C29A1D1130C3006A1AA2 /* DDNetworking.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DDNetworking.h; sourceTree = "<group>"; };
 		F51AAB721D01A6BB001FE416 /* NSURLRequest+DDNetworkingMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURLRequest+DDNetworkingMethods.h"; sourceTree = "<group>"; };
 		F51AAB731D01A6BB001FE416 /* NSURLRequest+DDNetworkingMethods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURLRequest+DDNetworkingMethods.m"; sourceTree = "<group>"; };
 		F51BF8391D003CA800F9603A /* DDApiProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDApiProxy.h; sourceTree = "<group>"; };
@@ -220,6 +224,39 @@
 			name = Services;
 			sourceTree = "<group>";
 		};
+		F518C2931D110793006A1AA2 /* LogComponents */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = LogComponents;
+			sourceTree = "<group>";
+		};
+		F518C2941D1107D0006A1AA2 /* DDNetworkingCustoms */ = {
+			isa = PBXGroup;
+			children = (
+				F518C2951D1107F1006A1AA2 /* DDLoggerConfigureation */,
+			);
+			name = DDNetworkingCustoms;
+			sourceTree = "<group>";
+		};
+		F518C2951D1107F1006A1AA2 /* DDLoggerConfigureation */ = {
+			isa = PBXGroup;
+			children = (
+				F518C2961D11081D006A1AA2 /* DDLogerConfiguration.h */,
+				F518C2971D11081D006A1AA2 /* DDLogerConfiguration.m */,
+			);
+			name = DDLoggerConfigureation;
+			sourceTree = "<group>";
+		};
+		F518C2991D11309F006A1AA2 /* DDNetwoking */ = {
+			isa = PBXGroup;
+			children = (
+				F51BF83D1D0041F800F9603A /* Configurations */,
+				F518C29A1D1130C3006A1AA2 /* DDNetworking.h */,
+			);
+			name = DDNetwoking;
+			sourceTree = "<group>";
+		};
 		F51AAB711D01A693001FE416 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
@@ -318,6 +355,8 @@
 				F53533CA1CE006F700E79155 /* New Group */,
 				F518C2851D100220006A1AA2 /* Generators */,
 				F518C2891D100706006A1AA2 /* Services */,
+				F518C2931D110793006A1AA2 /* LogComponents */,
+				F518C2941D1107D0006A1AA2 /* DDNetworkingCustoms */,
 				F56C90D41CD2EC650056AB1F /* RightVc.h */,
 				F56C90D51CD2EC650056AB1F /* RightVc.m */,
 				F56C90D71CD2EC710056AB1F /* LeftVc.h */,
@@ -389,7 +428,7 @@
 				F56C90D21CD2EC510056AB1F /* MiddleVc.m */,
 				F53533CB1CE0072000E79155 /* RadarView.h */,
 				F53533CC1CE0072000E79155 /* RadarView.m */,
-				F51BF83D1D0041F800F9603A /* Configurations */,
+				F518C2991D11309F006A1AA2 /* DDNetwoking */,
 				F51BF83C1D00412200F9603A /* URLResponse */,
 				F51BF8381D003C7600F9603A /* APIProxy */,
 				F51BF8371D003C7100F9603A /* BaseAPIManager */,
@@ -641,6 +680,7 @@
 				F518C28F1D10074F006A1AA2 /* DDServiceFactory.m in Sources */,
 				F5A4773E1CEAF35D000D318F /* Person.m in Sources */,
 				F56C90D61CD2EC650056AB1F /* RightVc.m in Sources */,
+				F518C2981D11081D006A1AA2 /* DDLogerConfiguration.m in Sources */,
 				F56C90D91CD2EC710056AB1F /* LeftVc.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
