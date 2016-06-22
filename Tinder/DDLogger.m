@@ -8,6 +8,14 @@
 
 #import "DDLogger.h"
 
+@interface DDLogger ()
+@property (nonatomic, strong,readwrite)  DDLogerConfiguration*configParams;
+@end
+
 @implementation DDLogger
++ (void)logDebugInfoWithResponse:(NSHTTPURLResponse *)response responseString:(NSString *)responseString request:(NSURLRequest *)request error:(NSError *)error {
+	
+}
+
 
 @end

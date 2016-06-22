@@ -1,1 +1,0 @@
-../../../VCTransitionsLibrary/AnimationControllers/CEFoldAnimationController.h

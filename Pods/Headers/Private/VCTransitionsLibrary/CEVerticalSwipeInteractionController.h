@@ -1,1 +1,0 @@
-../../../VCTransitionsLibrary/InteractionControllers/CEVerticalSwipeInteractionController.h

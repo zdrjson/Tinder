@@ -1,1 +1,0 @@
-../../../CTPersistance/CTPersistance/CTPersistance/QueryCommand/Categories/DataManipulations/CTPersistanceQueryCommand+DataManipulations.h

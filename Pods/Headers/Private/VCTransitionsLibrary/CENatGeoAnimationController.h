@@ -1,1 +1,0 @@
-../../../VCTransitionsLibrary/AnimationControllers/CENatGeoAnimationController.h

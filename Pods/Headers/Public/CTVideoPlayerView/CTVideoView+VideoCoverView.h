@@ -1,1 +1,0 @@
-../../../CTVideoPlayerView/CTVideoView/CTVideoView/Categories/CTVideoView/VideoCoverView/CTVideoView+VideoCoverView.h

@@ -1,1 +1,0 @@
-../../../CTPersistance/CTPersistance/CTPersistance/QueryCommand/Categories/ReadingMethods/CTPersistanceQueryCommand+ReadMethods.h
