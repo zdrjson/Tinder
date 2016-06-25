@@ -13,8 +13,19 @@
 @end
 
 @implementation DDLogger
-+ (void)logDebugInfoWithResponse:(NSHTTPURLResponse *)response responseString:(NSString *)responseString request:(NSURLRequest *)request error:(NSError *)error {
-	
++ (void)logDebugInfoWithRequest:(NSURLRequest *)request apiName:(NSString *)apiName service:(DDService *)service requestParams:(id)requestParams httpMethod:(NSString *)httpMethod
+{
+#ifdef DEBUG
+    BOOL isOnline = NO;
+    if ([service respondsToSelector:@selector(isOnline)]) {
+        NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:[service methodSignatureForSelector:@selector(isOnline)]];
+        invocation.target = service;
+        invocation.selector = @selector(isOnline);
+        [invocation invoke];
+        [invocation getReturnValue:&isOnline];
+        
+    }
+#endif
 }
 
 
