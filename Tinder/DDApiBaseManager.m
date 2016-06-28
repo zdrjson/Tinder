@@ -7,6 +7,7 @@
 //
 
 #import "DDApiBaseManager.h"
+#import "DDApiProxy.h"
 
 @interface DDApiBaseManager ()
 @property (nonatomic, strong, readwrite) id fetchedRawData;
@@ -20,8 +21,10 @@
 @end
 
 @implementation DDApiBaseManager
+
 - (void)a{
-    __weak typeof(self) weakSelf = self;
+//    __weak typeof(self) weakSelf = self;
+   
     
     
 }
@@ -121,7 +124,15 @@
     NSDictionary *result = (NSDictionary *)[[NSUserDefaults standardUserDefaults] objectForKey:methodName];
     
     if (result) {
-        
+        self.isNativeDataEmpty = NO;
+        __weak typeof(self) weakSelf = self;
+        dispatch_async(dispatch_get_main_queue(), ^{
+            __strong typeof (weakSelf) strongSelf = weakSelf;
+            DDURLResponse *response = [[DDURLResponse alloc] initWithData:[NSJSONSerialization dataWithJSONObject:result options:0 error:NULL]];
+            [strongSelf successedOnCallingApi:response];
+        });
+    } else {
+        self.isNativeDataEmpty = YES;
     }
     
 }
@@ -132,12 +143,20 @@
 #pragma mark - private methods
 - (void)removeRequestIdWithRequestID:(NSInteger)requestId
 {
-    
+    NSNumber *requestIDToRemove = nil;
+    for (NSNumber *storedRequestId in self.requestIdList) {
+        if ([storedRequestId integerValue] == requestId) {
+            requestIDToRemove = storedRequestId;
+        }
+    }
+    if (requestIDToRemove) {
+        [self.requestIdList removeObject:requestIDToRemove];
+    }
 }
 - (BOOL)hasCacheWithParams:(NSDictionary *)params {
     NSString *serviceIdentifier = self.child.serviceType;
     NSString *methodName = self.child.methodName;
-//    NSData *result = [self.cah]
+    NSData *result = [self.cache]
     return YES;
     
 }

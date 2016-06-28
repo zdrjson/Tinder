@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		99F5E9A66822DD54653CFD64 /* libPods-Tinder.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4720E233DDBD832C64149A1C /* libPods-Tinder.a */; };
 		F50B1EA21CCFC49F00E192EC /* DDTinderNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = F50B1EA11CCFC49F00E192EC /* DDTinderNavigationBar.m */; };
+		F50C0CDA1D22984D009FF612 /* DDCache.m in Sources */ = {isa = PBXBuildFile; fileRef = F50C0CD91D22984D009FF612 /* DDCache.m */; };
 		F50E5AED1CE2C0E900C8E627 /* DDCGUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = F50E5AEC1CE2C0E900C8E627 /* DDCGUtilities.m */; };
 		F51055B81CFBE6F600F4B4AD /* DDRadarView.m in Sources */ = {isa = PBXBuildFile; fileRef = F51055B71CFBE6F600F4B4AD /* DDRadarView.m */; };
 		F51055BB1CFBE72000F4B4AD /* DDLeftView.m in Sources */ = {isa = PBXBuildFile; fileRef = F51055BA1CFBE72000F4B4AD /* DDLeftView.m */; };
@@ -77,6 +78,8 @@
 		F50B1EA01CCFC49F00E192EC /* DDTinderNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDTinderNavigationBar.h; sourceTree = "<group>"; };
 		F50B1EA11CCFC49F00E192EC /* DDTinderNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDTinderNavigationBar.m; sourceTree = "<group>"; };
 		F50B1EA31CD0F2E700E192EC /* DDMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DDMacro.h; sourceTree = "<group>"; };
+		F50C0CD81D22984D009FF612 /* DDCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDCache.h; sourceTree = "<group>"; };
+		F50C0CD91D22984D009FF612 /* DDCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDCache.m; sourceTree = "<group>"; };
 		F50E5AEB1CE2C0E900C8E627 /* DDCGUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDCGUtilities.h; sourceTree = "<group>"; };
 		F50E5AEC1CE2C0E900C8E627 /* DDCGUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDCGUtilities.m; sourceTree = "<group>"; };
 		F51055B61CFBE6F600F4B4AD /* DDRadarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDRadarView.h; sourceTree = "<group>"; };
@@ -205,6 +208,15 @@
 				B5FC2EB09B16457699B3B73C /* Pods-Tinder.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		F50C0CD71D229801009FF612 /* CacheComponents */ = {
+			isa = PBXGroup;
+			children = (
+				F50C0CD81D22984D009FF612 /* DDCache.h */,
+				F50C0CD91D22984D009FF612 /* DDCache.m */,
+			);
+			name = CacheComponents;
 			sourceTree = "<group>";
 		};
 		F518C2851D100220006A1AA2 /* Generators */ = {
@@ -437,6 +449,7 @@
 				F51BF83C1D00412200F9603A /* URLResponse */,
 				F51BF8381D003C7600F9603A /* APIProxy */,
 				F51BF8371D003C7100F9603A /* BaseAPIManager */,
+				F50C0CD71D229801009FF612 /* CacheComponents */,
 			);
 			name = "New Group";
 			sourceTree = "<group>";
@@ -683,6 +696,7 @@
 				F51055BE1CFBE72D00F4B4AD /* DDMiddleView.m in Sources */,
 				F51AAB741D01A6BB001FE416 /* NSURLRequest+DDNetworkingMethods.m in Sources */,
 				F51E196B1CCE2D3300C281F1 /* main.m in Sources */,
+				F50C0CDA1D22984D009FF612 /* DDCache.m in Sources */,
 				F518C28F1D10074F006A1AA2 /* DDServiceFactory.m in Sources */,
 				F5A4773E1CEAF35D000D318F /* Person.m in Sources */,
 				F56C90D61CD2EC650056AB1F /* RightVc.m in Sources */,
