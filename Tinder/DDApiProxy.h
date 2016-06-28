@@ -24,7 +24,7 @@ typedef void(^AXCallback) (DDURLResponse *response);
  @return requestId
  */
 - (NSInteger)callGetWithParams:(NSDictionary *)params serviceIdentifier:(NSString *)servieIdentifier methodName:(NSString *)methodName success:(AXCallback)success fail:(AXCallback)fail;
-- (NSInteger)callPOSTWithParams:(NSDictionary *)params serviceIdentifier:(NSString *)servieIdentifier methodName:(NSDictionary *)params success:(AXCallback)success fail:(AXCallback)fail;
+- (NSInteger)callPOSTWithParams:(NSDictionary *)params serviceIdentifier:(NSString *)servieIdentifier methodName:(NSString *)methodName success:(AXCallback)success fail:(AXCallback)fail;
 - (NSInteger)callPUTWithParams:(NSDictionary *)params serviceIdentifier:(NSString *)serviedIdentifier methodName:(NSString *)methodName success:(AXCallback)success fail:(AXCallback)fail;
 - (NSInteger)callDELETEWithParams:(NSDictionary *)params serviceIdetifier:(NSString *)servieIdentifier methodName:(NSString *)methodName success:(AXCallback)success fail:(AXCallback)fail;
 

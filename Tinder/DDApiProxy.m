@@ -8,6 +8,7 @@
 
 #import "DDApiProxy.h"
 #import <AFNetworking/AFNetworking.h>
+#import "DDRequestGenerator.h"
 
 @interface DDApiProxy ()
 @property (nonatomic, strong) NSMutableDictionary *dispatchTable;
@@ -50,7 +51,30 @@
 #pragma mark - public methods
 - (NSInteger)callGetWithParams:(NSDictionary *)params serviceIdentifier:(NSString *)servieIdentifier methodName:(NSString *)methodName success:(AXCallback)success fail:(AXCallback)fail
 {
-//    NSURLRequest *request = [ddre]
+    NSURLRequest *request = [[DDRequestGenerator sharedInstance] generateGETRequestWithServiceIdentifier:servieIdentifier requestParams:params methodName:methodName];
+    
+    NSNumber *requestId = [self callApiWithRequest:request success:success fail:fail];
+    return [requestId integerValue];
+}
+- (NSInteger)callPOSTWithParams:(NSDictionary *)params serviceIdentifier:(NSString *)servieIdentifier methodName:(NSString *)methodName success:(AXCallback)success fail:(AXCallback)fail
+{
+    NSURLRequest *request = [[DDRequestGenerator sharedInstance] generatePOSTRequestWithServiceIdentifier:servieIdentifier requestParams:params methodName:methodName];
+    NSNumber *requestId = [self callApiWithRequest:request success:success fail:fail];
+    return requestId.integerValue;
+    
+}
+- (NSInteger)callPUTWithParams:(NSDictionary *)params serviceIdentifier:(NSString *)serviedIdentifier methodName:(NSString *)methodName success:(AXCallback)success fail:(AXCallback)fail
+{
+    NSURLRequest *request = [[DDRequestGenerator sharedInstance] generatePUTRequestWithServiceIdentifier:serviedIdentifier requestParams:params methodName:methodName];
+    NSNumber *requestId = [self callApiWithRequest:request success:success fail:fail];
+    return requestId.integerValue;
+}
+- (NSInteger)callDELETEWithParams:(NSDictionary *)params serviceIdetifier:(NSString *)servieIdentifier methodName:(NSString *)methodName success:(AXCallback)success fail:(AXCallback)fail
+{
+    NSURLRequest *request = [[DDRequestGenerator sharedInstance] generateDeleteRequestWithServiceIdentifier:servieIdentifier requestParams:params methodName:methodName];
+    NSNumber *requestId = [self callApiWithRequest:request success:success fail:fail];
+
+    return requestId.integerValue;
 }
 - (NSNumber *)callApiWithRequest:(NSURLRequest *)request success:(AXCallback)success fail:(AXCallback)fail {
     NSLog(@"%@",request.URL);
