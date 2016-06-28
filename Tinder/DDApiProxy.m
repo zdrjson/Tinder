@@ -9,6 +9,7 @@
 #import "DDApiProxy.h"
 #import <AFNetworking/AFNetworking.h>
 #import "DDRequestGenerator.h"
+#import "DDLogger.h"
 
 @interface DDApiProxy ()
 @property (nonatomic, strong) NSMutableDictionary *dispatchTable;
@@ -76,6 +77,18 @@
 
     return requestId.integerValue;
 }
+- (void)cancelRequestWithRequestID:(NSNumber *)requestID {
+    NSURLSessionDataTask *requestOperation = self.dispatchTable[requestID];
+    [requestOperation cancel];
+    [self.dispatchTable removeObjectForKey:requestID];
+}
+- (void)cancelRequestWithRequestList:(NSArray *)requestList
+{
+    for (NSNumber *requestId in requestList) {
+        [self cancelRequestWithRequestID:requestId];
+    }
+}
+
 - (NSNumber *)callApiWithRequest:(NSURLRequest *)request success:(AXCallback)success fail:(AXCallback)fail {
     NSLog(@"%@",request.URL);
     
@@ -88,11 +101,20 @@
         NSString *responseString = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
         
         if (error) {
-            
+            [DDLogger logDebugInfoWithResponse:httpResponse responseString:responseString request:request error:error];
+            DDURLResponse *ddResponse = [[DDURLResponse alloc] initWithResonseString:responseString requestId:requestID request:request responseData:responseData error:error];
+            fail?fail(ddResponse):nil;
         } else {
-            
+            //检测http response是否成立
+            [DDLogger logDebugInfoWithResponse:httpResponse responseString:responseString request:request error:NULL];
+            DDURLResponse *ddResponse = [[DDURLResponse alloc] initWithResponseString:responseString requestId:requestID request:request responseData:responseData status:DDURLResponseStatusSuccess];
+            success?success(ddResponse):nil;
         }
     }];
-    return @0;
+    
+    NSNumber *requestId = @(dataTask.taskIdentifier);
+    self.dispatchTable[requestId] = dataTask;
+    [dataTask resume];
+    return requestId;
 }
 @end

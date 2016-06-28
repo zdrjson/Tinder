@@ -30,5 +30,5 @@ typedef void(^AXCallback) (DDURLResponse *response);
 
 - (NSNumber *)callApiWithRequest:(NSURLRequest *)request success:(AXCallback)success fail:(AXCallback)fail;
 - (void)cancelRequestWithRequestID:(NSNumber *)requestID;
-- (void)cancelRequestWithRequestList:(NSNumber *)requestList;
+- (void)cancelRequestWithRequestList:(NSArray *)requestList;
 @end
