@@ -26,4 +26,8 @@
 - (void)deleteCacheWithServiceIdentifier:(NSString *)serviceIdentifier
                               methodName:(NSString *)methodName
                            requestParams:(NSDictionary *)requesetParams;
+- (NSData *)fetchaCachedDataWithKey:(NSString *)key;
+- (void)saveCacheWithData:(NSData *)cachedData key:(NSString *)key;
+- (void)deleteCacheWithKey:(NSString *)key;
+- (void)clean;
 @end

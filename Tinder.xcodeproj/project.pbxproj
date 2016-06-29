@@ -40,6 +40,7 @@
 		F51EFE081D0D2E020086EEE4 /* HistoryDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F51EFE071D0D2E020086EEE4 /* HistoryDemoViewController.m */; };
 		F53533CD1CE0072000E79155 /* RadarView.m in Sources */ = {isa = PBXBuildFile; fileRef = F53533CC1CE0072000E79155 /* RadarView.m */; };
 		F56398D01CE58F7600D185A4 /* DDSwipeableVc.m in Sources */ = {isa = PBXBuildFile; fileRef = F56398CF1CE58F7600D185A4 /* DDSwipeableVc.m */; };
+		F5685CF01D235A3300831678 /* DDCacheObject.m in Sources */ = {isa = PBXBuildFile; fileRef = F5685CEF1D235A3300831678 /* DDCacheObject.m */; };
 		F56C90C71CD2524D0056AB1F /* DDNavigationBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F56C90C61CD2524D0056AB1F /* DDNavigationBarItem.m */; };
 		F56C90D31CD2EC510056AB1F /* MiddleVc.m in Sources */ = {isa = PBXBuildFile; fileRef = F56C90D21CD2EC510056AB1F /* MiddleVc.m */; };
 		F56C90D61CD2EC650056AB1F /* RightVc.m in Sources */ = {isa = PBXBuildFile; fileRef = F56C90D51CD2EC650056AB1F /* RightVc.m */; };
@@ -142,6 +143,8 @@
 		F53533CC1CE0072000E79155 /* RadarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RadarView.m; sourceTree = "<group>"; };
 		F56398CE1CE58F7600D185A4 /* DDSwipeableVc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDSwipeableVc.h; sourceTree = "<group>"; };
 		F56398CF1CE58F7600D185A4 /* DDSwipeableVc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDSwipeableVc.m; sourceTree = "<group>"; };
+		F5685CEE1D235A3300831678 /* DDCacheObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDCacheObject.h; sourceTree = "<group>"; };
+		F5685CEF1D235A3300831678 /* DDCacheObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDCacheObject.m; sourceTree = "<group>"; };
 		F56C90C51CD2524D0056AB1F /* DDNavigationBarItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDNavigationBarItem.h; sourceTree = "<group>"; };
 		F56C90C61CD2524D0056AB1F /* DDNavigationBarItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDNavigationBarItem.m; sourceTree = "<group>"; };
 		F56C90D11CD2EC510056AB1F /* MiddleVc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MiddleVc.h; path = ../MiddleVc.h; sourceTree = "<group>"; };
@@ -215,6 +218,8 @@
 			children = (
 				F50C0CD81D22984D009FF612 /* DDCache.h */,
 				F50C0CD91D22984D009FF612 /* DDCache.m */,
+				F5685CEE1D235A3300831678 /* DDCacheObject.h */,
+				F5685CEF1D235A3300831678 /* DDCacheObject.m */,
 			);
 			name = CacheComponents;
 			sourceTree = "<group>";
@@ -692,6 +697,7 @@
 				F51E196E1CCE2D3300C281F1 /* AppDelegate.m in Sources */,
 				F518C2881D100249006A1AA2 /* DDRequestGenerator.m in Sources */,
 				F51055BB1CFBE72000F4B4AD /* DDLeftView.m in Sources */,
+				F5685CF01D235A3300831678 /* DDCacheObject.m in Sources */,
 				F518C28C1D100730006A1AA2 /* DDService.m in Sources */,
 				F51055BE1CFBE72D00F4B4AD /* DDMiddleView.m in Sources */,
 				F51AAB741D01A6BB001FE416 /* NSURLRequest+DDNetworkingMethods.m in Sources */,
