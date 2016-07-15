@@ -156,7 +156,7 @@
 - (BOOL)hasCacheWithParams:(NSDictionary *)params {
     NSString *serviceIdentifier = self.child.serviceType;
     NSString *methodName = self.child.methodName;
-    NSData *result = [self.cache]
+//    NSData *result = [self.cache]
     return YES;
     
 }

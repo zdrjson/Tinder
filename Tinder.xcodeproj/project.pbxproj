@@ -38,6 +38,7 @@
 		F51EFE021D0D2CC60086EEE4 /* UIColor+FlatColors.m in Sources */ = {isa = PBXBuildFile; fileRef = F51EFE011D0D2CC60086EEE4 /* UIColor+FlatColors.m */; };
 		F51EFE051D0D2CE70086EEE4 /* CardView.m in Sources */ = {isa = PBXBuildFile; fileRef = F51EFE041D0D2CE70086EEE4 /* CardView.m */; };
 		F51EFE081D0D2E020086EEE4 /* HistoryDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F51EFE071D0D2E020086EEE4 /* HistoryDemoViewController.m */; };
+		F533B2341D38BAFD00F42941 /* NSObject+DDNetworkingMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = F533B2331D38BAFD00F42941 /* NSObject+DDNetworkingMethods.m */; };
 		F53533CD1CE0072000E79155 /* RadarView.m in Sources */ = {isa = PBXBuildFile; fileRef = F53533CC1CE0072000E79155 /* RadarView.m */; };
 		F56398D01CE58F7600D185A4 /* DDSwipeableVc.m in Sources */ = {isa = PBXBuildFile; fileRef = F56398CF1CE58F7600D185A4 /* DDSwipeableVc.m */; };
 		F5685CF01D235A3300831678 /* DDCacheObject.m in Sources */ = {isa = PBXBuildFile; fileRef = F5685CEF1D235A3300831678 /* DDCacheObject.m */; };
@@ -139,6 +140,8 @@
 		F51EFE041D0D2CE70086EEE4 /* CardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardView.m; sourceTree = "<group>"; };
 		F51EFE061D0D2E020086EEE4 /* HistoryDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HistoryDemoViewController.h; sourceTree = "<group>"; };
 		F51EFE071D0D2E020086EEE4 /* HistoryDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HistoryDemoViewController.m; sourceTree = "<group>"; };
+		F533B2321D38BAFD00F42941 /* NSObject+DDNetworkingMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+DDNetworkingMethods.h"; sourceTree = "<group>"; };
+		F533B2331D38BAFD00F42941 /* NSObject+DDNetworkingMethods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+DDNetworkingMethods.m"; sourceTree = "<group>"; };
 		F53533CB1CE0072000E79155 /* RadarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RadarView.h; sourceTree = "<group>"; };
 		F53533CC1CE0072000E79155 /* RadarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RadarView.m; sourceTree = "<group>"; };
 		F56398CE1CE58F7600D185A4 /* DDSwipeableVc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDSwipeableVc.h; sourceTree = "<group>"; };
@@ -286,6 +289,8 @@
 				F51EFE011D0D2CC60086EEE4 /* UIColor+FlatColors.m */,
 				F51AAB721D01A6BB001FE416 /* NSURLRequest+DDNetworkingMethods.h */,
 				F51AAB731D01A6BB001FE416 /* NSURLRequest+DDNetworkingMethods.m */,
+				F533B2321D38BAFD00F42941 /* NSObject+DDNetworkingMethods.h */,
+				F533B2331D38BAFD00F42941 /* NSObject+DDNetworkingMethods.m */,
 				F511706D1D0562F200183EE9 /* NSThread+DDAdd.h */,
 				F511706E1D0562F200183EE9 /* NSThread+DDAdd.m */,
 			);
@@ -693,6 +698,7 @@
 				F51055B81CFBE6F600F4B4AD /* DDRadarView.m in Sources */,
 				F51BF83B1D003CA800F9603A /* DDApiProxy.m in Sources */,
 				F51EFE021D0D2CC60086EEE4 /* UIColor+FlatColors.m in Sources */,
+				F533B2341D38BAFD00F42941 /* NSObject+DDNetworkingMethods.m in Sources */,
 				F5A101841CF8555200DEF86F /* DDNavVc.m in Sources */,
 				F51E196E1CCE2D3300C281F1 /* AppDelegate.m in Sources */,
 				F518C2881D100249006A1AA2 /* DDRequestGenerator.m in Sources */,

@@ -163,13 +163,13 @@
         [self.ddRadarView backAnimation];
         
         
-        
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            [self stop];
-            self.ddRadarView.hidden = YES;
-            [self addSwipView];
-            
-        });
+
+//        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//            [self stop];
+//            self.ddRadarView.hidden = YES;
+//            [self addSwipView];
+//            
+//        });
     });
 
 }
